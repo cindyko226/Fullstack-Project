@@ -3,7 +3,7 @@ import SessionForm from './session_from';
 import {signup} from '../../actions/session_actions';
 import React from 'react';
 import {openModal, closeModal} from '../../actions/modal_actions';
-
+import {withRouter} from 'react-router-dom';
 const msp = (state) => {
     return({
         errors: state.errors,
@@ -23,4 +23,4 @@ const mdp = (dispatch) => {
     })
 }
 
-export default connect(msp, mdp)(SessionForm);
+export default withRouter(connect(msp, mdp)(SessionForm));

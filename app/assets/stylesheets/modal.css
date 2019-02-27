@@ -1,0 +1,95 @@
+
+ .login-form-container {
+   display: flex;
+   justify-content: center;
+   background-color:pink;
+   padding: 30px;
+ }
+
+ .modal-logo{
+     padding: 20px;
+     font-size: 40px;
+     font-family: 'Nunito', sans-serif;
+ }
+
+ .modal-title{
+     text-align: center;
+     font-weight: 800;
+     font-size: 30px;
+     font-family: 'Nunito', sans-serif;
+ }
+
+ .modal-word{
+     font-size: 20px;
+     font-family: 'Nunito', sans-serif;
+ }
+
+
+ .login-form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin: 10px;
+ }
+
+ .login-input {
+   margin-left: 20px;
+   border: 2px solid teal;
+ }
+
+ .login-form-box {
+   outline: 2px solid black;
+   padding: 20px;
+   background: white;
+   position: relative;
+ }
+
+ .modal-footer{
+     display: flex;
+     font-size: 20px;
+     font-family: 'Nunito', sans-serif;
+     justify-content: center;
+ }
+
+ .footer-word{
+     padding-right: 10px;
+ }
+
+
+.session-submit{
+    cursor: pointer;
+    background: powderblue;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    width: auto;
+}
+
+.modal-background {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 10;
+ }
+
+ .modal-child {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .close-x {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   cursor: pointer;
+   color: palevioletred;
+   font-size: 30px;
+   padding: 5px;
+   font-family: 'Nunito', sans-serif;
+ }

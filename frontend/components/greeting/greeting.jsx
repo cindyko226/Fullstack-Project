@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom';
 export default ({currentUser, logout, openModal}) => {
 
     const display = currentUser ? (
-        <div>
-            <p>Hello, {currentUser.username}</p>
-            <button onClick={logout} >Logout</button>
+        <div className="home-page-greeting">
+            <p className="welcome">Hello, {currentUser.username}</p>
+            <button onClick={logout} className="home-logout" >Logout</button>
         </div>
     ) : (
         <div className="home-page-button">
@@ -19,8 +19,21 @@ export default ({currentUser, logout, openModal}) => {
 
     return(
         <div className='home-page'>
-            <h1 className="app-name">Take Me Home</h1>
             {display}
+            <div>
+              <h1 className="app-name">Take Me Home</h1>
+              <div>
+                  <div className="home-page-search">
+                      
+                        <input className="search-input" type="text" value='Try San Francisco' />
+                      
+                      
+                        <button>Search</button>
+                      
+                  </div>
+              </div>
+            </div>
+            
         </div>
     )
 

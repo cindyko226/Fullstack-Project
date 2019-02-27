@@ -5,7 +5,8 @@ import SignupFormContainer from './session_form/signup_form_container';
 import {AuthRoute} from '../util/route_util';
 import Modal from './modal/modal';
 
-import { Switch} from 'react-router-dom';
+
+import { Switch, Route} from 'react-router-dom';
 
 const App = () => (
     <div>
@@ -15,6 +16,7 @@ const App = () => (
         </header>
 
         <Switch>
+            {/* <Route path='/spots' component={SpotsIndexContainer} ></Route> */}
         </Switch>
 
 
