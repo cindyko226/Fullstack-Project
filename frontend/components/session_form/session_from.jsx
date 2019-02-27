@@ -31,13 +31,6 @@ class SessionForm extends React.Component {
 
     render(){
 
-        const link = this.props.formType === "Sign Up" ? 
-        (
-            <Link to="/login" ></Link>
-        ) : (
-            <Link to="/signup" ></Link>
-        )
-
         return(
             <div>
                 <form onSubmit={this.handleSubmit} >
@@ -58,7 +51,7 @@ class SessionForm extends React.Component {
                   <input type="submit" value={this.props.formType} />
                 </form>
 
-                {link}
+              
                 
                 <ul>
                     {this.props.errors.session.map(error => console.log(error))}

@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 
 
 
-export default ({currentUser, logout}) => {
+export default ({currentUser, logout, openModal}) => {
+
     const display = currentUser ? (
         <div>
             <p>Hello, {currentUser.username}</p>
@@ -11,10 +12,8 @@ export default ({currentUser, logout}) => {
         </div>
     ) : (
         <div>
-            <Link to='/signup' >Sign Up</Link>
-            <br/>
-            <br/>
-            <Link to='/login'> Log In</Link>
+            <button onClick={() => openModal('login')}>Log In</button>
+            <button onClick={() => openModal('signup')}>Sign Up</button>
         </div>
     )
 
