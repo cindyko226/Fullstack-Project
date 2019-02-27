@@ -11,14 +11,15 @@ export default ({currentUser, logout, openModal}) => {
             <button onClick={logout} >Logout</button>
         </div>
     ) : (
-        <div>
-            <button onClick={() => openModal('login')}>Log In</button>
-            <button onClick={() => openModal('signup')}>Sign Up</button>
+        <div className="home-page-button">
+            <button onClick={() => openModal('login')} className="home-login">Log In</button>
+            <button onClick={() => openModal('signup')} className="home-signup" >Sign Up</button>
         </div>
     )
 
     return(
-        <div>
+        <div className='home-page'>
+            <h1 className="app-name">Take Me Home</h1>
             {display}
         </div>
     )

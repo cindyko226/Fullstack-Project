@@ -34,16 +34,14 @@ class SessionForm extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit} >
-                  Welcome to Take Me Home!
-                  <br/>
-                    Please {this.props.formType} or {this.props.otherForm}
+                  <h2>Welcome to Take Me Home!</h2>
+                  <h3>Please {this.props.formType} or {this.props.otherForm}</h3>
                   <div onClick={this.props.closeModal} >X</div>
-                  <label>Username:
+                  <label>Username: 
                     <input type="text"  value={this.state.username} onChange={this.handleInput("username")} />
                   </label>
-                  <br></br>
-                  <br/>
-                  <label>Password:
+                  <br></br><br/>
+                  <label>Password: 
                     <input type="password" value={this.state.password} onChange={this.handleInput("password")}/>
                   </label>
                   <br></br>

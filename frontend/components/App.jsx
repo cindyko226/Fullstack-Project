@@ -11,7 +11,6 @@ const App = () => (
     <div>
         <Modal />
         <header>
-            <h1>Take Me Home</h1>
             <GreetingContainer />
         </header>
 
