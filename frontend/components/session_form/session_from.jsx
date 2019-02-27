@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
                 {link}
                 
                 <ul>
-                    {this.props.errors.map(error => console.log(error))}
+                    {this.props.errors.session.map(error => console.log(error))}
                 </ul>
 
             </div>
