@@ -24,11 +24,14 @@ export default ({currentUser, logout, openModal}) => {
               <h1 className="app-name">Take Me Home</h1>
               <div>
                   <div className="home-page-search">
+                        <div className="home-icon">
+                        <div className="icon" ></div>
+                        <input className="search-input" type="text" placeholder='Try San Francisco' />
                       
-                        <input className="search-input" type="text" value='Try San Francisco' />
+
+                        </div>
                       
-                      
-                        <button>Search</button>
+                        <button className="search-button">Search</button>
                       
                   </div>
               </div>

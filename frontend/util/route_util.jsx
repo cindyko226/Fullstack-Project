@@ -13,6 +13,11 @@ const Auth = ({ component: Component, exact, loggedIn, path }) => (
 );
 
 
+
+
+
+
+
 const mapStateToProps = state => (
     { loggedIn: Boolean(state.session.id) }
 );

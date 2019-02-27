@@ -22,6 +22,7 @@
  .modal-word{
      font-size: 20px;
      font-family: 'Nunito', sans-serif;
+     width: 100%;
  }
 
 
@@ -36,10 +37,10 @@
  .login-input {
    margin-left: 20px;
    border: 2px solid teal;
+   width: 400px;
  }
 
  .login-form-box {
-   outline: 2px solid black;
    padding: 20px;
    background: white;
    position: relative;
@@ -63,7 +64,11 @@
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
     text-align: center;
-    width: auto;
+    width: 100%;
+}
+
+.session-submit-hide{
+    display: none;
 }
 
 .modal-background {

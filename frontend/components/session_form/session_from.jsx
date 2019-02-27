@@ -45,10 +45,14 @@ class SessionForm extends React.Component {
         ):(
             "Already have an Take Me Home account ?"
         );
+
+        let classname = (this.props.formType === "Log In") ? (
+            'session-submit'
+        ):(
+            'session-submit-hide'
+        );
         
-        // let demo = (this.props.formType === "Log In") ? (
-        //     <input type="text" />
-        // );
+        
         
 
         return(
@@ -84,7 +88,7 @@ class SessionForm extends React.Component {
                         <input type="submit"
                                value="Demo Login"
                                onClick={this.handleDemoLogin}
-                               className="session-submit"
+                               className={classname}
                         />
                       </div >
                         <div className="modal-footer">
