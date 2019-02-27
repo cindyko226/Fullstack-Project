@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+
+
 class SessionForm extends React.Component {
     constructor(props){
         super(props);
@@ -23,7 +25,7 @@ class SessionForm extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        this.props.processForm(user).then(this.props.closeModal);
        
     }
 
@@ -38,8 +40,11 @@ class SessionForm extends React.Component {
 
         return(
             <div>
-                <h2>{this.props.formType}</h2>
                 <form onSubmit={this.handleSubmit} >
+                  Welcome to Take Me Home!
+                  <br/>
+                    Please {this.props.formType} or {this.props.otherForm}
+                  <div onClick={this.props.closeModal} >X</div>
                   <label>Username:
                     <input type="text"  value={this.state.username} onChange={this.handleInput("username")} />
                   </label>
@@ -50,7 +55,7 @@ class SessionForm extends React.Component {
                   </label>
                   <br></br>
                   <br/>
-                  <input type="submit" value="submit"/>
+                  <input type="submit" value={this.props.formType} />
                 </form>
 
                 {link}
