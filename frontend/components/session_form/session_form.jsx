@@ -37,6 +37,7 @@ class SessionForm extends React.Component {
     handleDemoLogin(e){
         e.preventDefault();
         const user = Object.assign({}, {username: 'Mocha', password: "password"});
+        
         this.props.processForm(user)
         .then(() => {
                 this.props.closeModal();
