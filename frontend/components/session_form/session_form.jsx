@@ -33,18 +33,83 @@ class SessionForm extends React.Component {
         });
        
     }
+    
+
+
+    demo(user) {
+        const intervalSpeed = 100;
+        const { username, password } = user;
+        const demoUsernameTime = username.length * intervalSpeed;
+        const demoPasswordTime = password.length * intervalSpeed;
+        const buffer = intervalSpeed * 3;
+        const totalDemoTime = demoUsernameTime + demoPasswordTime + buffer;
+
+        this.demoUsername(username, intervalSpeed);
+        setTimeout(() => this.demoPassword(password, intervalSpeed), demoUsernameTime);
+        setTimeout(() => this.props.processForm(user)
+        .then(() => { 
+            this.props.closeModal();
+            this.props.history.push('/spots');
+             })
+        , totalDemoTime);
+    }
+
+    demoUsername(username, intervalSpeed) {
+        let i = 0;
+
+        setInterval(() => {
+            if (i <= username.length) {
+                this.setState({ username: username.slice(0, i) })
+                i++
+            } else {
+                clearInterval()
+            }
+        }, intervalSpeed);
+
+    }
+
+    demoPassword(password, intervalSpeed) {
+        let j = 0;
+
+        setInterval(() => {
+            if (j <= password.length) {
+                this.setState({ password: password.slice(0, j) })
+                j++;
+            } else {
+                clearInterval()
+            }
+        }, intervalSpeed);
+
+    }
+
+
+
 
     handleDemoLogin(e){
         e.preventDefault();
         const user = Object.assign({}, {username: 'Mocha', password: "password"});
-        
-        this.props.processForm(user)
-        .then(() => {
-                this.props.closeModal();
-                this.props.history.push('/spots');
-         });
-
+        this.demo(user)
+        .then( () => {
+            this.props.closeModal();
+            
+        });
     }
+        
+
+    
+
+
+    // handleDemoLogin(e) {
+    //     e.preventDefault();
+    //     const user = Object.assign({}, { username: 'Mocha', password: "password" });
+
+    //     this.props.processForm(user)
+    //         .then(() => {
+    //             this.props.closeModal();
+    //             this.props.history.push('/spots');
+    //         });
+
+    // }
 
     render(){
         let display = (this.props.formType === "Log In") ? (
