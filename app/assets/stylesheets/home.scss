@@ -1,6 +1,6 @@
 
 .home-page {
-    background: image_url("beach-island.jpg");
+    background: image_url("tower.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,13 +14,13 @@
     font-weight: 800;
     color: white;
     padding-top: 80px;
-    padding-left: 30px;
+    padding-right: 500px;
     text-align: center;
     text-shadow: 4px 4px 6px rgb(196, 192, 193);
 }
 
 .home-login, .home-signup, .home-logout{
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     color: white;
     font-family: 'Nunito Sans', sans-serif;
@@ -68,14 +68,15 @@ button:hover{
     display: flex;
     justify-content: center;
     padding: 20px;
-    padding-left: 80px;
+    padding-right: 510px;
 }
 
 .search-input{
-    width:500px;
+    width:450px;
     height: 50px;
     margin-right: 20px;
     font-family:'Nunito Sans', sans-serif;
+    padding-right: 100px;
     padding: 10px;
     font-size: 20px;
 }

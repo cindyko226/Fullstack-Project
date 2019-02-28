@@ -134,3 +134,12 @@
 .input-form-icon:hover{
     border: 1px solid teal;
 }
+
+.errors{
+    color: red;
+    width: 430px;
+    padding: 5px;
+    margin-top: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+

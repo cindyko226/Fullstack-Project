@@ -22,7 +22,7 @@ const receiveErrors = (errors) => ({
 export const signup = (user) => (dispatch) => (
     SessionApiUtil.signup(user)
     .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
-    .fail(errors => dispatch(receiveErrors(errors.esponseJSON)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 )
 
 

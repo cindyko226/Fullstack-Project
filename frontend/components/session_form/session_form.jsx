@@ -108,6 +108,20 @@ class SessionForm extends React.Component {
     //         });
 
     // }
+    
+   
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.session.map((error) => (
+                    <li >
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render(){
         let display = (this.props.formType === "Log In") ? (
@@ -131,18 +145,22 @@ class SessionForm extends React.Component {
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                       <div className="login-form">
                        <h3 className="modal-title" >{this.props.formType}</h3>
+                        
                         <br/>
-                           <div className="input-form-icon">
+                           <div className="input-form-icon" >
 
                             <input type="text"  
                                    value={this.state.username} 
                                    onChange={this.handleInput("username")} 
                                    className="login-input"
                                    placeholder="Username:"
+                                   required
                             />
                             <i class="fas fa-user"></i>
                            </div>
-                        
+                            <div class="errors">
+                            {this.renderErrors()}
+                            </div>
                         <br/>
                             <div className="input-form-icon">
 
@@ -151,10 +169,11 @@ class SessionForm extends React.Component {
                                    onChange={this.handleInput("password")}
                                    className="login-input"
                                    placeholder="Password:"
+                                   required
                                    />
                             <i class="fas fa-lock"></i>
                             </div>
-                      
+                            <div className="errors" >{this.renderErrors()}</div>
                         <br/>
                         <input type="submit" 
                                value={this.props.formType} 
@@ -171,13 +190,12 @@ class SessionForm extends React.Component {
                           <div className="footer-word"> {display} </div>
                           <div>  {this.props.otherForm} </div>
                         </div>
+
                     </form>
                 </div>
               
                 
-                <ul>
-                    {/* {this.props.errors.session.map(error => console.log(error))} */}
-                </ul>
+                
 
             </div>
         )
