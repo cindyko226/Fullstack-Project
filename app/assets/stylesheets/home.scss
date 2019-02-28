@@ -23,20 +23,32 @@
     font-size: 1.2em;
     font-weight: 600;
     color: white;
-    padding-top: 20px;
-    padding-right: 25px;
     font-family: 'Roboto', sans-serif;
+    display:inline-block;
+    margin: 10px;
+    padding: 20px;
+}
+.nav-login{
+    border-bottom: 5px solid transparent;
+}
+.nav-login:hover{
+     border-bottom: 3px solid rgb(160, 160, 160);
 }
 
-button{
+button:hover{
     cursor: pointer;
 }
 
 .home-page-button{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    // border-bottom: 0.1px solid rgb(182, 182, 182); 
 }
+
+.home-nav{
+    display: flex;
+}
+
 
 .home-page-greeting{
     display: flex;

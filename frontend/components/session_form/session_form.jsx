@@ -96,8 +96,6 @@ class SessionForm extends React.Component {
     }
         
 
-    
-
 
     // handleDemoLogin(e) {
     //     e.preventDefault();
