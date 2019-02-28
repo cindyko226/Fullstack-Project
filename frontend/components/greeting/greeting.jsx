@@ -7,16 +7,20 @@ export default ({currentUser, logout, openModal}) => {
 
     const display = currentUser ? (
         <div className="home-page-greeting">
+            <div className="logo-png" ></div>
             <p className="welcome">Hello, {currentUser.username}</p>
             <button onClick={logout} className="home-logout" >Logout</button>
         </div>
     ) : (
         <div className="home-page-button">
+            <div className="logo-png" ></div>
+            <div>
             <button onClick={() => openModal('login')} className="home-login">Log In</button>
             <button onClick={() => openModal('signup')} className="home-signup" >Sign Up</button>
+            </div>
         </div>
     )
-
+    
     return(
         <div className='home-page'>
             {display}

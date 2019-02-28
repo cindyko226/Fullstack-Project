@@ -27,8 +27,10 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user)
-        .then(this.props.closeModal);
-        // this.props.history.push('/spots');
+        .then(() => {
+            this.props.closeModal();
+            this.props.history.push('/spots');
+        });
        
     }
 
@@ -37,6 +39,9 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, {username: 'Mocha', password: "password"});
         this.props.processForm(user)
         .then(this.props.closeModal);
+
+        this.props.history.push('/spots');
+
     }
 
     render(){
@@ -51,8 +56,6 @@ class SessionForm extends React.Component {
         ):(
             'session-submit-hide'
         );
-        
-        
         
 
         return(
@@ -100,7 +103,7 @@ class SessionForm extends React.Component {
               
                 
                 <ul>
-                    {this.props.errors.session.map(error => console.log(error))}
+                    {/* {this.props.errors.session.map(error => console.log(error))} */}
                 </ul>
 
             </div>
