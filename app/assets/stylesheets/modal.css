@@ -2,27 +2,32 @@
  .login-form-container {
    display: flex;
    justify-content: center;
-   background-color:pink;
    padding: 30px;
  }
 
  .modal-logo{
      padding: 20px;
-     font-size: 40px;
+     font-size: 30px;
      font-family: Arial, Helvetica, sans-serif;
+     text-align: center;
  }
 
  .modal-title{
      text-align: center;
-     font-weight: 800;
-     font-size: 30px;
+     color: gray;
+     font-size: 20px;
      font-family: Arial, Helvetica, sans-serif;
+     border: 1px solid rgb(235, 235, 235);
+     width: 400px;
+     padding: 20px;
  }
 
  .modal-word{
      font-size: 20px;
      font-family: Arial, Helvetica, sans-serif;
      width: 100%;
+     border: 1px solid rgb(235, 235, 235);
+     padding: 20px;
  }
 
 
@@ -35,11 +40,12 @@
  }
 
  .login-input {
-   margin-left: 20px;
-   border-bottom: 2px solid teal;
-   width: 400px;
+   width: 360px;
+   padding: 20px;
+   
  }
 
+ 
  .login-form-box {
    padding: 20px;
    background: white;
@@ -60,11 +66,12 @@
 
 .session-submit{
     cursor: pointer;
-    background: powderblue;
+    background: rgb(255, 90, 95);
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    width: 100%;
+    padding: 20px;
+    width: 400px;
 }
 
 .session-submit-hide{
@@ -91,10 +98,39 @@
  .close-x {
    position: absolute;
    top: 5px;
-   right: 5px;
+   left: 5px;
    cursor: pointer;
-   color: palevioletred;
+   color: gray;
    font-size: 30px;
-   padding: 5px;
    font-family: Arial, Helvetica, sans-serif;
+   
  }
+
+.form-signup-button, .form-login-button{
+    color:teal; 
+}
+
+.form-login-button:hover{
+    color:teal; 
+    text-decoration: underline;
+}
+
+.form-signup-button:hover{
+    color:teal; 
+    text-decoration: underline;
+}
+
+.input-form-icon{
+    display: flex;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+
+.input-form-icon i {
+    align-self: center;
+    padding-right: 20px; 
+}
+
+.input-form-icon:hover{
+    border: 1px solid teal;
+}

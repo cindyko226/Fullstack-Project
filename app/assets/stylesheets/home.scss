@@ -22,7 +22,7 @@
 .home-login, .home-signup, .home-logout{
     font-size: 1.5em;
     font-weight: 600;
-    color: rgb(86, 235, 240);
+    color: white;
     padding-top: 20px;
     padding-right: 25px;
     font-family: sans-serif;
@@ -79,17 +79,16 @@ button{
     text-align: center;
 }
 
-.icon{
-    background: image_url("favicon.png");
-    width: 80px;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 30px;
-}
 
 .home-icon{
     background:white;
     display: flex;
+}
+
+.home-icon i {
+    font-size: 30px;
+    padding: 20px;
+    color:gray;
 }
 
 .logo-png{

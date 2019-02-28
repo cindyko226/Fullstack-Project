@@ -38,9 +38,10 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, {username: 'Mocha', password: "password"});
         this.props.processForm(user)
-        .then(this.props.closeModal);
-
-        this.props.history.push('/spots');
+        .then(() => {
+                this.props.closeModal();
+                this.props.history.push('/spots');
+         });
 
     }
 
@@ -63,25 +64,33 @@ class SessionForm extends React.Component {
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box" >
                     <h2 className="modal-logo" >Welcome to Take Me Home!</h2>
-                    <h3 className="modal-title" >{this.props.formType}</h3>
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                       <div className="login-form">
+                       <h3 className="modal-title" >{this.props.formType}</h3>
                         <br/>
-                        <label className="modal-word" >Username: 
+                           <div className="input-form-icon">
+
                             <input type="text"  
                                    value={this.state.username} 
                                    onChange={this.handleInput("username")} 
                                    className="login-input"
+                                   placeholder="Username:"
                             />
-                        </label>
+                            <i class="fas fa-user"></i>
+                           </div>
+                        
                         <br/>
-                        <label className="modal-word" >Password: 
+                            <div className="input-form-icon">
+
                             <input type="password" 
                                    value={this.state.password} 
                                    onChange={this.handleInput("password")}
                                    className="login-input"
+                                   placeholder="Password:"
                                    />
-                        </label>
+                            <i class="fas fa-lock"></i>
+                            </div>
+                      
                         <br/>
                         <input type="submit" 
                                value={this.props.formType} 

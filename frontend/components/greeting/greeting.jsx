@@ -29,10 +29,11 @@ export default ({currentUser, logout, openModal}) => {
               <div>
                   <div className="home-page-search">
                         <div className="home-icon">
-                        <div className="icon" ></div>
-                        <input className="search-input" type="text" placeholder='Try San Francisco' />
-                      
+                        <i class="fa fa-search" aria-hidden="true"></i>
 
+                        <input className="search-input" type="text" placeholder='Try San Francisco' />
+                        
+                    
                         </div>
                       
                         <button className="search-button">Search</button>
@@ -42,7 +43,7 @@ export default ({currentUser, logout, openModal}) => {
             </div>
             
         </div>
+    
+
     )
-
-
 }
