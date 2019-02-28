@@ -9,7 +9,7 @@
 }
 
 .app-name{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito Sans';
     font-size: 6.5em ;
     font-weight: 800;
     color: white;
@@ -23,10 +23,10 @@
     font-size: 1.2em;
     font-weight: 600;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     display:inline-block;
     margin: 10px;
-    padding: 20px;
+    padding: 15px;
 }
 .nav-login{
     border-bottom: 5px solid transparent;
@@ -42,7 +42,6 @@ button:hover{
 .home-page-button{
     display: flex;
     justify-content: space-between;
-    // border-bottom: 0.1px solid rgb(182, 182, 182); 
 }
 
 .home-nav{
@@ -57,10 +56,11 @@ button:hover{
 
 
 .welcome{
-    font-size: 40px;
-    font-family:'Roboto', sans-serif;
-    padding: 10px 0 0 30px;
-    color: rgb(86, 235, 240);
+    font-size: 30px;
+    font-family:'Nunito Sans', sans-serif;
+    padding: 20px 0 0 0;
+    color: white;
+    margin-right: 995px;
 }
 
 
@@ -75,7 +75,7 @@ button:hover{
     width:500px;
     height: 50px;
     margin-right: 20px;
-    font-family:'Roboto',  Arial, Helvetica, sans-serif;
+    font-family:'Nunito Sans', sans-serif;
     padding: 10px;
     font-size: 20px;
 }
@@ -83,7 +83,7 @@ button:hover{
 .search-button{
     width: 100px;
     background: pink;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Nunito Sans',sans-serif;
     color: white;
     font-weight: 900;
     padding: 10px;
