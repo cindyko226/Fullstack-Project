@@ -4,7 +4,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import Modal from './modal/modal';
 import SpotsIndexContainer from './spots/spots_index_container';
 
-import { Switch} from 'react-router-dom';
+import { Redirect, Switch} from 'react-router-dom';
 
 const App = () => (
     <div>
@@ -15,6 +15,7 @@ const App = () => (
 
         <Switch>
             <ProtectedRoute exact path='/spots' component={SpotsIndexContainer}/>
+            <Redirect to="/" />
         </Switch>
 
 

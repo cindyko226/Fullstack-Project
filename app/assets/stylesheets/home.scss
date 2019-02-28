@@ -1,11 +1,11 @@
 
 .home-page {
-    background: image_url("tower.jpg");
+    background: image_url("tower2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .app-name{
@@ -14,7 +14,6 @@
     font-weight: 800;
     color: white;
     padding-top: 80px;
-    padding-right: 500px;
     text-align: center;
     text-shadow: 4px 4px 6px rgb(196, 192, 193);
 }
@@ -32,7 +31,7 @@
     border-bottom: 5px solid transparent;
 }
 .nav-login:hover{
-     border-bottom: 3px solid rgb(160, 160, 160);
+     border-bottom: 3px solid white;
 }
 
 button:hover{
@@ -54,21 +53,23 @@ button:hover{
     justify-content: space-between;
 }
 
+.welcome-top{
+    display: flex;
+}
 
 .welcome{
-    font-size: 30px;
+    font-size: 1em;
     font-family:'Nunito Sans', sans-serif;
-    padding: 20px 0 0 0;
+    // padding: 20px 0 0 0;
+    margin: 10px;
+    padding: 20px;
     color: white;
-    margin-right: 995px;
 }
 
 
 .home-page-search{
     display: flex;
     justify-content: center;
-    padding: 20px;
-    padding-right: 510px;
 }
 
 .search-input{

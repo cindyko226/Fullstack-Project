@@ -6,7 +6,6 @@
  }
 
  .modal-logo{
-     padding: 20px;
      font-size: 30px;
      font-family: 'Nunito Sans', sans-serif;
      text-align: center;
@@ -30,6 +29,11 @@
      padding: 20px;
  }
 
+
+ input::placeholder{
+     font-family: 'Nunito Sans', sans-serif;
+     color: rgb(165, 163, 163);
+ }
 
  .login-form {
    display: flex;
@@ -57,21 +61,26 @@
      font-size: 20px;
      font-family:  'Nunito Sans', sans-serif;
      justify-content: center;
+     border-top: 1px solid rgb(235, 235, 235);
+     padding: 10px;
  }
 
  .footer-word{
      padding-right: 10px;
+     font-family:  'Nunito Sans', sans-serif;
+     color: rgb(165, 163, 163);
  }
 
 
 .session-submit{
     cursor: pointer;
     background: rgb(255, 90, 95);
-    font-size: 20px;
+    font-size: 15px;
     font-family:'Nunito Sans', sans-serif;
+    color: white;
     text-align: center;
-    padding: 20px;
-    width: 400px;
+    padding: 10px;
+    width: 420px;
 }
 
 .session-submit-hide{
@@ -100,7 +109,7 @@
    top: 5px;
    left: 5px;
    cursor: pointer;
-   color: gray;
+   color: rgb(165, 163, 163);
    font-size: 25px;
    font-family: 'Nunito Sans', sans-serif;
    
@@ -139,7 +148,6 @@
     color: red;
     width: 430px;
     padding: 5px;
-    margin-top: 10px;
     font-family: 'Nunito Sans', sans-serif;
 }
 

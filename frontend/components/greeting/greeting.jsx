@@ -8,8 +8,10 @@ export default ({currentUser, logout, openModal}) => {
     const display = currentUser ? (
         <div className="home-page-greeting">
             <div className="logo-png" ></div>
+            <div className="welcome-top" >
             <p className="welcome">Hello, {currentUser.username}</p>
             <button onClick={logout} className="home-logout" >Logout</button>
+            </div>
         </div>
     ) : (
         <div className="home-page-button">

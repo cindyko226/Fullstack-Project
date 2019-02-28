@@ -15,6 +15,20 @@ class SessionForm extends React.Component {
         this.handleDemoLogin = this.handleDemoLogin.bind(this);
     }
 
+    // componentDidMount(){
+    //     this.props.clearErrors();
+    // }
+
+    // componentDidUpdate(){
+    //     this.props.clearErrors();
+    // }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
+
+
     handleInput(field) {
         return e => {
             this.setState({
@@ -109,19 +123,26 @@ class SessionForm extends React.Component {
 
     // }
     
+   renderUsernameErrors(){
+       if (this.props.errors.session.length === 1 && this.props.errors.session[0].includes("Username")) {
+           return (this.props.errors.session[0]); 
+       } 
+       if (this.props.errors.session.length > 1) {
+           return (this.props.errors.session[0]);
+       }
+
+   }
+
+   renderPasswordErrors(){
+       if (this.props.errors.session.length === 1 && this.props.errors.session[0].includes("Password")) {
+           return (this.props.errors.session[0]);
+       }
+       if (this.props.errors.session.length > 1) {
+           return (this.props.errors.session[1]);
+       }
+   }
    
 
-    renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.session.map((error) => (
-                    <li >
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    }
 
     render(){
         let display = (this.props.formType === "Log In") ? (
@@ -144,8 +165,8 @@ class SessionForm extends React.Component {
                     <h2 className="modal-logo" >Welcome to Take Me Home!</h2>
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                       <div className="login-form">
-                       <h3 className="modal-title" >{this.props.formType}</h3>
-                        
+                            
+
                         <br/>
                            <div className="input-form-icon" >
 
@@ -159,8 +180,9 @@ class SessionForm extends React.Component {
                             <i class="fas fa-user"></i>
                            </div>
                             <div class="errors">
-                            {this.renderErrors()}
+                            {this.renderUsernameErrors()} 
                             </div>
+                            
                         <br/>
                             <div className="input-form-icon">
 
@@ -168,12 +190,15 @@ class SessionForm extends React.Component {
                                    value={this.state.password} 
                                    onChange={this.handleInput("password")}
                                    className="login-input"
-                                   placeholder="Password:"
+                                   placeholder="Create a password:"
                                    required
                                    />
                             <i class="fas fa-lock"></i>
                             </div>
-                            <div className="errors" >{this.renderErrors()}</div>
+                            <div class="errors">
+                            {this.renderPasswordErrors()} 
+                            </div>
+    
                         <br/>
                         <input type="submit" 
                                value={this.props.formType} 

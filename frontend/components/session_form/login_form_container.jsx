@@ -1,6 +1,6 @@
 import {connect } from 'react-redux';
 import SessionForm from './session_form';
-import {login} from '../../actions/session_actions';
+import {login, clearErrors} from '../../actions/session_actions';
 import React from 'react';
 import {openModal, closeModal} from '../../actions/modal_actions';
 import {withRouter } from 'react-router-dom';
@@ -17,10 +17,11 @@ const mdp = (dispatch) => {
         processForm: (user) => dispatch(login(user)),
         otherForm: (
             <button className="form-signup-button" onClick={() => dispatch(openModal('signup'))}>
-                Signup
+                Sign up
             </button>
         ),
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        clearErrors: ()=>dispatch(clearErrors())
     })
 }
 
