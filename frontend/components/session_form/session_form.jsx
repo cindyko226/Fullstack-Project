@@ -124,22 +124,29 @@ class SessionForm extends React.Component {
     // }
     
    renderUsernameErrors(){
-       if (this.props.errors.session.length === 1 && this.props.errors.session[0].includes("Username")) {
-           return (this.props.errors.session[0]); 
-       } 
-       if (this.props.errors.session.length > 1) {
-           return (this.props.errors.session[0]);
+       if (this.props.formType === "Sign Up"){
+           if (this.props.errors.session.length === 1 && this.props.errors.session[0].includes("Username")) {
+               return (this.props.errors.session[0]); 
+          } 
+           if (this.props.errors.session.length > 1) {
+               return (this.props.errors.session[0]);
+          }
        }
-
    }
 
    renderPasswordErrors(){
-       if (this.props.errors.session.length === 1 && this.props.errors.session[0].includes("Password")) {
-           return (this.props.errors.session[0]);
-       }
-       if (this.props.errors.session.length > 1) {
+       if (this.props.formType === "Log In") {
            return (this.props.errors.session[1]);
-       }
+       } 
+
+       if (this.props.formType === "Sign Up") {
+           if (this.props.errors.session.length === 1 && this.props.errors.session[0].includes("Password")) {
+               return (this.props.errors.session[0]);
+           }
+           if (this.props.errors.session.length > 1) {
+               return (this.props.errors.session[1]);
+           }
+       } 
    }
    
 
