@@ -181,9 +181,9 @@ class SessionForm extends React.Component {
                                    placeholder="Username:"
                                    required
                             />
-                            <i class="fas fa-user"></i>
+                            <i className="fas fa-user"></i>
                            </div>
-                            <div class="errors">
+                            <div className="errors">
                             {this.renderUsernameErrors()} 
                             </div>
                             
@@ -197,9 +197,9 @@ class SessionForm extends React.Component {
                                    placeholder="Create a password:"
                                    required
                                    />
-                            <i class="fas fa-lock"></i>
+                            <i className="fas fa-lock"></i>
                             </div>
-                            <div class="errors">
+                            <div className="errors">
                             {this.renderPasswordErrors()} 
                             </div>
     

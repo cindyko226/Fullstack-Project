@@ -13,8 +13,14 @@ ActiveRecord::Base.transaction do
   User.destroy_all
 
   
-  
+  user1 = User.create!(username: "Cindy", password: "password")
+  user2 = User.create!(username: "Liz", password: "password")
+  user3 = User.create!(username: "Mocha", password: "password")
+  user4 = User.create!(username: "Guest", password: "password")
+  user5 = User.create!(username: "Dave", password: "password")
 
+
+  
 
 
 end

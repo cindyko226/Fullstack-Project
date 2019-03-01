@@ -36,7 +36,7 @@ export default ({currentUser, logout, openModal}) => {
               <div>
                   <div className="home-page-search">
                         <div className="home-icon">
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i className="fa fa-search" aria-hidden="true"></i>
 
                         <input className="search-input" type="text" placeholder='Try San Francisco' />
                         
