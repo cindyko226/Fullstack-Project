@@ -1,9 +1,7 @@
 .main-container{
     display: block;
     padding: 0px 150px 0px 150px;
-
 }
-
 
 
 .index-title{
@@ -17,5 +15,33 @@
     letter-spacing: normal;
     padding: 2px 0 2px 0;
     margin-bottom: 0px;
+
+}
+
+.nav-login-button, .nav-signup-button{
+     font-size: 1em;
+    font-weight: 600;
+    color: rgb(72, 72, 72);
+    font-family: 'Nunito Sans', sans-serif;
+    display:inline-block;
+    margin: 10px;
+    padding: 15px;
+
+}
+
+
+.nav-login-button:hover{
+     border-bottom: 2px solid rgb(72, 72, 72);;
+}
+
+.nav-signup-button:hover{
+    border-bottom: 2px solid rgb(72, 72, 72);;
+}
+
+
+.index-page-container{
+
+    grid-template-columns: 2fr 1fr;
+    
 
 }

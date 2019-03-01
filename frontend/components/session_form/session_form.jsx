@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInput = this.handleInput.bind(this);
         this.handleDemoLogin = this.handleDemoLogin.bind(this);
+        this.changeHistory = this.changeHistory.bind(this);
     }
 
     // componentDidMount(){
@@ -48,7 +49,15 @@ class SessionForm extends React.Component {
        
     }
     
+    changeHistory(){
+        // debugger
+        if (this.props.location.pathname === "/") {
+           return( this.props.history.push('/spots') );
+        };
+    }
 
+   
+    
 
     demo(user) {
         const intervalSpeed = 100;
@@ -57,15 +66,16 @@ class SessionForm extends React.Component {
         const demoPasswordTime = password.length * intervalSpeed;
         const buffer = intervalSpeed * 3;
         const totalDemoTime = demoUsernameTime + demoPasswordTime + buffer;
-
+        console.log(this.props.history);
         this.demoUsername(username, intervalSpeed);
         setTimeout(() => this.demoPassword(password, intervalSpeed), demoUsernameTime);
         setTimeout(() => this.props.processForm(user)
-        .then(() => { 
-            this.props.closeModal();
-            this.props.history.push('/spots');
-             })
-        , totalDemoTime);
+        .then(() => {
+                this.props.closeModal();
+                this.changeHistory()
+                // this.props.history.push('/spots');
+            }), totalDemoTime);
+        
     }
 
     demoUsername(username, intervalSpeed) {

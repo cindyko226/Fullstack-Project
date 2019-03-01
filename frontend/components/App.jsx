@@ -12,7 +12,7 @@ const App = () => (
        
         <Switch>
             <Route exact path='/' component={GreetingContainer} />
-            <ProtectedRoute exact path='/spots' component={SpotsIndexContainer}/>
+            <Route exact path='/spots' component={SpotsIndexContainer}/>
             <Redirect to="/" />
         </Switch>
 

@@ -31,8 +31,12 @@ export default ({currentUser, logout, openModal}) => {
     return(
         <div className='home-page'>
             {display}
-            <div>
-              <h1 className="app-name">Take Me Home</h1>
+            <div className="splash-container" >
+
+              <div> 
+                  <h1 className="app-name">Plan your next trip</h1>
+              </div>
+
               <div>
                   <div className="home-page-search">
                         <div className="home-icon">
@@ -43,7 +47,7 @@ export default ({currentUser, logout, openModal}) => {
                     
                         </div>
                       
-                        <button className="search-button">Search</button>
+                        <button className="search-button"><i className="fa fa-search" aria-hidden="true"></i></button>
                       
                   </div>
               </div>

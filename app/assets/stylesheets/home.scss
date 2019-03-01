@@ -9,14 +9,24 @@
     position: relative;
 }
 
+.splash-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
 .app-name{
     font-family: 'Nunito Sans';
-    font-size: 6.5em ;
+    font-size: 50px; ;
     font-weight: 800;
     color: white;
     padding-top: 80px;
-    text-align: center;
     text-shadow: 4px 4px 6px rgb(196, 192, 193);
+    margin-bottom: 30px;
 }
 
 .home-login, .home-signup, {
@@ -26,7 +36,7 @@
     font-family: 'Nunito Sans', sans-serif;
     display:inline-block;
     margin: 10px;
-    padding: 15px;
+    padding:15px 10px 0 0;
 }
 
 .home-logout{
@@ -83,14 +93,15 @@ button:hover{
 .welcome{
     font-size: 1em;
     font-family:'Nunito Sans', sans-serif;
-  
+    margin: 10px;
+    padding: 15px;
     color: red;
 }
 
 
 .home-page-search{
     display: flex;
-    justify-content: center;
+    // justify-content: center;
 }
 
 .search-input{
@@ -104,20 +115,23 @@ button:hover{
 }
 
 .search-button{
-    width: 100px;
-    background: pink;
+    width: 50px;
+    background:  rgb(255, 90, 95);
     font-family: 'Nunito Sans',sans-serif;
     color: white;
     font-weight: 900;
     padding: 10px;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
+    border-radius: 5px;
 }
 
 
 .home-icon{
     background:white;
     display: flex;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 .home-icon i {
@@ -132,7 +146,7 @@ button:hover{
     background-size: 80px;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 40px;
+    padding-left: 20px;
 }
 
 // @media (min-width: 744px){

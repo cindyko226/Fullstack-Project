@@ -1,6 +1,8 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-
+import GreetingContainer from '../greeting/greeting_container';
+import NavBarContainer from '../nav-bar/nav_bar_container';
+import {Link} from 'react-router-dom';
 
 class SpotsIndex extends React.Component{
 
@@ -14,18 +16,19 @@ class SpotsIndex extends React.Component{
 
     render(){
         return(
-        <div>
+        <div className="spots-index-page">
             <div className="home-page-greeting">
-              <div className="logo-png" ></div>
+              <Link to="/" ><div className="logo-png" ></div></Link>
               <div className="welcome-top" >
-              
-              <button onClick={this.props.logout} className="home-logout" >Logout</button>
+              <NavBarContainer/>
+               {/* <GreetingContainer/> */}
+              {/* <button onClick={this.props.logout} className="home-logout" >Logout</button> */}
               </div>
             </div>
 
-            <div>
+            <div className="index-page-container">
                 <div className="main-container">
-                    <p className="welcome">Start planning your trip, {this.props.currentUser.username}</p>
+                    {/* <p className="welcome">Start planning your trip, {this.props.currentUser.username}</p> */}
                     <p className="index-title">Where to stay</p>
                     <div>
                         <h1 className="index-title">Homes in San Francisco</h1>
@@ -42,6 +45,10 @@ class SpotsIndex extends React.Component{
                     <div>
                         <h1 className="index-title" >Homes in San Jose</h1>
                     </div>
+                </div>
+
+                <div className="index-map">
+                    <h1>Map Here</h1>
                 </div>
 
             </div>
