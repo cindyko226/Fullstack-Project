@@ -21,7 +21,7 @@ export default ({currentUser, logout, openModal}) => {
                 <button onClick={() => openModal('login')} className="home-login">Log In</button>
                 </div>
 
-                <div className="nav-login">
+                <div className="nav-signup">
                 <button onClick={() => openModal('signup')} className="home-signup" >Sign Up</button>
                 </div>
             </div>
