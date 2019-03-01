@@ -32,11 +32,11 @@ class SpotsIndex extends React.Component{
                     </div>
 
                     <div>
-                        <h1 className="index-title" >Home in San Diego</h1>
+                        <h1 className="index-title" >Homes in San Diego</h1>
                     </div>
 
                     <div>
-                        <h1 className="index-title" >Home in San Jose</h1>
+                        <h1 className="index-title" >Homes in San Jose</h1>
                     </div>
                 </div>
 
