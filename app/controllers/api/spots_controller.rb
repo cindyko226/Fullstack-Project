@@ -1,7 +1,7 @@
 class Api::SpotsController < ApplicationController
 
     def index 
-        @spots = Sport.all 
+        @spots = Spot.all 
         render :index
     end 
 

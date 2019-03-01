@@ -8,6 +8,10 @@ class SpotsIndex extends React.Component{
         super(props);
     }
 
+    componentDidMount(){
+        this.props.fetchSpots();
+    }
+
     render(){
         return(
         <div>
