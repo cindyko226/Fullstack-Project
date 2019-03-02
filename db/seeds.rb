@@ -35,7 +35,7 @@ ActiveRecord::Base.transaction do
                   kitchen, bedroom and bath with artful touches in 1911 
                   Edwardian. Close to beaches,Park, groceries.",
     rate: 110,
-    home_type: "private home"
+    home_type: "PRIVATE ROOM"
 
   )
 
@@ -55,7 +55,7 @@ ActiveRecord::Base.transaction do
                   Comes with it's own entrance just steps from bus lines, train and all 
                   that Haight Street has to offer.",
     rate: 250,
-    home_type: "private home"
+    home_type: "PRIVATE ROOM"
 
   )
   

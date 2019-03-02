@@ -3,7 +3,7 @@ import GreetingContainer from './greeting/greeting_container';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import Modal from './modal/modal';
 import SpotsIndexContainer from './spots/spots_index_container';
-
+import SearchContainer from './search/search_container';
 import { Redirect, Switch, Route} from 'react-router-dom';
 
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
        
         <Switch>
             <Route exact path='/' component={GreetingContainer} />
-            <Route exact path='/spots' component={SpotsIndexContainer}/>
+            <Route exact path='/spots' component={SearchContainer}/>
             <Redirect to="/" />
         </Switch>
 
