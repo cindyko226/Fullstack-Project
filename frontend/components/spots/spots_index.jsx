@@ -3,7 +3,7 @@ import {withRouter} from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 import NavBarContainer from '../nav-bar/nav_bar_container';
 import {Link} from 'react-router-dom';
-import SpotMap from '../map/spot_map';
+import SpotMapContainer from '../map/spot_map_container';
 
 class SpotsIndex extends React.Component{
 
@@ -206,7 +206,7 @@ class SpotsIndex extends React.Component{
                     <div className="map-zero"></div>
                     <div className="map-one"></div>
                     <div className="index-map">
-                    <SpotMap />
+                    <SpotMapContainer />
 
                     </div>
                 </div>

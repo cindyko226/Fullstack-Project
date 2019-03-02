@@ -11,7 +11,6 @@ export default class MarkerManager{
         // spots.forEach( spot => spotsObj[spot.id] = spot);
 
         // let filterSpot = spots.filter(spot => !this.markers[spot.id]);
-        // // debugger
         // filterSpot.forEach(newSpot => this.createMarkerFromSpot(newSpot))
 
         // spots.filter(spot=> !this.markers[spot.id])

@@ -1,20 +1,19 @@
 import React from 'react';
-import SpotsIndex from '../spots/spots_index';
-import SpotMap from '../map/spot_map';
+import SpotsIndexContainer from '../spots/spots_index_container';
+import SpotMapContainer from '../map/spot_map_container';
 
 
 const Search = ({ spots, logout, fetchSpots}) => {
     console.log(spots);
+    // debugger
     return(
     <div>
-        <SpotsIndex 
+        <SpotsIndexContainer
           spots={spots}
           logout={logout}
           fetchSpots={fetchSpots}
         />
-        <div className="hidden-map" >
-          <SpotMap  spots={spots}/>
-        </div>
+        
     </div>
     )
 };

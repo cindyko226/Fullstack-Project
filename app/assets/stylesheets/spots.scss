@@ -91,7 +91,9 @@
 .homes-des{
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    // padding: 10px;
+    border: 1px solid rgb(235,235,235);
+    margin: 5px;
 }
 
 img{
@@ -122,11 +124,14 @@ img{
     background:white;
     display: flex;
     border-radius: 5px;
-    border: 1px solid rgb(165, 163, 163);
-    box-shadow: 2px 2px 15px 1px #b6b6b6;
+    border: 1px solid rgb(235,235,235);
     padding: 5px;
     margin-top: 5px;
    
+}
+
+.index-search-icon:hover{
+     box-shadow: 2px 2px 15px 1px #b6b6b6;
 }
 
 

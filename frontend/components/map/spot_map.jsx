@@ -20,15 +20,17 @@ import MarkerManager from '../../util/marker_manager';
 
 class SpotMap extends React.Component {
 
-    // constructor(props){
-    //     super(props);
-    //     console.log(props);
-    // }
+    constructor(props){
+        super(props);
+        console.log(props);
+        // debugger
+    }
 
     componentDidMount() {
         // if (this.props.spots.length === 0) {
         //     return null;
         // }
+        // debugger
         const mapOptions = {
             center: { lat: 37.7758, lng: -122.435 }, // this is SF
             zoom: 13
@@ -37,7 +39,7 @@ class SpotMap extends React.Component {
         this.MarkerManager = new MarkerManager(this.map);
 
         // debugger
-        // this.MarkerManager.updateMarkers(this.props.spots);
+        this.MarkerManager.updateMarkers(this.props.spots);
         
         // wrap this.mapNode in a Google Map
         // this.map = new google.maps.Map(this.mapNode, mapOptions);

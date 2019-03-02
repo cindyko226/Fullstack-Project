@@ -3,10 +3,10 @@ import SpotsIndex from './spots_index';
 import { logout } from '../../actions/session_actions';
 import {fetchSpots} from '../../actions/spots_actions';
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
     return({
         currentUser: state.entities.users[state.session.id],
-        spots: Object.values(state.entities.spots)
+        spots: Object.values(ownProps.spots)
     })
 }
 
