@@ -3,12 +3,13 @@ import {withRouter} from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 import NavBarContainer from '../nav-bar/nav_bar_container';
 import {Link} from 'react-router-dom';
-
+import SpotMap from '../map/spot_map';
 
 class SpotsIndex extends React.Component{
 
     constructor(props){
         super(props);
+        console.log(props);
     }
 
     componentDidMount(){
@@ -205,7 +206,7 @@ class SpotsIndex extends React.Component{
                     <div className="map-zero"></div>
                     <div className="map-one"></div>
                     <div className="index-map">
-                    <h1>Map Here</h1>
+                    <SpotMap />
 
                     </div>
                 </div>

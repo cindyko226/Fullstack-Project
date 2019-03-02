@@ -1,7 +1,7 @@
 .main-container{
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: 1px solid rgb(165, 163, 163);
     flex-direction: column;
 }
@@ -195,5 +195,13 @@ img{
 
 .map{
     width: 500px;
-    height: 500px;
+    height: 100vh;
+}
+
+.index-page-greeting-nav{
+    display: flex;
+}
+
+.hidden-map{
+    display: none;
 }

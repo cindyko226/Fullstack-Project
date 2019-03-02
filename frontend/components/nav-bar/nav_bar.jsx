@@ -6,7 +6,20 @@ export default ({ currentUser, logout, openModal }) => {
 
     const display = currentUser ? (
         <div className="home-page-greeting">
-            <div className="spots-logo-png" ></div>
+            <div className="index-page-greeting-nav">
+ 
+                <div className="spots-logo-png" ></div>
+                <div >
+                    <div className="index-page-search">
+                        <div className="index-search-icon">
+                            <i className="fa fa-search" aria-hidden="true"></i>
+                            <input className="index-search-input" type="text" placeholder='Try San Francisco' />
+                        </div>
+                    </div>
+               </div>
+               
+
+            </div>
             <div className="welcome-top" >
                <div>
                 <p className="welcome">Hello, {currentUser.username}</p>
