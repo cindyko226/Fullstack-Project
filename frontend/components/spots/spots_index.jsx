@@ -4,6 +4,7 @@ import GreetingContainer from '../greeting/greeting_container';
 import NavBarContainer from '../nav-bar/nav_bar_container';
 import {Link} from 'react-router-dom';
 
+
 class SpotsIndex extends React.Component{
 
     constructor(props){
