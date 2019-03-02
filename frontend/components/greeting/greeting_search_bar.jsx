@@ -1,22 +1,22 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 class SearchBar extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
-        this.state = { address: null }
+        this.state = { address: null };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
 
 
-    componentDidMount(){
-        
+    componentDidMount() {
+
         let input = document.getElementById('search-bar');
-        
+
         let autocomplete = new google.maps.places.Autocomplete(input);
         let address;
 
@@ -25,12 +25,12 @@ class SearchBar extends React.Component {
                 // use input if cannot convert to formatted address
                 address = autocomplete.getPlace().name;
                 this.setState({ address: address });
-                // this.handleSubmit();
+                this.handleSubmit();
             } else {
                 // use formatted address if available
                 address = autocomplete.getPlace().formatted_address;
                 this.setState({ address: address });
-                // this.handleSubmit();
+                this.handleSubmit();
             }
         });
 
@@ -44,11 +44,11 @@ class SearchBar extends React.Component {
             if (status === 'OK') {
                 lat = results[0].geometry.location.lat();
                 lng = results[0].geometry.location.lng();
-                this.props.history.push(`/search?lat=${lat}&lng=${lng}`)
+                this.props.history.push("/spots");
             } else {
-                lat = 37.773972;
-                lng = -122.431297;
-                this.props.history.push(`/search?lat=${lat}&lng=${lng}`)
+                // lat = 37.773972;
+                // lng = -122.431297;
+                this.props.history.push("/");
             }
         });
     }
@@ -59,16 +59,14 @@ class SearchBar extends React.Component {
 
 
     render() {
-        
+
         const places = ['San Francisco', 'Los Angeles', 'San Diego', 'San Jose'];
 
-        return(
-            <div className="index-page-search">
-                <div className="index-search-icon">
-                    <i className="fa fa-search" aria-hidden="true"></i>
-                    <input id="search-bar" className="index-search-input" type="text" 
-                    placeholder={`Try  \"${places[Math.floor(Math.random() * places.length)]}\"`}  />
-                </div>
+        return (
+            <div className="home-icon">
+                <i className="fa fa-search" aria-hidden="true"></i>
+                <input id="search-bar" className="search-input" type="text" 
+                placeholder={`Try  \"${places[Math.floor(Math.random() * places.length)]}\"`}  />
             </div>
         )
     }

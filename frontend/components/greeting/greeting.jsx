@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import GreetingSearchBar from './greeting_search_bar';
 
 
 export default ({currentUser, logout, openModal}) => {
@@ -39,13 +39,14 @@ export default ({currentUser, logout, openModal}) => {
 
               <div>
                   <div className="home-page-search">
-                        <div className="home-icon">
+                        <GreetingSearchBar />
+                        {/* <div className="home-icon">
                         <i className="fa fa-search" aria-hidden="true"></i>
 
                         <input className="search-input" type="text" placeholder='Try San Francisco' />
                         
                     
-                        </div>
+                        </div> */}
                       
                         <button className="search-button"><i className="fa fa-search" aria-hidden="true"></i></button>
                       

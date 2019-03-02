@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import SearchBar from './search_bar';
 
 export default ({ currentUser, logout, openModal }) => {
 
@@ -8,13 +8,16 @@ export default ({ currentUser, logout, openModal }) => {
         <div className="home-page-greeting">
             <div className="index-page-greeting-nav">
  
+                
                 <div className="spots-logo-png" ></div>
+                
                 <div >
                     <div className="index-page-search">
-                        <div className="index-search-icon">
+                    <SearchBar />
+                        {/* <div className="index-search-icon">
                             <i className="fa fa-search" aria-hidden="true"></i>
                             <input className="index-search-input" type="text" placeholder='Try San Francisco' />
-                        </div>
+                        </div> */}
                     </div>
                </div>
                
@@ -32,13 +35,14 @@ export default ({ currentUser, logout, openModal }) => {
     ) : (
             <div className="home-page-button">
                 <div className="index-logo-search" >
-                    <div className="spots-logo-png"></div>
+                    <Link to="/"><div className="spots-logo-png"></div></Link>
                     <div>
                         <div className="index-page-search">
-                            <div className="index-search-icon">
+                            <SearchBar />
+                            {/* <div className="index-search-icon">
                                 <i className="fa fa-search" aria-hidden="true"></i>
                                 <input className="index-search-input" type="text" placeholder='Try San Francisco' />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                  </div>
