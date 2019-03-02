@@ -1,20 +1,19 @@
-export default class MarkerManager{
+
+class MarkerManager{
     constructor(map, handleClick){
         this.map = map;
-        // this.handleClick = handleClick;
+        this.handleClick = handleClick;
         this.markers = {};
     }
 
 
     updateMarkers(spots){
-        // const spotsObj = {};
-        // spots.forEach( spot => spotsObj[spot.id] = spot);
+        const spotsObj = {};
+        spots.forEach( spot => spotsObj[spot.id] = spot);
 
-        // let filterSpot = spots.filter(spot => !this.markers[spot.id]);
-        // filterSpot.forEach(newSpot => this.createMarkerFromSpot(newSpot))
 
-        // spots.filter(spot=> !this.markers[spot.id])
-        // .forEach( newSpot => this.createMarkerFromSpot(newSpot))
+        spots.filter(spot=> !this.markers[spot.id])
+        .forEach( newSpot => this.createMarkerFromSpot(newSpot))
 
         // Object.keys(this.markers)
         // .filter(spotId => !spotsObj[spotId])
@@ -24,18 +23,18 @@ export default class MarkerManager{
 
     }
 
-    // createMarkerFromSpot(spot) {
-    //     const position = new google.map.LatLng(spot.lat, spot.lng)
-    //     const marker = new google.maps.marker({
-    //         position,
-    //         map: this.map,
-    //         spotId: spot.id
-    //     });
+    createMarkerFromSpot(spot) {
+        
+        const marker = new google.maps.Marker({
+            position: {lat: spot.lat, lng: spot.lng},
+            map: this.map,
+            spotId: spot.id
+        });
 
-    //     marker.addListener('click', () => this.handleClick(spot));
-    //     this.markers[marker.spotId] = marker;
+        marker.addListener('click', () => this.handleClick(spot));
+        this.markers[marker.spotId] = marker;
 
-    // }
+    }
 
     // remmoveMarker(marker) {
     //     this.markers[marker.spotId].setMap(null);
@@ -46,3 +45,5 @@ export default class MarkerManager{
 
 }
 
+
+export default MarkerManager;

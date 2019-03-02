@@ -143,7 +143,7 @@ class SpotsIndex extends React.Component{
                             </div>
                             <div className="homes-des">
                                 <div className="home-pic">
-                                    < img src={window.int1URL} />
+                                    < img src={window.int2URL} />
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
@@ -166,7 +166,7 @@ class SpotsIndex extends React.Component{
                         <div className="homes-lists">
                             <div className="homes-des">
                                 <div className="home-pic">
-                                    < img src={window.int2URL} />
+                                    < img src={window.int1URL} />
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">

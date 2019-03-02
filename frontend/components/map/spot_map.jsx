@@ -32,7 +32,7 @@ class SpotMap extends React.Component {
         // }
         // debugger
         const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 }, // this is SF
+            center: { lat: 37.7258, lng: -122.405 }, // this is SF
             zoom: 13
         };
         this.map = new google.maps.Map(this.mapNode, mapOptions);
