@@ -1,6 +1,9 @@
 .main-container{
-    display: block;
-    padding: 0px 150px 0px 150px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid rgb(165, 163, 163);
+    flex-direction: column;
 }
 
 
@@ -8,18 +11,17 @@
     font-size: 24px;
     line-height: 30px;
     font-family:'Nunito Sans', sans-serif;
-   
     padding: 20px;
     color:rgb(72, 72, 72);
     font-weight: 800;
     letter-spacing: normal;
-    padding: 2px 0 2px 0;
+    padding: 2px 0 2px 10px;
     margin-bottom: 0px;
 
 }
 
 .nav-login-button, .nav-signup-button{
-     font-size: 1em;
+    font-size: 1em;
     font-weight: 600;
     color: rgb(72, 72, 72);
     font-family: 'Nunito Sans', sans-serif;
@@ -40,8 +42,123 @@
 
 
 .index-page-container{
+    display: flex;
+    padding-top: 130px;
+    width: auto;
+}
 
-    grid-template-columns: 2fr 1fr;
-    
 
+
+.filter{
+    position: fixed;
+    margin-top:80px;
+    height: 50px;
+    border: 1px solid rgb(165, 163, 163);
+    font-family: 'Nunito Sans', sans-serif;
+    background: white;
+    width: 100%;
+
+}
+.index-map-container{
+    position: relative;
+    overflow: hidden;
+}
+.index-map{
+    position: fixed;
+    border: 1px solid rgb(165, 163, 163);
+    font-family: 'Nunito Sans', sans-serif;
+    height: 100vh;
+    width:100%;
+}
+
+
+
+.homes-column{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.homes-lists{
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.homes-des{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+img{
+    border-radius: 8px;
+    width: 450px;
+    height:300px;
+}   
+
+
+.index-page-search{
+    display: flex;
+}
+
+.index-logo-search{
+    display: flex;
+}
+
+.index-search-input{
+    width:300px;
+    font-family:'Nunito Sans', sans-serif;
+    color:#484848;
+    font-size: 20px;
+}
+
+.index-search-icon{
+    background:white;
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid rgb(165, 163, 163);
+    box-shadow: 2px 2px 15px 1px #b6b6b6;
+}
+
+
+.index-search-icon i {
+    font-size: 20px;
+    padding: 10px;
+    color:#484848;
+}
+
+.index-page-search{
+    padding-top: 20px;
+}
+
+.home-pic{
+    display: flex;
+    position: relative;
+    z-index: -1;
+}
+
+.far{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.far:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    .index-page-container{
+    display: flex;
+    padding-top: 130px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    }
 }

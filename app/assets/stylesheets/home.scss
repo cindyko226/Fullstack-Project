@@ -72,18 +72,32 @@ button:hover{
 }
 
 .home-page-button{
+    position: fixed;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    background: white;
+}
+
+
+.home-page-button-greeting{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .home-nav{
+    // position: fixed;
     display: flex;
 }
 
 
 .home-page-greeting{
+    position: fixed;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    background: white;
 }
 
 .welcome-top{
@@ -149,6 +163,16 @@ button:hover{
     padding-left: 20px;
 }
 
+
+.spots-logo-png{
+    background: image_url("logo.png");
+    width: 80px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 20px;
+    height: 80px;
+}
 // @media (min-width: 744px){
 // .home-page {
 //     height: 100vh !important;

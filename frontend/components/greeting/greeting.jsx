@@ -14,7 +14,7 @@ export default ({currentUser, logout, openModal}) => {
             </div>
         </div>
     ) : (
-        <div className="home-page-button">
+        <div className="home-page-button-greeting">
             <div className="logo-png" ></div>
             <div className="home-nav" >
                 <div className="nav-login">

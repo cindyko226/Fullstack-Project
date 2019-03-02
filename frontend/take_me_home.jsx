@@ -5,7 +5,8 @@ import Root from './components/root';
 import { logout, signup } from "./util/session_api_util";
 import {login} from './actions/session_actions';
 import configureStore from './store/store';
-
+import { fetchSpots } from './actions/spots_actions';
+ 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     
@@ -31,5 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.signup = signup; 
     window.getState = store.getState;
     window.dispatch = store.dispatch;
+    window.fetchSpots = fetchSpots;
 
 })

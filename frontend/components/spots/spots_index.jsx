@@ -15,40 +15,143 @@ class SpotsIndex extends React.Component{
     }
 
     render(){
+        // debugger 
+        if (this.props.spots.length === 0 ){
+            return null;
+        }
+
         return(
         <div className="spots-index-page">
-            <div className="home-page-greeting">
-              <Link to="/" ><div className="logo-png" ></div></Link>
-              <div className="welcome-top" >
+            <div >
+              {/* <Link to="/" > <div className="spots-logo-png" ></div></Link>  */}
+              <div >
               <NavBarContainer/>
-               {/* <GreetingContainer/> */}
-              {/* <button onClick={this.props.logout} className="home-logout" >Logout</button> */}
               </div>
+             </div> 
+
+            <div className="filter"> 
+                <p>Filter here</p>
             </div>
 
             <div className="index-page-container">
                 <div className="main-container">
+                    <div className="homes-column">
+                        <p className="index-title">Where to stay</p>
+                    </div>
                     {/* <p className="welcome">Start planning your trip, {this.props.currentUser.username}</p> */}
-                    <p className="index-title">Where to stay</p>
-                    <div>
+                    <div className="homes-column">
+
                         <h1 className="index-title">Homes in San Francisco</h1>
+                        <div className="homes-lists">
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                    < img src={window.brentURL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>{this.props.spots[0].name}</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                    < img src={window.intURL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div>
+                    <div className="homes-column">
                         <h1 className="index-title">Homes in Los Angeles</h1>
+                        <div className="homes-lists">
+                            <div className="homes-des" >
+                                <div className="home-pic">
+                                    < img src={window.artURL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                < img src={window.kitURL} />
+                                <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div>
+                    <div className="homes-column">
                         <h1 className="index-title" >Homes in San Diego</h1>
+                        <div className="homes-lists">
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                    < img src={window.art1URL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                    < img src={window.int1URL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div>
+                    <div className="homes-column">
                         <h1 className="index-title" >Homes in San Jose</h1>
+                        <div className="homes-lists">
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                    < img src={window.int2URL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                            <div className="homes-des">
+                                <div className="home-pic">
+                                    < img src={window.int3URL} />
+                                    <i className="far fa-heart"></i>
+                                </div>
+                                <div>home_type</div>
+                                <div>name</div>
+                                <div>rate</div>
+                                <div>rating</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div className="index-map">
+                <div className="index-map-container">
+                    <div className="map-zero"></div>
+                    <div className="map-one"></div>
+                    <div className="index-map">
                     <h1>Map Here</h1>
+
+                    </div>
                 </div>
 
             </div>
