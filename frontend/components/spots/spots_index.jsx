@@ -63,6 +63,7 @@ class SpotsIndex extends React.Component{
                                 </div>
                             </div>
                         </Link>
+                        <Link to={`/spots/${this.props.sf[0].id}`} >
                             <div className="homes-des">
                                 <div className="home-pic">
                                     < img src={window.intURL} />
@@ -80,7 +81,9 @@ class SpotsIndex extends React.Component{
                                         </div>
                                     </div>
                             </div>
+                        </Link>
                         </div>
+
                     </div>
 
                     <div className="homes-column">

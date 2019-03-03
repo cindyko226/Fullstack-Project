@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from '../nav-bar/nav_bar_container';
 import ShowMap from '../map/spot_map';
+import SpotMapContainer from '../map/spot_map_container';
 
 
 
@@ -14,6 +15,7 @@ class SpotShow extends React.Component {
 
 
     componentWillMount(){
+        // debugger
         this.props.fetchSpot(this.props.match.params.spotId);
     }
 
@@ -95,7 +97,7 @@ class SpotShow extends React.Component {
                             
                         </div>
                         <div className="spot-detail-reviews">Reviews</div>
-                        <div>Map here</div>
+                        <div><SpotMapContainer /></div>
                         <div className="spot-detail-pol">
                             Policies
                             <div className="rules">
