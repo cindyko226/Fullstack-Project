@@ -4,9 +4,65 @@
 
 .spot-pictures{
     padding-top:150px;
-    background: paleturquoise;
+    display: flex;
+    width: 100%;
+    height: 500px;
+
+
 }
 
+.small-pix-group{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+// .small-pix:hover{
+//      transform: scale(1.05);
+//     filter: brightness(110%);
+// }
+
+.small-pix{
+    display: flex;
+  
+}
+
+.large{
+    border-radius: 0;
+    height:100%;
+    width: 100%;
+    transition: transform 435ms;
+}
+
+.large-pix, .small-pic{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.large-pix-container, .small-pic-container{
+    height:100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.large:hover{
+    transform: scale(1.05);
+    filter: brightness(110%);
+    cursor: pointer;
+}
+
+.small1, .small2, .small3, .small4{
+    transition: transform 435ms;
+    border-radius: 0;
+}
+
+.small-pic img:hover{
+    transform: scale(1.05);
+    filter: brightness(110%);
+    cursor: pointer;
+}
 
 .spot-info-container{
    margin: 0px;
@@ -23,7 +79,7 @@
 }
 
 .booking-container{
-    background: palegreen;
+    background: papayawhip;
 }
 
 

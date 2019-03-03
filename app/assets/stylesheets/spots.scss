@@ -130,11 +130,11 @@ img{
     // padding: 5px;
     // margin-top: 5px;
     height: 48px;
-    transition: box-shadow 200ms ease-in !important;
-    transition-property: box-shadow !important;
-    transition-duration: 200ms !important;
-    transition-timing-function: ease-in !important;
-    transition-delay: 0s !important;
+    transition: box-shadow 200ms ease-in ;
+    transition-property: box-shadow ;
+    transition-duration: 200ms ;
+    transition-timing-function: ease-in ;
+    transition-delay: 0s ;
 }
 
 .index-search-icon:hover{

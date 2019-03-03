@@ -38,7 +38,41 @@ class SpotShow extends React.Component {
                 </div>
 
                 <div className="spot-pictures">
-                    All pictures here
+                    <div className="large-pix-container">
+                        <div className="large-pix">
+                        < img className="large" src={window.artURL} />
+                        </div>
+                    </div>
+                    <div className="small-pix-group">
+                        <div className="small-pix">
+                                <div className="small-pic-container">
+
+                                    <div className="small-pic">
+
+                                        < img className="small1" src={window.int3URL} />
+                                    </div>
+                                </div>
+
+                                <div className="small-pic-container">
+                                    <div className="small-pic">
+
+                                        < img className="small2" src={window.intURL} />
+                                    </div>
+                                </div>
+                        </div>
+                        <div className="small-pix">
+                            <div className="small-pic-container">
+                                <div className="small-pic">
+                                    < img className="small3" src={window.int2URL} />
+                                </div>
+                            </div>
+                            <div className="small-pic-container">
+                                <div className="small-pic">
+                                    < img className="small4" src={window.kitURL} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className = "spot-info-container">
