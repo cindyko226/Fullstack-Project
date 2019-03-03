@@ -79,15 +79,50 @@ class SpotShow extends React.Component {
 
                 <div className = "spot-info-container">
                     <div className="spot-detail-container">
-                        <div className="spot-detail-title">Name</div>
-                        <div className="spot-detail-des">Description</div>
-                        <div className="spot-detail-ame">Amenities</div>
-                        <div className="spot-detail-sleep">Sleeping arrangements</div>
+                        <div className="spot-detail-title-group" >
+                            <div className="spot-detail-type">{this.props.spot.homeType}</div>
+                            <div className="spot-detail-title">{this.props.spot.name}</div>
+                            <div className="spot-detail-city">{this.props.spot.city}</div>
+                        </div>
+                        <div className="spot-detail-des">{this.props.spot.description}</div>
+                        <div className="ame-group">
+                            <div className="spot-detail-ame">Amenities</div>
+                            <div className="ame-detail-group" > 
+                                <div className="left-ame">
+                                    <div className="wifi">
+                                        <div><i className="fas fa-wifi"></i></div>
+                                        <div>Wifi</div>
+                                    </div>
+                                    <div className="coffee">
+                                        <div><i className="fas fa-coffee"></i></div>
+                                        <div>Coffee maker</div>
+                                    </div>
+                                </div>
+                                <div className="right-ame">
+                                    <div className="laptop">
+                                        <div><i className="fas fa-laptop"></i></div>
+                                        <div>Laptop friendly workspace</div>
+                                    </div>
+                                    <div className="shower">
+                                        <div><i className="fas fa-shower"></i></div>
+                                        <div>Hot water</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="sleep-group">
+                            <div className="spot-detail-sleep">Sleeping arrangements</div>
+                            <div className="bed-group">
+                                <div><i className="fas fa-bed"></i></div>
+                                <div>Bedroom 1</div>
+                                <div><p>1 queen bed</p></div>
+                            </div>
+                        </div>
                         <div className="spot-detail-ava" >Availability</div>
                         <div className="review-star" >
                             <div className="spot-detail-review">200 REVIEWS</div>
                             
-                            <div className="index-rating">
+                            <div className="show-rating">
                                 <i id="star" className="fas fa-star"></i>
                                 <i id="star" className="fas fa-star"></i>
                                 <i id="star" className="fas fa-star"></i>
@@ -97,9 +132,14 @@ class SpotShow extends React.Component {
                             
                         </div>
                         <div className="spot-detail-reviews">Reviews</div>
-                        <div><SpotMapContainer /></div>
+                        <div className="map-group">
+                            <div className="map-title">The neighborhood</div>
+                            <div className="spot-detail-map"><SpotMapContainer /></div>
+                        </div>
                         <div className="spot-detail-pol">
-                            Policies
+                            <div>
+                                Policies
+                            </div>
                             <div className="rules">
                                 House Rules
                                 <ul>
@@ -107,7 +147,7 @@ class SpotShow extends React.Component {
                                     <li>Check-in is anytime after 2PM and check-out by 11AM</li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="rules">
                                 Cancellations
                                 <ul>
                                     <li>Free cancellation for 48 hours</li>

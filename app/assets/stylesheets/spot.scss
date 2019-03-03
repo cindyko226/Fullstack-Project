@@ -95,9 +95,12 @@
     color: #484848 ;
     padding-top: 6px ;
     padding-bottom: 6px ;
-    border-bottom: 1px solid #EBEBEB;
+  
 }
 .spot-detail-des{
+    height: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px; 
     font-weight: 400; 
@@ -112,7 +115,50 @@
     font-weight: 800 ;
     line-height: 1.375em ;
     color: #484848 ;
+
+}
+.ame-detail-group{
+    font-family: 'Nunito Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+}
+.ame-group, {
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid #EBEBEB;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+.sleep-group{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #EBEBEB;
+    justify-content: space-evenly;
+    height: 200px;
+}
+
+.left-ame, .right-ame{
+    display: flex;
+    flex-direction: column;
+}
+.wifi, .coffee, .shower, .laptop{
+    display: flex;
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+}
+.ame-detail-group i {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    height: 19px;
+    width: 19px;
+    padding: 2px;
 }
 
 .spot-detail-sleep{
@@ -121,9 +167,42 @@
     font-weight: 800 ;
     line-height: 1.375em ;
     color: #484848 ;
-    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 20px; 
 }
 
+.bed-group{
+    font-family: 'Nunito Sans', sans-serif;
+    border: 1px solid #EBEBEB ;
+    border-radius: 4px ;
+    padding: 24px ;
+    width: 20% ;
+}
+
+.bed-group div{
+    font-size: 16px ;
+    font-weight: 600 ;
+    line-height: 1.375em ;
+    color: #484848
+}
+
+.bed-group div p{
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: 1.375em ;
+    color: #484848
+}
+
+.bed-group i{
+    height: 24px;
+    width: 24px;
+    font-size: 25px;
+    color: #484848;
+    padding-bottom: 25px;
+}
+.sleep-group{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 .spot-detail-ava{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px ;
@@ -131,6 +210,7 @@
     line-height: 1.375em ;
     color: #484848 ;
     border-bottom: 1px solid #EBEBEB;
+    height: 200px;
 }
 .spot-detail-reviews{
     font-family: 'Nunito Sans', sans-serif;
@@ -139,6 +219,7 @@
     line-height: 1.375em ;
     color: #484848 ;
     border-bottom: 1px solid #EBEBEB;
+    height: 200px;
 }
 .spot-detail-review{
     font-family: 'Nunito Sans', sans-serif;
@@ -148,7 +229,8 @@
     color: #484848 ;
     padding-top: 2px ;
     padding-bottom: 2px ;
-    border-bottom: 1px solid #EBEBEB;
+   
+    height: 150px;
 }
 
 #star{
@@ -162,16 +244,31 @@
 .review-star{
 
     display:flex;
+     border-bottom: 1px solid #EBEBEB;
 }
 
-.index-rating{
-    align-self: center;
+.show-rating{
+    // align-self: center;
     padding-left: 10px; 
+    padding-top: 5px;
 }
 
+.map-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 500px;
+    border-bottom: 1px solid #EBEBEB;
+}
+.map-title{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px ;
+    font-weight: 800 ;
+    line-height: 1.25em ;
+    color: #484848 
+}
 .spot-detail-pol{
     font-family: 'Nunito Sans', sans-serif;
-
     font-size: 24px ;
     font-weight: 800 ;
     line-height: 1.25em ;
@@ -194,4 +291,28 @@
     font-weight: 400; 
     line-height: 1.375em; 
     color: #484848; 
+}
+
+.spot-detail-type{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px ;
+    font-weight: 800 ;
+    line-height: 1.3333333333333333em;
+    color:#03150d;
+}
+
+.spot-detail-city{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+}
+
+.spot-detail-title-group{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+    border-bottom: 1px solid #EBEBEB;
 }
