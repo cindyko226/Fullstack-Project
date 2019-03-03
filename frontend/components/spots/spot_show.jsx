@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from '../nav-bar/nav_bar_container';
-import ShowMap from '../map/spot_map';
+import ShowMap from '../map/show_map';
 import SpotMapContainer from '../map/spot_map_container';
 
 
@@ -134,21 +134,28 @@ class SpotShow extends React.Component {
                         <div className="spot-detail-reviews">Reviews</div>
                         <div className="map-group">
                             <div className="map-title">The neighborhood</div>
-                            <div className="spot-detail-map"><SpotMapContainer /></div>
+                            <div className="spot-detail-map"><ShowMap spot={this.props.spot} /></div>
                         </div>
                         <div className="spot-detail-pol">
-                            <div>
-                                Policies
+                            <div className="pol-group">
+                                <div>
+                                    Policies
+                                </div>
+                                <div className="rules">
+                                    <div>
+                                    House Rules
+
+                                    </div>
+                                    <ul>
+                                        <li>No smoking, partities, or events</li>
+                                        <li>Check-in is anytime after 2PM and check-out by 11AM</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div className="rules">
-                                House Rules
-                                <ul>
-                                    <li>No smoking, partities, or events</li>
-                                    <li>Check-in is anytime after 2PM and check-out by 11AM</li>
-                                </ul>
-                            </div>
-                            <div className="rules">
+                                <div>
                                 Cancellations
+                                </div>
                                 <ul>
                                     <li>Free cancellation for 48 hours</li>
                                     <li>After that, get a full refund, minus the service fee.</li>

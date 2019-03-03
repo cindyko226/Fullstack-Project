@@ -4,7 +4,7 @@ import SpotMapContainer from '../map/spot_map_container';
 
 
 const Search = ({ spots, logout, fetchSpots}) => {
-    console.log(spots);
+    // console.log(spots);
     // debugger
     return(
     <div>

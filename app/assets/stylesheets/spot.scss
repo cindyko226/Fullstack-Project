@@ -28,8 +28,6 @@
     border-radius: 0;
     height:100%;
     width: 100%;
-    transition: transform 435ms;
-    overflow: hidden;
 }
 
 .large-pix, .small-pic{
@@ -46,9 +44,9 @@
 
 
 .large:hover{
+    transition: transform 435ms;
     transform: scale(1.05);
     filter: brightness(110%);
-    cursor: pointer;
 }
 
 .small1, .small2, .small3, .small4{
@@ -59,7 +57,6 @@
 .small-pic img:hover{
     transform: scale(1.05);
     filter: brightness(110%);
-    cursor: pointer;
 }
 
 .spot-info-container{
@@ -80,6 +77,8 @@
 }
 
 .booking-container{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2em;
     width: 376px;
     height: 40%;
     background: papayawhip;
@@ -131,6 +130,22 @@
     border-bottom: 1px solid #EBEBEB;
     justify-content: space-evenly;
     height: 150px;
+}
+
+.pol-group{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #EBEBEB;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+
+.rules ul li{ 
+    font-size: 16px ;
+    font-weight: 400 ;
+    line-height: 1.375em ;
+    color: #484848 ;
 }
 
 .sleep-group{
@@ -257,8 +272,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 500px;
+    height: 700px;
     border-bottom: 1px solid #EBEBEB;
+    overflow: scroll;
+    // z-index: -1;
 }
 .map-title{
     font-family: 'Nunito Sans', sans-serif;
@@ -278,11 +295,15 @@
 }
 
 .rules{
+    display: flex;
+    flex-direction: column;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px ;
     font-weight: 800 ;
     line-height: 1.375em ;
     color: #484848 ;
+    justify-content: space-evenly;
+    height: 100px;
 }
 
 .spot-detail-pol ul li{
