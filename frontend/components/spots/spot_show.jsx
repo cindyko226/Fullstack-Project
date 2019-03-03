@@ -1,0 +1,102 @@
+import React from 'react';
+import NavBarContainer from '../nav-bar/nav_bar_container';
+import ShowMap from '../map/spot_map';
+
+
+
+class SpotShow extends React.Component {
+
+    constructor(props){
+        super(props);
+        // this.state
+        
+    }
+
+
+    componentWillMount(){
+        this.props.fetchSpot(this.props.match.params.spotId);
+    }
+
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
+
+    render(){
+
+        if (!this.props.spot) {
+            return null;
+        }
+
+
+        return(
+            <div className="show-container">
+                <div>
+                    <div>
+                        <NavBarContainer />
+                    </div>
+
+                </div>
+
+                <div className="spot-pictures">
+                    All pictures here
+                </div>
+
+                <div className = "spot-info-container">
+                    <div className="spot-detail-container">
+                        <div className="spot-detail-title">Name</div>
+                        <div className="spot-detail-des">Description</div>
+                        <div className="spot-detail-ame">Amenities</div>
+                        <div className="spot-detail-sleep">Sleeping arrangements</div>
+                        <div className="spot-detail-ava" >Availability</div>
+                        <div className="review-star" >
+                            <div className="spot-detail-review">200 REVIEWS</div>
+                            
+                            <div className="index-rating">
+                                <i id="star" className="fas fa-star"></i>
+                                <i id="star" className="fas fa-star"></i>
+                                <i id="star" className="fas fa-star"></i>
+                                <i id="star" className="fas fa-star"></i>
+                                <i id="star" className="fas fa-star"></i>
+                            </div>
+                            
+                        </div>
+                        <div className="spot-detail-reviews">Reviews</div>
+                        <div>Map here</div>
+                        <div className="spot-detail-pol">
+                            Policies
+                            <div className="rules">
+                                House Rules
+                                <ul>
+                                    <li>No smoking, partities, or events</li>
+                                    <li>Check-in is anytime after 2PM and check-out by 11AM</li>
+                                </ul>
+                            </div>
+                            <div>
+                                Cancellations
+                                <ul>
+                                    <li>Free cancellation for 48 hours</li>
+                                    <li>After that, get a full refund, minus the service fee.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="booking-container">
+                        Booking form here 
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        )
+
+    }
+
+
+}
+
+export default SpotShow;

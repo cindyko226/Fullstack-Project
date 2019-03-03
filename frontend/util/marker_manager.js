@@ -19,7 +19,7 @@ class MarkerManager{
         // .filter(spotId => !spotsObj[spotId])
         // .forEach((spotId) => this.remmoveMarker(this.markers[spotId]))
 
-        console.log('time to update');
+        // console.log('time to update');
 
     }
 

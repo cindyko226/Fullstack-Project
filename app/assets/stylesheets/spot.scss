@@ -1,0 +1,138 @@
+.show-container{
+    position: relative;
+}
+
+.spot-pictures{
+    padding-top:150px;
+    background: paleturquoise;
+}
+
+
+.spot-info-container{
+   margin: 0px;
+   display: grid;
+   width: auto;
+   grid-template-columns: 1fr 1fr;
+   padding-left: 24px;
+   padding-right:24px;
+}
+
+.spot-detail-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-container{
+    background: palegreen;
+}
+
+
+.spot-detail-title{
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 32px ;
+    font-weight: 800 ;
+    line-height: 1.125em; 
+    color: #484848 ;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+    border-bottom: 1px solid #EBEBEB;
+}
+.spot-detail-des{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 1.375em; 
+    color: #484848; 
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.spot-detail-ame{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px ;
+    font-weight: 800 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.spot-detail-sleep{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px ;
+    font-weight: 800 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.spot-detail-ava{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px ;
+    font-weight: 800 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+    border-bottom: 1px solid #EBEBEB;
+}
+.spot-detail-reviews{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px ;
+    font-weight: 800 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+    border-bottom: 1px solid #EBEBEB;
+}
+.spot-detail-review{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px ;
+    font-weight: 800 ;
+    line-height: 1.25em ;
+    color: #484848 ;
+    padding-top: 2px ;
+    padding-bottom: 2px ;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#star{
+
+    font-size:16px;
+    line-height: 1.43;
+    color: teal;
+
+}
+
+.review-star{
+
+    display:flex;
+}
+
+.index-rating{
+    align-self: center;
+    padding-left: 10px; 
+}
+
+.spot-detail-pol{
+    font-family: 'Nunito Sans', sans-serif;
+
+    font-size: 24px ;
+    font-weight: 800 ;
+    line-height: 1.25em ;
+    color: #484848 ;
+    padding-top: 2px ;
+    padding-bottom: 2px ;
+}
+
+.rules{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px ;
+    font-weight: 800 ;
+    line-height: 1.375em ;
+    color: #484848 ;
+}
+
+.spot-detail-pol ul li{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 1.375em; 
+    color: #484848; 
+}

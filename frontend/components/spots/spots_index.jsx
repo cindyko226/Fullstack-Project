@@ -44,13 +44,14 @@ class SpotsIndex extends React.Component{
 
                         <h1 className="index-title">Homes in San Francisco</h1>
                         <div className="homes-lists">
+                        <Link to={`/spots/${this.props.sf[0].id}`} >
                             <div className="homes-des">
                                 <div className="home-pic">
                                     < img src={window.brentURL} />
                                     <i className="far fa-heart"></i>
                                 </div>
                                 <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.spots[0].home_type} * {this.props.spots[0].beds} BED</div>
+                                    <div className="index-spot-type">{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
                                     <div className="index-spot-title">{this.props.spots[0].name}</div>
                                     <div className="index-rating">
                                             <i className="fas fa-star"></i>
@@ -61,13 +62,14 @@ class SpotsIndex extends React.Component{
                                     </div>
                                 </div>
                             </div>
+                        </Link>
                             <div className="homes-des">
                                 <div className="home-pic">
                                     < img src={window.intURL} />
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[1].home_type} * {this.props.spots[1].beds} BED</div>
+                                        <div className="index-spot-type" >{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
                                         <div className="index-spot-title">{this.props.spots[1].name}</div>
                                         <div className="index-rating" >
                                             <i className="fas fa-star"></i>
@@ -90,7 +92,7 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type">{this.props.spots[0].home_type} * {this.props.spots[0].beds} BED</div>
+                                        <div className="index-spot-type">{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
                                         <div className="index-spot-title" >{this.props.spots[0].name}</div>
                                         <div className="index-rating">
                                             <i className="fas fa-star"></i>
@@ -107,7 +109,7 @@ class SpotsIndex extends React.Component{
                                 <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type">{this.props.spots[1].home_type} * {this.props.spots[1].beds} BED</div>
+                                        <div className="index-spot-type">{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
                                         <div className="index-spot-title" >{this.props.spots[1].name}</div>
                                         <div className="index-rating" >
                                             <i className="fas fa-star"></i>
@@ -130,7 +132,7 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[0].home_type} * {this.props.spots[0].beds} BED</div>
+                                        <div className="index-spot-type" >{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
                                         <div className="index-spot-title">  {this.props.spots[0].name}</div>
                                         <div className="index-rating" >
                                             <i className="fas fa-star"></i>
@@ -147,7 +149,7 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[1].home_type} * {this.props.spots[1].beds} BED</div>
+                                        <div className="index-spot-type" >{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
                                         <div className="index-spot-title" >{this.props.spots[1].name}</div>
                                         <div className="index-rating" >
                                             <i className="fas fa-star"></i>
@@ -170,7 +172,7 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[0].home_type} * {this.props.spots[0].beds} BED</div>
+                                        <div className="index-spot-type" >{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
                                         <div className="index-spot-title">{this.props.spots[0].name}</div>
                                         <div className="index-rating">
                                             <i className="fas fa-star"></i>
@@ -187,7 +189,7 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type">{this.props.spots[1].home_type} * {this.props.spots[1].beds} BED</div>
+                                        <div className="index-spot-type">{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
                                         <div className="index-spot-title">{this.props.spots[1].name}</div>
                                         <div className="index-rating">
                                             <i className="fas fa-star"></i>
