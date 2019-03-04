@@ -3,7 +3,7 @@ export const fetchSpots = (filters) => {
         $.ajax({
             method: 'GET',
             url: "/api/spots/",
-            data: {filters}
+            data: filters
         })
     )
 }

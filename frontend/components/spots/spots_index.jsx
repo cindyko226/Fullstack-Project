@@ -16,6 +16,8 @@ class SpotsIndex extends React.Component{
         this.props.fetchSpots(this.props.filters);
     }
 
+   
+
     render(){
         if (this.props.spots.length === 0 ){
             return null;

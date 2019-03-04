@@ -20,7 +20,7 @@ class MarkerManager{
 
         Object.keys(this.markers)
         .filter(spotId => !spotsObj[spotId])
-        .map((marker) => this.remmoveMarker(marker));
+        .map((marker) => this.removeMarker(marker));
 
         // console.log('time to update');
 

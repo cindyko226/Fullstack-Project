@@ -8,6 +8,7 @@ const msp = (state, ownProps) => {
     // debugger
     return ({
         spots: Object.values(state.entities.spots),
+        search: state.ui.search,
         singleSpot: false
     });
 }

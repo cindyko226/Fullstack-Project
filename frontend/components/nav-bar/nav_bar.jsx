@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './search_bar';
 
-export default ({ currentUser, logout, openModal }) => {
-
+export default ({ currentUser, logout, openModal, receiveSearch }) => {
+    // debugger
     const display = currentUser ? (
         <div className="home-page-greeting">
             <div className="index-page-greeting-nav">
@@ -13,7 +13,7 @@ export default ({ currentUser, logout, openModal }) => {
                 
                 <div >
                     <div className="index-page-search">
-                    <SearchBar />
+                    <SearchBar receiveSearch={receiveSearch}/>
                         
                     </div>
                </div>
@@ -35,8 +35,8 @@ export default ({ currentUser, logout, openModal }) => {
                     <Link to="/"><div className="spots-logo-png"></div></Link>
                     <div>
                         <div className="index-page-search">
-                            <SearchBar />
-                            
+                            <SearchBar receiveSearch ={receiveSearch} />
+        
                         </div>
                     </div>
                  </div>

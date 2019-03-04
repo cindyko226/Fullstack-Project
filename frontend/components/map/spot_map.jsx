@@ -39,7 +39,7 @@ class SpotMap extends React.Component {
                 lat: parseFloat(coordinates.lat),
                 lng: parseFloat(coordinates.lng)
             },
-            zoom: 13
+            zoom: 12
         };
         
         // debugger
@@ -47,8 +47,8 @@ class SpotMap extends React.Component {
         // debugger
         this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick);
         // debugger
-        this.MarkerManager.updateMarkers(this.props.spots);
         this.registerListeners();
+        this.MarkerManager.updateMarkers(this.props.spots);
     }
 
     componentDidUpdate(prevProps){
@@ -87,8 +87,9 @@ class SpotMap extends React.Component {
     
 
     render() {
+        // debugger
         return(
-
+            
             <div className="map" ref={map => this.mapNode = map}>
                 
             </div>
