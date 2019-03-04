@@ -32,7 +32,7 @@ class Spot < ApplicationRecord
 
     def in_bounds(bounds)
     bounds = bounds.values
-    if self.lat.between?(bounds[1]['lat'].to_f, bounds[0]['lat'].to_f) && self.lngitude.between?(bounds[1]['lng'].to_f, bounds[0]['lng'].to_f)
+    if self.lat.between?(bounds[1]['lat'].to_f, bounds[0]['lat'].to_f) && self.lng.between?(bounds[1]['lng'].to_f, bounds[0]['lng'].to_f)
       return true
     end
 

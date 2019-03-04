@@ -27,8 +27,8 @@ export const clearErrors = () => ({
 })
 
 
-export const fetchSpots = () => dispatch => (
-    spotsApiUtil.fetchSpots()
+export const fetchSpots = (filters) => dispatch => (
+    spotsApiUtil.fetchSpots(filters)
     .then(spots => dispatch(receiveSpots(spots)),
         errors => dispatch(receiveErrors(errors))
     ) 

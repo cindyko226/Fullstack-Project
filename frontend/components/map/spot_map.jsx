@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {withRouter} from 'react-router-dom';
-
 import MarkerManager from '../../util/marker_manager';
+import queryString from 'query-string';
 
 // const getCoordsObj = latLng => ({
 //     lat: latLng.lat(),
@@ -24,67 +23,74 @@ class SpotMap extends React.Component {
         super(props);
         // console.log(props);
         // debugger
+        this.resetMap = this.resetMap.bind(this);
+        this.registerListeners = this.registerListeners.bind(this);
+        this.handleMarkerClick = this.handleMarkerClick.bind(this);
     }
 
     componentDidMount() {
-        // if (this.props.spots.length === 0) {
-        //     return null;
-        // }
-        // debugger
-        const mapOptions = {
-            center: { lat: 37.7258, lng: -122.405 }, // this is SF
-            zoom: 13
-        };
-        this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map);
-
-        // debugger
-        this.MarkerManager.updateMarkers(this.props.spots);
-        
-        // wrap this.mapNode in a Google Map
-        // this.map = new google.maps.Map(this.mapNode, mapOptions);
-        
-        // const map = this.refs.map;
-        // this.map = new google.maps.Map(map, mapOptions);
-        // this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this))
-        
-        // if(!true){
-        //     this.props.fetchSpot(this.props.spotId)
-        // }else {
-        //     this.registerListeners();
-        //     this.MarkerManager.updateMarkers(this.props.spots);
-        // }
+        this.resetMap();
 
     }
 
+    resetMap(){
+        
+        let coordinates;
+        if (this.props.location.search) {
+            coordinates = queryString.parse(this.props.location, search);
+        } else {
+            coordinates = { lat: '37.773972', lng: '-122.431297' };
+        }
+        
+        const mapOptions = {
+            center: {
+                lat: parseFloat(coordinates.lat),
+                lng: parseFloat(coordinates.lng)
+            },
+            zoom: 13
+        };
+        
+        // debugger
+        this.map = new google.maps.Map(this.mapNode, mapOptions);
+        // debugger
+        this.registerListeners();
+        this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick);
+        // debugger
+        this.MarkerManager.updateMarkers(this.props.spots);
+    }
 
-    // componentDidUpdate(){
-    //     if(!ture){
-    //         const targetSpotKey = Object.keys(this.props.spots)[0];
-    //         const targetSpot = this.props.spots[targetSpotKey];
-    //         this.MarkerManager.updateMarkers([targetSpot]); //grabs only that one bench
-    //     }else {
-    //         this.MarkerManager.updateMarkers(this.props.spots)
-    //     }
-    // }
+    componentDidUpdate(prevProps){
+        // if(!ture){
+        //     const targetSpotKey = Object.keys(this.props.spots)[0];
+        //     const targetSpot = this.props.spots[targetSpotKey];
+        //     this.MarkerManager.updateMarkers([targetSpot]); 
+        // }else {
+        //     this.MarkerManager.updateMarkers(this.props.spots)
+        // }
+        this.MarkerManager.updateMarkers(this.props.spots)
+        if(this.props.location.search != prevProps.location.search){
+            this.resetMap();
+        }
+    }
 
-    // registerListeners(){
-    //     google.maps.event.addListener(this.map, 'idle', ()=> {
-    //         const { north, south, east, west } = this.map.getBounds().toJSON();
-    //         const bounds = {
-    //             northEase: {lat: north, lng: east},
-    //             southWest: { lat: south, lng: west} };
-    //             this.props.updateMarkers('bounds', bounds); 
-    //     });
-    //     google.maps.event.addLiatener(this.map, 'click', (event) => {
-    //         const coords = getCoordsObj(event.latLng);
-    //         this.handleClick(coords);
-    //     });
-    //  }
+    componentWillUnmount(){
+        google.maps.event.clearListeners(this.map, 'idle');
+    }
+
+    registerListeners(){
+        google.maps.event.addListener(this.map, 'idle', ()=> {
+            const { north, south, east, west } = this.map.getBounds().toJSON();
+            const bounds = {
+                northEase: {lat: north, lng: east},
+                southWest: { lat: south, lng: west} };
+            this.props.updateFilter('bounds', bounds); 
+        });
+       
+     }
     
-    //  handleMarkerClick(spot) {
-    //      this.props.history.push(`api/spots/${spot.id}`);
-    //  }
+     handleMarkerClick(spot) {
+         this.props.history.push(`spots/${spot.id}`);
+     }
 
     // handleClick(coords) {
     //     this.props.history.push({
@@ -97,11 +103,11 @@ class SpotMap extends React.Component {
         return(
 
             <div className="map" ref={map => this.mapNode = map}>
-                Map
+                
             </div>
         )
     }
 
 }
 
-export default SpotMap;
+export default withRouter(SpotMap);
