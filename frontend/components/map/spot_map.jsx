@@ -6,7 +6,6 @@ import queryString from 'query-string';
 
 
 
-
 class SpotMap extends React.Component {
 
     constructor(props){
@@ -19,7 +18,8 @@ class SpotMap extends React.Component {
     }
 
     componentDidMount() {
-        this.resetMap();
+        // debugger
+        return this.resetMap();
 
     }
 
@@ -68,14 +68,15 @@ class SpotMap extends React.Component {
     }
 
     registerListeners(){
-        this.map.addListener('idle', () => {
+        google.maps.event.addListener(this.map, 'idle', () => {
             let { north, south, east, west } = this.map.getBounds().toJSON();
             let bounds = {
                 ne: { lat: north, lng: east },
                 sw: { lat: south, lng: west }
             }
-            this.props.updateFilter('bounds', bounds)
-        })
+            this.props.updateFilter('bounds', bounds);
+        });
+        
        
      }
     

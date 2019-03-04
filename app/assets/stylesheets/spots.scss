@@ -52,10 +52,12 @@
     position: fixed;
     margin-top:80px;
     height: 50px;
+    padding-top: 10px;
     border: 1px solid rgb(235,235,235);
     font-family: 'Nunito Sans', sans-serif;
     background: white;
     width: 100%;
+    z-index: 1;
 
 }
 .index-map-container{
@@ -149,7 +151,6 @@ img{
 .home-pic{
     display: flex;
     position: relative;
-    z-index: -1;
 }
 
 .far{

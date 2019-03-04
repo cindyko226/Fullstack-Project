@@ -6,10 +6,16 @@ import {fetchSpots} from '../../actions/spots_actions';
 const msp = (state, ownProps) => {
     // debugger
     const sf = Object.values(state.entities.spots).filter(spot => spot.city === 'San Francisco').slice(0, 2);
+    const la = Object.values(state.entities.spots).filter(spot => spot.city === 'Los Angeles').slice(0, 2);
+    const sd = Object.values(state.entities.spots).filter(spot => spot.city === 'San Diego').slice(0, 2);
+    const sj = Object.values(state.entities.spots).filter(spot => spot.city === 'San Jose').slice(0, 2);
     return({
         currentUser: state.entities.users[state.session.id],
         spots: Object.values(ownProps.spots),
         sf,
+        la,
+        sd,
+        sj,
         filters: state.ui.filters
 
     })

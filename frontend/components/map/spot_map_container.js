@@ -7,7 +7,8 @@ import { updateFilter } from '../../actions/filter_actions';
 const msp = (state, ownProps) => {
     // debugger
     return ({
-        spots: Object.values(state.entities.spots)
+        spots: Object.values(state.entities.spots),
+        singleSpot: false
     });
 }
 

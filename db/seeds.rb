@@ -60,5 +60,129 @@ ActiveRecord::Base.transaction do
   )
   
 
+  spot3 = Spot.create!(
+    host_id: user2.id,
+    name: "Great Pool",
+    address: '548 S Los Angeles St',
+    city: 'Los Angeles',
+    state: 'CA',
+    lat: 34.044916, 
+    lng: -118.248494,
+    guests: 4,
+    bedrooms: 3,
+    beds: 3,
+    bathrooms: 4,
+    description: "Welcome to our gorgeous house! Centrally located in historic 
+                  Hancock Park, we just minutes away from Hollywood Attractions, 
+                  Museums & Galleries, The Grove Shopping center/restaurants, 
+                  Universal Studio, Downtown LA! Our place is ideal for 4 guests",
+    rate: 350,
+    home_type: "ENTIRE GUEST SUITE"
+
+  )
+
+
+  spot4 = Spot.create!(
+    host_id: user2.id,
+    name: "The Cheer",
+    address: '5405029007',
+    city: 'Los Angeles',
+    state: 'CA',
+    lat: 34.065956, 
+    lng: -118.250539,
+    guests: 1,
+    bedrooms: 1,
+    beds: 1,
+    bathrooms: 2,
+    description: "Our darling, sunny, detached, private studio guest house, 
+                  the NoHouse, is ready for your visit to Los Angeles! ",
+    rate: 100,
+    home_type: "ENTIRE GUEST SUITE"
+
+  )
+
+
+
+  spot5 = Spot.create!(
+    host_id: user3.id,
+    name: "The Beach",
+    address: '501 21st St',
+    city: 'San Diego',
+    state: 'CA',
+    lat: 32.711297, 
+    lng: -117.144845,
+    guests: 2,
+    bedrooms: 2,
+    beds: 3,
+    bathrooms: 2,
+    description: "Our darling, sunny, detached, private studio guest house, 
+                  the NoHouse, is ready for your visit to Los Angeles!",
+    rate: 70,
+    home_type: "ENTIRE GUEST SUITE"
+
+  )
+
+
+  spot6 = Spot.create!(
+    host_id: user3.id,
+    name: "The Deluxe",
+    address: '5354320200',
+    city: 'San Diego',
+    state: 'CA',
+    lat: 32.710159, 
+    lng: -117.144609,
+    guests: 4,
+    bedrooms: 4,
+    beds: 4,
+    bathrooms: 5,
+    description: "350 sq ft JUST RENOVATED large room in stunning Mediterranean-style 
+                  estate nestled in a secure, quiet canyon in Mission Hills. Includes 
+                  private bathroom with large shower.",
+    rate: 170,
+    home_type: "ENTIRE GUEST SUITE"
+  )
+
+
+
+  spot7 = Spot.create!(
+    host_id: user4.id,
+    name: "The Willow ",
+    address: '24940040',
+    city: 'San Jose',
+    state: 'CA',
+    lat: 37.346624, 
+    lng: -121.894283,
+    guests: 2,
+    bedrooms: 2,
+    beds: 2,
+    bathrooms: 3,
+    description: "Very quite neighborhood, 1/3 acre lot, near eBay & public transit",      
+    rate: 200,
+    home_type: "ENTIRE GUEST SUITE"
+  )
+
+   spot8 = Spot.create!(
+    host_id: user5.id,
+    name: "The Modern",
+    address: '24938020',
+    city: 'San Jose',
+    state: 'CA',
+    lat: 37.347767, 
+    lng: -121.892727,
+    guests: 4,
+    bedrooms: 4,
+    beds: 4,
+    bathrooms: 5,
+    description: "Nice quiet location. Bright, tranquil, and comfortable unit 
+                  in a private house with a separate entrance and private yard. 
+                  Unit consists of one bedroom, one bathroom, 
+                  and a kitchen and living area. ",
+    rate: 110,
+    home_type: "ENTIRE GUEST SUITE"
+  )
+
+
+
+
 
 end

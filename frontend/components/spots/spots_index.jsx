@@ -49,8 +49,8 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                 <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.spots[0].name}</div>
+                                    <div className="index-spot-type">{this.props.sf[0].homeType} • {this.props.sf[0].beds} BED</div>
+                                    <div className="index-spot-title">{this.props.sf[0].name}</div>
                                     <div className="index-rating">
                                             <i className="fas fa-star"></i>
                                             <i className="fas fa-star"></i>
@@ -68,8 +68,8 @@ class SpotsIndex extends React.Component{
                                     <i className="far fa-heart"></i>
                                 </div>
                                     <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
-                                        <div className="index-spot-title">{this.props.spots[1].name}</div>
+                                        <div className="index-spot-type" >{this.props.sf[1].homeType} • {this.props.sf[1].beds} BED</div>
+                                        <div className="index-spot-title">{this.props.sf[1].name}</div>
                                         <div className="index-rating" >
                                             <i className="fas fa-star"></i>
                                             <i className="fas fa-star"></i>
@@ -87,121 +87,133 @@ class SpotsIndex extends React.Component{
                     <div className="homes-column">
                         <h1 className="index-title">Homes in Los Angeles</h1>
                         <div className="homes-lists">
-                            <div className="homes-des" >
-                                <div className="home-pic">
-                                    < img src={window.artURL} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                    <div className="index-spot-info">
-                                        <div className="index-spot-type">{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
-                                        <div className="index-spot-title" >{this.props.spots[0].name}</div>
-                                        <div className="index-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
+                                <Link to={`/spots/${this.props.la[0].id}`} >
+                                    <div className="homes-des" >
+                                        <div className="home-pic">
+                                            < img src={window.artURL} />
+                                            <i className="far fa-heart"></i>
                                         </div>
+                                            <div className="index-spot-info">
+                                                <div className="index-spot-type">{this.props.la[0].homeType} • {this.props.la[0].beds} BED</div>
+                                                <div className="index-spot-title" >{this.props.la[0].name}</div>
+                                                <div className="index-rating">
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                < img src={window.kitURL} />
-                                <i className="far fa-heart"></i>
-                                </div>
-                                    <div className="index-spot-info">
-                                        <div className="index-spot-type">{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
-                                        <div className="index-spot-title" >{this.props.spots[1].name}</div>
-                                        <div className="index-rating" >
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
+                                </Link>
+                                <Link to={`/spots/${this.props.la[1].id}`} >
+                                    <div className="homes-des">
+                                        <div className="home-pic">
+                                        < img src={window.kitURL} />
+                                        <i className="far fa-heart"></i>
                                         </div>
+                                            <div className="index-spot-info">
+                                                <div className="index-spot-type">{this.props.la[1].homeType} • {this.props.la[1].beds} BED</div>
+                                                <div className="index-spot-title" >{this.props.la[1].name}</div>
+                                                <div className="index-rating" >
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
+                                </Link>
                         </div>
                     </div>
 
                     <div className="homes-column">
                         <h1 className="index-title" >Homes in San Diego</h1>
                         <div className="homes-lists">
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={window.art1URL} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                    <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
-                                        <div className="index-spot-title">  {this.props.spots[0].name}</div>
-                                        <div className="index-rating" >
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
+                                <Link to={`/spots/${this.props.sd[0].id}`} >
+                                    <div className="homes-des">
+                                        <div className="home-pic">
+                                            < img src={window.art1URL} />
+                                            <i className="far fa-heart"></i>
                                         </div>
+                                            <div className="index-spot-info">
+                                                <div className="index-spot-type" >{this.props.sd[0].homeType} • {this.props.sd[0].beds} BED</div>
+                                                <div className="index-spot-title">  {this.props.sd[0].name}</div>
+                                                <div className="index-rating" >
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={window.int2URL} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                    <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
-                                        <div className="index-spot-title" >{this.props.spots[1].name}</div>
-                                        <div className="index-rating" >
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
+                                </Link>
+                                <Link to={`/spots/${this.props.sd[1].id}`} >
+                                    <div className="homes-des">
+                                        <div className="home-pic">
+                                            < img src={window.int2URL} />
+                                            <i className="far fa-heart"></i>
                                         </div>
+                                            <div className="index-spot-info">
+                                                <div className="index-spot-type" >{this.props.sd[1].homeType} • {this.props.sd[1].beds} BED</div>
+                                                <div className="index-spot-title" >{this.props.sd[1].name}</div>
+                                                <div className="index-rating" >
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
+                                </Link>
                         </div>
                     </div>
 
                     <div className="homes-column">
                         <h1 className="index-title" >Homes in San Jose</h1>
                         <div className="homes-lists">
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={window.int1URL} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                    <div className="index-spot-info">
-                                        <div className="index-spot-type" >{this.props.spots[0].homeType} • {this.props.spots[0].beds} BED</div>
-                                        <div className="index-spot-title">{this.props.spots[0].name}</div>
-                                        <div className="index-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
+                                <Link to={`/spots/${this.props.sj[0].id}`} >
+                                    <div className="homes-des">
+                                        <div className="home-pic">
+                                            < img src={window.int2URL} />
+                                            <i className="far fa-heart"></i>
                                         </div>
+                                            <div className="index-spot-info">
+                                                <div className="index-spot-type" >{this.props.sj[0].homeType} • {this.props.sj[0].beds} BED</div>
+                                                <div className="index-spot-title">{this.props.sj[0].name}</div>
+                                                <div className="index-rating">
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={window.int3URL} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                    <div className="index-spot-info">
-                                        <div className="index-spot-type">{this.props.spots[1].homeType} • {this.props.spots[1].beds} BED</div>
-                                        <div className="index-spot-title">{this.props.spots[1].name}</div>
-                                        <div className="index-rating">
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
-                                            <i className="fas fa-star"></i>
+                                </Link>
+                                <Link to={`/spots/${this.props.sj[1].id}`} >
+                                    <div className="homes-des">
+                                        <div className="home-pic">
+                                            < img src={window.int3URL} />
+                                            <i className="far fa-heart"></i>
                                         </div>
+                                            <div className="index-spot-info">
+                                                <div className="index-spot-type">{this.props.sj[1].homeType} • {this.props.sj[1].beds} BED</div>
+                                                <div className="index-spot-title">{this.props.sj[1].name}</div>
+                                                <div className="index-rating">
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                    <i className="fas fa-star"></i>
+                                                </div>
+                                            </div>
                                     </div>
-                            </div>
-                        </div>
+                                </Link>
+                             </div>
                     </div>
                 </div>
 

@@ -9,9 +9,10 @@ const changeFilter = (filter, value) => ({
 });
 
 export function updateFilter(filter, value) {
+    // debugger
     return (dispatch, getState) => {
         dispatch(changeFilter(filter, value));
-        return fetchSpots(getState().filters)(dispatch);
+        return fetchSpots(getState().ui.filters)(dispatch);
     }
 }
 

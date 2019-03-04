@@ -1,6 +1,8 @@
 
 class MarkerManager{
+    
     constructor(map, handleClick, single){
+    
         this.map = map;
         this.handleClick = handleClick;
         this.markers = {};
@@ -76,8 +78,8 @@ class MarkerManager{
     }
 
     remmoveMarker(marker) {
-        this.markers[markerId].setMap(null);
-        delete this.markers[markerId];
+        this.markers[marker.spotId].setMap(null);
+        delete this.markers[marker.spotId];
     }
 
 
