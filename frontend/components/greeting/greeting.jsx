@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import GreetingSearchBar from './greeting_search_bar';
 
 
+
 export default ({currentUser, logout, openModal}) => {
 
     const display = currentUser ? (

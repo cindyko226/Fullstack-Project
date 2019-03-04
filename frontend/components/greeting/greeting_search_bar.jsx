@@ -4,15 +4,16 @@ import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
+        // debugger
         super(props);
-
+        
         this.state = { address: null };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        
     }
-
-
+    
+    
     componentDidMount() {
 
         let input = document.getElementById('search-bar');
@@ -44,11 +45,11 @@ class SearchBar extends React.Component {
             if (status === 'OK') {
                 lat = results[0].geometry.location.lat();
                 lng = results[0].geometry.location.lng();
-                this.props.history.push("/spots");
+                this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
             } else {
-                // lat = 37.773972;
-                // lng = -122.431297;
-                this.props.history.push("/");
+                lat = 37.773972;
+                lng = -122.431297;
+                this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
             }
         });
     }
@@ -65,7 +66,7 @@ class SearchBar extends React.Component {
         return (
             <div className="home-icon">
                 <i className="fa fa-search" aria-hidden="true"></i>
-                <input id="search-bar" className="search-input" type="text" 
+                <input id="search-bar" className="search-input" type="text" onChange={this.handleChange} 
                 placeholder={`Try  \"${places[Math.floor(Math.random() * places.length)]}\"`}  />
             </div>
         )

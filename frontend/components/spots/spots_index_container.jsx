@@ -9,7 +9,9 @@ const msp = (state, ownProps) => {
     return({
         currentUser: state.entities.users[state.session.id],
         spots: Object.values(ownProps.spots),
-        sf
+        sf,
+        filters: state.ui.filters
+
     })
 }
 

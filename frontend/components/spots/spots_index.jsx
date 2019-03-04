@@ -9,11 +9,11 @@ class SpotsIndex extends React.Component{
 
     constructor(props){
         super(props);
-        console.log(props);
     }
 
     componentDidMount(){
-        this.props.fetchSpots();
+        // debugger
+        this.props.fetchSpots(this.props.filters);
     }
 
     render(){
@@ -24,7 +24,6 @@ class SpotsIndex extends React.Component{
         return(
         <div className="spots-index-page">
             <div >
-              {/* <Link to="/" > <div className="spots-logo-png" ></div></Link>  */}
               <div >
               <NavBarContainer/>
               </div>
@@ -39,7 +38,6 @@ class SpotsIndex extends React.Component{
                     <div className="homes-column">
                         <p className="index-title">Where to stay</p>
                     </div>
-                    {/* <p className="welcome">Start planning your trip, {this.props.currentUser.username}</p> */}
                     <div className="homes-column">
 
                         <h1 className="index-title">Homes in San Francisco</h1>

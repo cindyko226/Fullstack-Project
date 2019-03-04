@@ -1,6 +1,6 @@
 import {fetchSpots} from '../actions/spots_actions';
 
-export const UPDATE_FILTER = "FILTER";
+export const UPDATE_FILTER = "UPDATE_FILTER";
 
 const changeFilter = (filter, value) => ({
     type: UPDATE_FILTER,
@@ -8,8 +8,10 @@ const changeFilter = (filter, value) => ({
     value: value
 });
 
-export const updateFilter = (filter, value) => (dispatch, getState) => {
-    dispatch(changeFilter(filter, value));
-    return fetchSpots(getState().ui.filters)(dispatch);
-};
+export function updateFilter(filter, value) {
+    return (dispatch, getState) => {
+        dispatch(changeFilter(filter, value));
+        return fetchSpots(getState().filters)(dispatch);
+    }
+}
 

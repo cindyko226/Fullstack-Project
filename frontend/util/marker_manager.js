@@ -76,8 +76,8 @@ class MarkerManager{
     }
 
     remmoveMarker(marker) {
-        this.markers[marker.spotId].setMap(null);
-        delete this.markers[marker.spotId];
+        this.markers[markerId].setMap(null);
+        delete this.markers[markerId];
     }
 
 
