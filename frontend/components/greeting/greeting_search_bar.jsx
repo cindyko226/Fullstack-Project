@@ -66,7 +66,8 @@ class SearchBar extends React.Component {
         return (
             <div className="home-icon">
                 <i className="fa fa-search" aria-hidden="true"></i>
-                <input id="search-bar" className="search-input" type="text" onChange={this.handleChange} 
+                <input id="search-bar" className="search-input" type="text"
+                 onChange={this.handleChange} 
                 placeholder={`Try  \"${places[Math.floor(Math.random() * places.length)]}\"`}  />
             </div>
         )

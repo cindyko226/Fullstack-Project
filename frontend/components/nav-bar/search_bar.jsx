@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-
+import SpotMap from '../map/spot_map';
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -11,6 +11,7 @@ class SearchBar extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
+   
 
 
     componentDidMount(){
@@ -64,12 +65,16 @@ class SearchBar extends React.Component {
         const places = ['San Francisco', 'Los Angeles', 'San Diego', 'San Jose'];
 
         return(
+            
             <div className="index-page-search">
+               
                 <div className="index-search-icon">
                     <i className="fa fa-search" aria-hidden="true"></i>
-                    <input id="search-bar" className="index-search-input" type="text" onChange={this.handleChange} 
+                    <input id="search-bar" className="index-search-input" type="text" 
+                    onChange={this.handleChange} 
                     placeholder={`Try  \"${places[Math.floor(Math.random() * places.length)]}\"`}  />
                 </div>
+               
             </div>
         )
     }

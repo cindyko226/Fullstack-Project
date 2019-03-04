@@ -27,7 +27,9 @@ class SpotMap extends React.Component {
         // debugger
         let coordinates;
         if (this.props.location.search) {
+            // debugger
             coordinates = queryString.parse(this.props.location.search);
+            // debugger
         } else {
             coordinates = { lat: '37.773972', lng: '-122.431297' };
         }
@@ -51,12 +53,15 @@ class SpotMap extends React.Component {
 
     componentDidUpdate(prevProps){
        
-       
+        // debugger
         if(this.props.location.search !== prevProps.location.search){
+            // debugger
             this.resetMap();
         }
-        this.MarkerManager.updateMarkers(this.props.spots)
+        // debugger
+        this.MarkerManager.updateMarkers(this.props.spots);
     }
+
 
     componentWillUnmount(){
         google.maps.event.clearListeners(this.map, 'idle');
