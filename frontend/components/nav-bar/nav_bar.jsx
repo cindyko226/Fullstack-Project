@@ -14,10 +14,7 @@ export default ({ currentUser, logout, openModal }) => {
                 <div >
                     <div className="index-page-search">
                     <SearchBar />
-                        {/* <div className="index-search-icon">
-                            <i className="fa fa-search" aria-hidden="true"></i>
-                            <input className="index-search-input" type="text" placeholder='Try San Francisco' />
-                        </div> */}
+                        
                     </div>
                </div>
                
@@ -39,10 +36,7 @@ export default ({ currentUser, logout, openModal }) => {
                     <div>
                         <div className="index-page-search">
                             <SearchBar />
-                            {/* <div className="index-search-icon">
-                                <i className="fa fa-search" aria-hidden="true"></i>
-                                <input className="index-search-input" type="text" placeholder='Try San Francisco' />
-                            </div> */}
+                            
                         </div>
                     </div>
                  </div>
