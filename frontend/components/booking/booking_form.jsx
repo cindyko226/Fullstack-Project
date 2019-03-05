@@ -96,7 +96,7 @@ class BookingForm extends React.Component {
 
 
                         <div className="booking-form-input">
-                            <input className="booking-form-input-button" type="submit" value="Request to Book" />
+                            <button className="booking-form-input-button" >Request to Book</button>
                         </div>
 
                         <div className="booking-form-footer">
