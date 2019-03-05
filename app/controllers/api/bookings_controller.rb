@@ -1,12 +1,13 @@
 class Api::BookingsController < ApplicationController
 
     def index 
-        @bookings = Booking.all 
+        @bookings = Booking.all.where(guest_id: current_user.id).include(:spot)
         render :index      
     end 
 
     def create
         @booking = Booking.new(booking_params)
+        @booking.guest_id = current_user.id
         if @booking.valid_date? 
             @booking.save 
             render :show 

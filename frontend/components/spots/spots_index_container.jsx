@@ -2,6 +2,8 @@ import {connect} from 'react-redux';
 import SpotsIndex from './spots_index';
 import { logout } from '../../actions/session_actions';
 import {fetchSpots} from '../../actions/spots_actions';
+// import 'react-dates/initialize';
+// import 'react-dates/lib/css/_datepicker.css';
 
 const msp = (state, ownProps) => {
     // debugger

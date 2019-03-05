@@ -49,7 +49,7 @@ export const updateNBooking = (booking) => dispatch => {
         errors => dispatch(receiveErrors(errors.responseJSON)))
 }
 
-export const deleteBooking = bookingId => dispatch => {
-    return bookingApiUtil.deleteBooking(bookingId)
-    .then( ()=> dispatch(removeBooking()))
+export const deleteBooking = id => dispatch => {
+    return bookingApiUtil.deleteBooking(id)
+    .then( ()=> dispatch(removeBooking(id)))
 }

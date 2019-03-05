@@ -7,6 +7,8 @@ import {login} from './actions/session_actions';
 import configureStore from './store/store';
 import { fetchSpots, fetchSpot } from './actions/spots_actions';
 import {fetchBookings} from './actions/booking_actions';
+// import 'react-dates/initialize';
+// import 'react-dates/lib/css/_datepicker.css';
  
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");

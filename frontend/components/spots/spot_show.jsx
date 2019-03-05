@@ -2,7 +2,7 @@ import React from 'react';
 import NavBarContainer from '../nav-bar/nav_bar_container';
 import ShowMap from '../map/show_map';
 import SpotMapContainer from '../map/spot_map_container';
-
+import BookingFormContainer from '../booking/booking_form_container';
 
 
 class SpotShow extends React.Component {
@@ -172,7 +172,7 @@ class SpotShow extends React.Component {
                     </div>
 
                     <div className="booking-container">
-                        Booking form here 
+                        <BookingFormContainer spot={this.props.spot}/>
                     </div>
                 </div>
 
