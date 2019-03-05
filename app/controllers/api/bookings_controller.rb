@@ -1,16 +1,17 @@
 class Api::BookingsController < ApplicationController
 
     def index 
-        @bookings = Booking.all.where(guest_id: current_user.id).include(:spot)
-        render :index      
+        @bookings = Booking.all.select {|booking| booking.guest_id = current_user.id}
+        render :index
     end 
+
 
     def create
         @booking = Booking.new(booking_params)
         @booking.guest_id = current_user.id
-        if @booking.valid_date? 
-            @booking.save 
-            render :show 
+        # debugger
+        if @booking.save 
+            render :show  
         else 
             render json: ["Dates are not available"], status: 400
         end 

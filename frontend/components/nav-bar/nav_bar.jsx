@@ -26,12 +26,17 @@ export default ({ currentUser, logout, openModal, receiveSearch }) => {
 
             </div>
             <div className="welcome-top" >
-               <div>
-                <p className="welcome">Hello, {currentUser.username}</p>
-               </div>
-               <div>
-                <button onClick={logout} className="home-logout" >Logout</button>
-               </div>
+                <Link to="/bookings">
+                    <div className="trip">
+                    Trip
+                    </div>
+                </Link>
+                <div>
+                    <p className="welcome">Hello, {currentUser.username}</p>
+                </div>
+                <div>
+                    <button onClick={logout} className="home-logout" >Logout</button>
+                </div>
             </div>
         </div>
     ) : (

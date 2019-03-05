@@ -27,14 +27,7 @@ class Booking < ApplicationRecord
       foreign_key: :guest_id,
     class_name: :User
 
-    def valid_date? 
-      if self.check_in && self.check_out 
-        current_request = Booking.where(spot_id: self.spot_id)
-        .where.not('check_out <= ? OR check_in >= ?', self.check_in, self.check_out)
-        return true if current_request.empty?
-      end 
-      return false 
-    end 
+  
     
 
 end

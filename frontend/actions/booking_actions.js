@@ -50,6 +50,7 @@ export const updateNBooking = (booking) => dispatch => {
 }
 
 export const deleteBooking = id => dispatch => {
+    // debugger
     return bookingApiUtil.deleteBooking(id)
-    .then( ()=> dispatch(removeBooking(id)))
+    .then(id=> dispatch(removeBooking(id)))
 }

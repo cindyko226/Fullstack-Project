@@ -1,40 +1,53 @@
 import React from 'react';
 import BookingIndexItem from './booking_index_item';
+import NavBarContainer from '../nav-bar/nav_bar_container';
 
 class BookingIndex extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
     }
 
 
     componentDidMount(){
-        this.props.fetchBookings()
+        this.props.fetchSpots();
+        this.props.fetchBookings();
     }
 
     render(){
         
-        let bookingItems = this.props.bookings.map( booking=> {
-            return(
-                <BookingIndexItem 
-                booking = {booking}
-                spot={this.props.spots[booking.spotId]}
-                key={booking.id}
-                deleteBooking={this.props.deleteBooking}
-                history={this.props.history}
-                />
-            )
-        })
+        
         
         return(
             <div>
-                <div>Your Trips</div>
-                <div>{bookingItems}</div>
+                <div>
+                    <NavBarContainer /> 
+                </div>
+                <div className="booking-index-info">
+
+                    <div className="trip-title">Your Trips</div>
+
+                    <div className="booking-detail-group">
+                        <ul>
+                        {this.props.bookings.map(booking => 
+                            <li className="booking-single">
+                                <BookingIndexItem
+                                booking={booking}
+                                spot={this.props.spots[booking.spotId]}
+                                key={booking.id}
+                                deleteBooking={this.props.deleteBooking}
+                            />
+                            </li>
+                            )}
+                        </ul>
+                        
+                </div>
+                </div>
             </div>
         )
-
-    }
-
-
+        
+            }
+        
+    //   {pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />)}
 
 }
 

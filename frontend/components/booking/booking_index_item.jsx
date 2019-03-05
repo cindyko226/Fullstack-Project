@@ -13,19 +13,19 @@ class BookingIndexitem extends React.Component {
         this.props.deleteBooking(this.props.booking.id)
     }
 
-    rende(){
-        const {booking, spot} = this.props;
+    render(){
         
-        if (spot === undefined){
+
+        if (this.props.spot === undefined){
             return null
         }
 
         return(
             <div>
-                <div>{spot.title}</div>
-                <div>{booking.checkIn}</div>
-                <div>{booking.checkOut}</div>
-                <div>{spot.rate}</div>
+                <div>{this.props.spot.name}</div>
+                <div>{this.props.booking.checkIn}</div>
+                <div>{this.props.booking.checkOut}</div>
+                <div>{this.props.spot.rate}</div>
                 <div>
                     <button onClick={this.deleteBooking}>Cancle Reservation</button>
                 </div>

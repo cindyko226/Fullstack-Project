@@ -7,7 +7,9 @@ import {withRouter} from 'react-router-dom';
 
 
 const msp = (state) => {
+    // debugger
     return({
+        
         bookings: Object.values(state.entities.bookings),
         spots: state.entities.spots
     })
@@ -16,8 +18,8 @@ const msp = (state) => {
 const mdp = (dispatch) => {
     return({
         fetchBookings: () => dispatch(fetchBookings()),
-        fetchSpots: () => dispatch(fetchSpots()),
-        deleteBooking: (id) => dispatch(deleteBooking(id))
+        deleteBooking: (id) => dispatch(deleteBooking(id)),
+        fetchSpots: () => dispatch(fetchSpots())
     })
 }
 

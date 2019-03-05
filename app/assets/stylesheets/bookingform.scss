@@ -1,0 +1,88 @@
+.booking-form-detail-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.booking-form-rate{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #EBEBEB;
+    height: 70px;
+    padding-top: 30px;
+}
+
+.form-rate-group{
+    display: flex;
+}
+
+.form-rate{
+    font-size: 22px;
+    font-weight: 800 ;
+    line-height: 1.44444em ;
+    color: rgb(72, 72, 72);
+
+}
+.form-rate-end{
+    font-size: 12px ;
+    font-weight: 600 ;
+    line-height: 1.33333em ;
+    color: rgb(72, 72, 72);
+    align-self: flex-end;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.booking-form-date-title, .booking-form-guest-title{
+
+    font-size: 12px ;
+    font-weight: 600 ;
+    line-height: 1.33333em ;
+    color: rgb(72, 72, 72)
+}
+
+.booking-form-date, .booking-form-guest{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+    height: 70px;
+
+}
+
+.booking-form-input{
+    padding: 10px;
+    border-radius: 4px ;
+    background: rgb(255, 90, 95);
+    text-align: center;
+    margin-top: 15px;
+}
+.booking-form-footer{
+    font-size: 12px ;
+    font-weight: 600 ;
+    line-height: 1.33333em ;
+    color: rgb(72, 72, 72);
+    text-align: center;
+    margin-top: 15px;
+
+}
+.booking-form-date-picker{
+    padding: 10px 10px 10px 0;
+
+}
+
+.guest-number-input{
+    padding: 8px;
+    width: 310px;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+
+.DateRangePickerInput{
+    padding-right: 30px;
+    // // width: 56px;
+    width: 295px;
+    height: 46px;
+    // border: 1px solid rgb(235, 235, 235);
+}
+
