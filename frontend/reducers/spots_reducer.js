@@ -6,8 +6,7 @@ const spotsReducer = (state = {}, action) => {
     let newState;
     switch(action.type) {
         case RECEIVE_SPOTS:
-          newState = merge({}, state, action.spots);
-          return newState;
+          return action.spots;
         case RECEIVE_SPOT:
           newState = merge({}, state, {[action.spot.id]:action.spot});
             return newState;

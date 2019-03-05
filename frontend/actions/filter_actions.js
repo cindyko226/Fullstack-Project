@@ -12,7 +12,7 @@ export function updateFilter(filter, value) {
     // debugger
     return (dispatch, getState) => {
         dispatch(changeFilter(filter, value));
-        return fetchSpots(getState().ui.filters)(dispatch);
+        return dispatch(fetchSpots(getState().ui.filters));
     }
 }
 

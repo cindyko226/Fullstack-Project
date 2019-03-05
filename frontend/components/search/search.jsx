@@ -1,7 +1,7 @@
 import React from 'react';
 import SpotsIndexContainer from '../spots/spots_index_container';
 import SpotMapContainer from '../map/spot_map_container';
-
+import NavBarContainer from '../nav-bar/nav_bar_container';
 
 class Search extends React.Component {
     constructor(props) {
@@ -11,12 +11,7 @@ class Search extends React.Component {
 
 
     loadSpots(){
-        // debugger
-        // if(this.props.spots.length === 0 && this.props.bounds.length > 1){
-        //     return(
-        //         <div>NO RESULT!</div>
-        //     )
-        // }else {
+      
             return (
                 <div>
 
@@ -28,13 +23,16 @@ class Search extends React.Component {
                     />
                 </div>
             )
-        // }
     }
 
     render(){
         return(
             <div>
-                {this.loadSpots()}
+                
+                <div>
+                    {this.loadSpots()}
+                </div>
+
             </div>
         )
     }
