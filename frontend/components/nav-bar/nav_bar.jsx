@@ -28,7 +28,7 @@ export default ({ currentUser, logout, openModal, receiveSearch }) => {
             <div className="welcome-top" >
                 <Link to="/bookings">
                     <div className="trip">
-                    Trip
+                    Trips
                     </div>
                 </Link>
                 <div>

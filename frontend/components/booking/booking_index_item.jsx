@@ -21,13 +21,19 @@ class BookingIndexitem extends React.Component {
         }
 
         return(
-            <div>
-                <div>{this.props.spot.name}</div>
-                <div>{this.props.booking.checkIn}</div>
-                <div>{this.props.booking.checkOut}</div>
-                <div>{this.props.spot.rate}</div>
+            
+            <div className="booking-each-container">
                 <div>
-                    <button onClick={this.deleteBooking}>Cancle Reservation</button>
+
+                    < img className="booking-pic" src={window.artURL} />
+                </div>
+                <div className="booking-each-detail">
+                    <div className="booking-each-title">{this.props.spot.name}</div>
+                    <div className="booking-each-checkin" >Check In: {this.props.booking.checkIn}</div>
+                    <div className="booking-each-checkout">Check Out: {this.props.booking.checkOut}</div>
+                    <div className="booking-cancel">
+                        <button onClick={this.deleteBooking}>Cancle Reservation</button>
+                    </div>
                 </div>
             </div>
             

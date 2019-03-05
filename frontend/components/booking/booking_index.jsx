@@ -24,16 +24,18 @@ class BookingIndex extends React.Component {
                 </div>
                 <div className="booking-index-info">
 
-                    <div className="trip-title">Your Trips</div>
+                    <div className="trip-title">
+                        Your Trip
+                    </div>
 
                     <div className="booking-detail-group">
                         <ul>
                         {this.props.bookings.map(booking => 
                             <li className="booking-single">
                                 <BookingIndexItem
+                                key={booking.id}
                                 booking={booking}
                                 spot={this.props.spots[booking.spotId]}
-                                key={booking.id}
                                 deleteBooking={this.props.deleteBooking}
                             />
                             </li>
