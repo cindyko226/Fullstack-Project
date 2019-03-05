@@ -4,13 +4,15 @@ import SpotShow from './spot_show';
 import {openModal} from '../../actions/modal_actions';
 
 
+
 const msp = (state, ownProps) => {
-    // debugger
+  
     return({
         spot: state.entities.spots[ownProps.match.params.spotId],
-        currentUserId: state.session.currentUserId
+        currentUserId: state.session.currentUserId,
+        
     })
-    // state.entities.users[state.session.id]
+   
 }
 
 
