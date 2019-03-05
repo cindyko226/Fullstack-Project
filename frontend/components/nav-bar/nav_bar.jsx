@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './search_bar';
+import { withRouter } from 'react-router-dom';
 
 export default ({ currentUser, logout, openModal, receiveSearch }) => {
-    // debugger
-    const display = currentUser ? (
+    
+
+
+
+    const display = (currentUser ) ? (
+        
         <div className="home-page-greeting">
             <div className="index-page-greeting-nav">
  

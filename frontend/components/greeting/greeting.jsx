@@ -1,17 +1,16 @@
-import React from 'react';
 import {Link} from 'react-router-dom';
 import GreetingSearchBar from './greeting_search_bar';
-
+import React from 'react';
 
 
 export default ({currentUser, logout, openModal}) => {
 
     const display = currentUser ? (
-        <div className="home-page-greeting">
+        <div className="home-page-greeting-splash">
             <div className="logo-png" ></div>
             <div className="welcome-top" >
-            <p className="welcome">Hello, {currentUser.username}</p>
-            <button onClick={logout} className="home-logout" >Logout</button>
+            <p className="welcome-splash">Hello, {currentUser.username}</p>
+            <button onClick={logout} className="home-logout-splash" >Logout</button>
             </div>
         </div>
     ) : (

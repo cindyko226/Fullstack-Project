@@ -49,6 +49,18 @@
     padding: 15px;
 
 }
+
+.home-logout-splash{
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    display:inline-block;
+    margin: 10px;
+    padding: 15px;
+
+
+}
 .nav-login{
     border-bottom: 5px solid transparent;
     margin-right: 5px;
@@ -82,7 +94,7 @@ button:hover{
 }
 
 
-.home-page-button-greeting{
+.home-page-button-greeting, .home-page-greeting-splash{
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -114,6 +126,13 @@ button:hover{
     margin: 10px;
     padding: 15px;
     color: red;
+}
+
+.welcome-splash{
+    font-size: 1em;
+    font-family:'Nunito Sans', sans-serif;
+    margin: 25px;
+    color: white;
 }
 
 
