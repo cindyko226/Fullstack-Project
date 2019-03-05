@@ -32,7 +32,7 @@ export default ({ currentUser, logout, openModal, receiveSearch }) => {
     ) : (
             <div className="home-page-button">
                 <div className="index-logo-search" >
-                    <Link to="/"><div className="spots-logo-png"></div></Link>
+                    <div className="spots-logo-png"></div>
                     <div>
                         <div className="index-page-search">
                             <SearchBar receiveSearch ={receiveSearch} />

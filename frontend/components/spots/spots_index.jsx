@@ -227,7 +227,7 @@ class SpotsIndex extends React.Component{
 
     noResult(){
         // debugger
-        if (this.props.spots.length === 0 ){
+        if (this.props.spots.length === 0 && this.props.bounds.length > 1){
             return(
                 <div className="homes-column">
                    

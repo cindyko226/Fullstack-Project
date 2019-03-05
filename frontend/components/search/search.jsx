@@ -20,6 +20,7 @@ class Search extends React.Component {
                         logout={this.props.logout}
                         fetchSpots={this.props.fetchSpots}
                         updateFilter={this.props.updateFilter}
+                        bounds = {this.props.bounds}
                     />
                 </div>
             )
