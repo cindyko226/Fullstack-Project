@@ -25,6 +25,11 @@ class User < ApplicationRecord
     foreign_key: :host_id,
     class_name: :Spot
 
+    has_many :bookings,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: :Booking
+
 
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)

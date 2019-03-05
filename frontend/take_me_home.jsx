@@ -6,6 +6,7 @@ import { logout, signup } from "./util/session_api_util";
 import {login} from './actions/session_actions';
 import configureStore from './store/store';
 import { fetchSpots, fetchSpot } from './actions/spots_actions';
+import {fetchBookings} from './actions/booking_actions';
  
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -34,5 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch;
     window.fetchSpots = fetchSpots;
     window.fetchSpot = fetchSpot;
+    window.fetchBookings = fetchBookings;
 
 })

@@ -18,6 +18,7 @@
 #  host_id     :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  home_type   :string           not null
 #
 
 class Spot < ApplicationRecord
@@ -29,6 +30,11 @@ class Spot < ApplicationRecord
     primary_key: :id,
     foreign_key: :host_id,
     class_name: :User 
+
+    has_many :bookings,
+    primary_key: :id,
+    foreign_key: :spot_id,
+    class_name: :Booking
 
     def in_bounds(bounds)
     bounds = bounds.values
