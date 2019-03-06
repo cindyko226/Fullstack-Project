@@ -6,3 +6,5 @@ json.host @spot.host.username
 json.hostPhotourl url_for(@spot.host.photo) if @spot.host.photo.attached?
 
 json.photoUrls @spot.photos.map { |pic| url_for(pic) } if @spot.photos.attached?
+
+

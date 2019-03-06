@@ -18,14 +18,13 @@ class BookingIndexitem extends React.Component {
         if (this.props.spot === undefined) {
             return null
         }
-
+        // debugger
 
         return(
             
             <div className="booking-each-container">
                 <div>
-
-                    < img className="booking-pic" src={window.artURL} />
+                    < img className="booking-pic" src={this.props.spot.photoUrls[0]} />
                 </div>
                 <div className="booking-each-detail">
                     <div className="booking-each-title">{this.props.spot.name}</div>
