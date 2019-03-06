@@ -87,7 +87,7 @@ class SpotShow extends React.Component {
                                     <div className="spot-detail-city">{this.props.spot.city}</div>
                                 </div>
                                 <div className="name-group">
-                                    <div>< img className="user-img" src={window.booURL} /></div>
+                                    <div>< img className="user-img" src={this.props.spot.hostPhotourl} /></div>
                                     <div className="host-name">{this.props.spot.host}</div>
                                 </div>
                         </div>

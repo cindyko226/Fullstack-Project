@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+# require 'open-uri'
 
 
 ActiveRecord::Base.transaction do
@@ -18,6 +18,18 @@ ActiveRecord::Base.transaction do
   user3 = User.create!(username: "Mocha", password: "password")
   user4 = User.create!(username: "Guest", password: "password")
   user5 = User.create!(username: "Dave", password: "password")
+
+  # user1.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/USER/user1.jpg"), filename: "user1.jpg")
+  # user1.save!
+  # user2.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/USER/user2.jpg"), filename: "user2.jpg")
+  # user2.save!
+  # user3.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/USER/user3.jpg"), filename: "user3.jpg")
+  # user3.save!
+  # user4.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/USER/user4.png"), filename: "user4.png")
+  # user4.save!
+  # user5.photo.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/USER/user5.jpg"), filename: "user5.jpg")
+  # user5.save!
+
 
   spot1 = Spot.create!(
     host_id: user1.id,

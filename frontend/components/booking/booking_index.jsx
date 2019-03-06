@@ -31,9 +31,9 @@ class BookingIndex extends React.Component {
                     <div className="booking-detail-group">
                         <ul>
                         {this.props.bookings.map(booking => 
-                            <li className="booking-single">
+                            <li className="booking-single" key={booking.id}>
                                 <BookingIndexItem
-                                key={booking.id}
+                                
                                 booking={booking}
                                 spot={this.props.spots[booking.spotId]}
                                 deleteBooking={this.props.deleteBooking}

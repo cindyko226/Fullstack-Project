@@ -36,6 +36,8 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: :Booking
 
+    has_many_attached :photos
+
     def in_bounds(bounds)
     bounds = bounds.values
     if self.lat.between?(bounds[1]['lat'].to_f, bounds[0]['lat'].to_f) && self.lng.between?(bounds[1]['lng'].to_f, bounds[0]['lng'].to_f)
