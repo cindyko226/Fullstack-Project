@@ -9,14 +9,26 @@ class BookingIndex extends React.Component {
 
 
     componentDidMount(){
-        this.props.fetchSpots();
         this.props.fetchBookings();
+        this.props.fetchSpots();
     }
 
     render(){
-        
-        
-        
+        // debugger 
+        let userBookings = this.props.bookings.filter((booking) => booking.guestId === this.props.currentUser.id);
+
+        let bookingItems = userBookings.map(booking => {
+            // let spot = booking.guestId
+            return (
+                <BookingIndexItem
+                    booking={booking}
+                    spot={this.props.spots[booking.spotId]}
+                    key={booking.id}
+                    deleteBooking={this.props.deleteBooking}
+                />
+            )
+        })
+        // debugger
         return(
             <div>
                 <div>
@@ -30,16 +42,9 @@ class BookingIndex extends React.Component {
 
                     <div className="booking-detail-group">
                         <ul>
-                        {this.props.bookings.map(booking => 
-                            <li className="booking-single" key={booking.id}>
-                                <BookingIndexItem
-                                
-                                booking={booking}
-                                spot={this.props.spots[booking.spotId]}
-                                deleteBooking={this.props.deleteBooking}
-                            />
+                            <li>
+                                {bookingItems}
                             </li>
-                            )}
                         </ul>
                         
                 </div>
@@ -49,7 +54,6 @@ class BookingIndex extends React.Component {
         
             }
         
-    //   {pokemon.map(poke => <PokemonIndexItem key={poke.id} pokemon={poke} />)}
 
 }
 

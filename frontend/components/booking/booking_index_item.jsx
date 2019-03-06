@@ -15,10 +15,10 @@ class BookingIndexitem extends React.Component {
 
     render(){
         
-
-        if (this.props.spot === undefined){
+        if (this.props.spot === undefined) {
             return null
         }
+
 
         return(
             
@@ -32,7 +32,7 @@ class BookingIndexitem extends React.Component {
                     <div className="booking-each-checkin" >Check In: {this.props.booking.checkIn}</div>
                     <div className="booking-each-checkout">Check Out: {this.props.booking.checkOut}</div>
                     <div className="booking-cancel">
-                        <button onClick={this.deleteBooking}>Cancle Reservation</button>
+                        <button onClick={this.deleteBooking}>Cancel Reservation</button>
                     </div>
                 </div>
             </div>

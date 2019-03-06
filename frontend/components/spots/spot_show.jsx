@@ -43,7 +43,8 @@ class SpotShow extends React.Component {
                 <div className="spot-pictures">
                     <div className="large-pix-container">
                         <div className="large-pix">
-                        < img className="large" src={window.artURL} />
+                            {/* < img className="large" src={window.artURL} src={window.artURL} /> */}
+                            < img className="large" src={this.props.spot.photoUrls[0]}  />
                         </div>
                     </div>
                     <div className="small-pix-group">
@@ -52,26 +53,26 @@ class SpotShow extends React.Component {
 
                                     <div className="small-pic">
 
-                                        < img className="small1" src={window.int3URL} />
+                                    < img className="small1" src={this.props.spot.photoUrls[1]}  />
                                     </div>
                                 </div>
 
                                 <div className="small-pic-container">
                                     <div className="small-pic">
 
-                                        < img className="small2" src={window.intURL} />
+                                    < img className="small2" src={this.props.spot.photoUrls[2]} />
                                     </div>
                                 </div>
                         </div>
                         <div className="small-pix">
                             <div className="small-pic-container">
                                 <div className="small-pic">
-                                    < img className="small3" src={window.int2URL} />
+                                    < img className="small3" src={this.props.spot.photoUrls[3]} />
                                 </div>
                             </div>
                             <div className="small-pic-container">
                                 <div className="small-pic">
-                                    < img className="small4" src={window.kitURL} />
+                                    < img className="small4" src={this.props.spot.photoUrls[4]} />
                                 </div>
                             </div>
                         </div>

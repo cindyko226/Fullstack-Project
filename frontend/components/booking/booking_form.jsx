@@ -12,12 +12,14 @@ class BookingForm extends React.Component {
             check_out: null, 
             guest_number: 1, 
             focusedInput: null,
-            spot_id: this.props.spotId
+            spot_id: this.props.spotId,
+            // guest_id: this.props.currentUser.id
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
+    
     handleChange(e) {
         this.setState({ guest_number: e.target.value });
     }
@@ -34,14 +36,15 @@ class BookingForm extends React.Component {
                 check_in: this.state.check_in._d,
                 check_out: this.state.check_out._d,
                 guest_number: this.state.guest_number,
-                spot_id: this.state.spot_id
+                spot_id: this.state.spot_id,
+                // guest_id: this.state.guest_id
             }).then(()=> this.props.history.push('/bookings'));
             // debugger
         }
 
     }
 
-
+    
     render(){
         const {spot} = this.props;
         return(

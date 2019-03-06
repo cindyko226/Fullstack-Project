@@ -28,7 +28,8 @@
     width: 450px;
     background: white;
     border: 1px solid #EBEBEB;
-    box-shadow: rgba(30, 25, 21, 0.1) 0px 6px 30px
+    box-shadow: rgba(30, 25, 21, 0.1) 0px 6px 30px;
+    margin-right: 50px
 }
 .booking-each-detail{
     font-family: 'Nunito Sans',sans-serif;
@@ -69,5 +70,7 @@
 }
 
 .booking-detail-group ul li{
-    margin-right: 50px;
+    // margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap
 }

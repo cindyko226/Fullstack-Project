@@ -1,11 +1,13 @@
 import {connect} from 'react-redux';
 import BookingForm from './booking_form';
-import {createBooking} from '../../actions/booking_actions';
+import { createBooking, fetchBookings} from '../../actions/booking_actions';
 import {openModal} from '../../actions/modal_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp =(state, ownProps) => {
+    // debugger
     return({
+        // bookings: Object.values(state.entities.bookings),
         currentUser: state.entities.users[state.session.id],
         spotId: ownProps.spot.id
     })
@@ -14,7 +16,8 @@ const msp =(state, ownProps) => {
 const mdp = dispatch => {
     return({
         createBooking: (booking) => dispatch(createBooking(booking)),
-        openModal: (modal) => dispatch(openModal(modal))
+        openModal: (modal) => dispatch(openModal(modal)),
+        // fetchBookings: () => dispatch(fetchBookings())
     })
 }
 

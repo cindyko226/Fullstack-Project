@@ -16,13 +16,7 @@ class SessionForm extends React.Component {
         this.changeHistory = this.changeHistory.bind(this);
     }
 
-    // componentDidMount(){
-    //     this.props.clearErrors();
-    // }
-
-    // componentDidUpdate(){
-    //     this.props.clearErrors();
-    // }
+    
 
     componentWillUnmount() {
         this.props.clearErrors();
