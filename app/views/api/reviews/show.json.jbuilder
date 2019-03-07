@@ -1,2 +1,2 @@
-json.extract! @review, :spot_id, :author_id, :body , :rating
+json.extract! @review, :id, :spot_id, :author_id, :body , :rating
 

@@ -19,7 +19,7 @@ class BookingIndex extends React.Component {
 
         let bookingItems = userBookings.map(booking => {
             // let spot = booking.guestId
-            debugger
+            // debugger
             return (
                 <BookingIndexItem
                     booking={booking}
@@ -30,7 +30,7 @@ class BookingIndex extends React.Component {
                 />
             )
         })
-        debugger
+        // debugger
         return(
             <div>
                 <div>
