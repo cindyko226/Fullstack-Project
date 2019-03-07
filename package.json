@@ -9,6 +9,7 @@
     "css-loader": "^2.1.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
+    "nuka-carousel": "^4.4.9",
     "query-string": "^6.3.0",
     "react": "^16.8.3",
     "react-dates": "^20.0.0",

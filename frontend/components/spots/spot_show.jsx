@@ -3,7 +3,7 @@ import NavBarContainer from '../nav-bar/nav_bar_container';
 import ShowMap from '../map/show_map';
 import SpotMapContainer from '../map/spot_map_container';
 import BookingFormContainer from '../booking/booking_form_container';
-
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class SpotShow extends React.Component {
 
@@ -18,6 +18,7 @@ class SpotShow extends React.Component {
         // debugger
         this.props.fetchSpot(this.props.match.params.spotId);
         window.scrollTo(0, 0);
+        this.props.fetchReviews();
     }
 
     componentWillUnmount(){
@@ -139,7 +140,12 @@ class SpotShow extends React.Component {
                             </div>
                             
                         </div>
-                        <div className="spot-detail-reviews">Reviews</div>
+                        <div className="spot-detail-reviews">
+                        Reviews
+                        
+                        <ReviewIndexContainer />
+                        </div>
+                        
                         <div className="map-group">
                             <div className="map-title">The neighborhood</div>
                             <div className="spot-detail-map"><ShowMap spot={this.props.spot} /></div>

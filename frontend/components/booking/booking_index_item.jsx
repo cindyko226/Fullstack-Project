@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ReviewFormContainer from '../reviews/reviewform_container';
+
 
 
 class BookingIndexitem extends React.Component {
@@ -18,7 +21,7 @@ class BookingIndexitem extends React.Component {
         if (this.props.spot === undefined) {
             return null
         }
-        // debugger
+       
 
         return(
             
@@ -33,6 +36,25 @@ class BookingIndexitem extends React.Component {
                     <div className="booking-cancel">
                         <button onClick={this.deleteBooking}>Cancel Reservation</button>
                     </div>
+
+                    {/* <Link to="/reviews">
+                        <p>
+                            Leave a review
+                        </p>
+                    </Link> */}
+
+                        <div>
+
+                        <ReviewFormContainer 
+                        key={this.props.spot.id}
+                        spot={this.props.spot}/>
+                        </div>
+                    
+                        { /* 
+                    <div className="nav-login">
+                        <button onClick={() => this.props.openModal('review')} className="nav-login-button">Leave Review</button>
+                    </div> */}
+
                 </div>
             </div>
             

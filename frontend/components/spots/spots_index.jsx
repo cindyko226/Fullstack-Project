@@ -21,6 +21,7 @@ class SpotsIndex extends React.Component{
     //     this.props.fetchSpots(this.props.filters);
     // }
 
+
     loadSf(){
         // debugger
         if(this.props.sf.length > 0){
@@ -31,7 +32,9 @@ class SpotsIndex extends React.Component{
                         <Link to={`/spots/${this.props.sf[0].id}`} >
                             <div className="homes-des">
                                 <div className="home-pic">
+                                   
                                     < img src={this.props.sf[0].photoUrls[0]} />
+                                  
                                     <i className="far fa-heart"></i>
                                 </div>
                                 <div className="index-spot-info">

@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {fetchBookings, deleteBooking} from '../../actions/booking_actions';
 import {fetchSpots} from '../../actions/spots_actions';
 import {withRouter} from 'react-router-dom';
-
+import { openModal } from '../../actions/modal_actions';
 
 
 const msp = (state) => {
@@ -20,7 +20,9 @@ const mdp = (dispatch) => {
     return({
         fetchBookings: () => dispatch(fetchBookings()),
         deleteBooking: (id) => dispatch(deleteBooking(id)),
-        fetchSpots: () => dispatch(fetchSpots())
+        fetchSpots: () => dispatch(fetchSpots()),
+        openModal: modal => dispatch(openModal(modal)),
+
     })
 }
 

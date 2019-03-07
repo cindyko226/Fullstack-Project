@@ -19,16 +19,18 @@ class BookingIndex extends React.Component {
 
         let bookingItems = userBookings.map(booking => {
             // let spot = booking.guestId
+            debugger
             return (
                 <BookingIndexItem
                     booking={booking}
                     spot={this.props.spots[booking.spotId]}
                     key={booking.id}
                     deleteBooking={this.props.deleteBooking}
+                    openModal = {this.props.openModal}
                 />
             )
         })
-        // debugger
+        debugger
         return(
             <div>
                 <div>
