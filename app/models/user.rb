@@ -30,6 +30,11 @@ class User < ApplicationRecord
     foreign_key: :guest_id,
     class_name: :Booking
 
+    has_many :reviews,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Review
+
     has_one_attached :photo
 
     def self.find_by_credentials(username, password)

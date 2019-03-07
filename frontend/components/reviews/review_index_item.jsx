@@ -13,16 +13,25 @@ class ReviewIndexitem extends React.Component {
 
 
     render(){
-        // debugger
+        debugger
         // if (this.props.spot === undefined){
         //     return null;
         // }
 
         return(
             
-            <div>
-                <div>Rating: {this.props.review.rating}</div>
-                <div>Review: {this.props.review.body}</div>
+            <div className="review-index-all">
+                <div className="pic-rating">
+                    <div className="review-index-pic">
+                        < img className="user-img-review" src={this.props.review.authorPhotourl} />
+                   </div>
+                    <div className="review-index-rating">
+                        <div className="review-author" >{this.props.review.author}</div>
+                        <div>Rating: {this.props.review.rating}</div>
+                    </div>
+
+                </div>
+                <div className="review-index-body" > {this.props.review.body}</div>
                 <div>
                     <button onClick={this.deleteReview}>Delete</button>
                 </div>
