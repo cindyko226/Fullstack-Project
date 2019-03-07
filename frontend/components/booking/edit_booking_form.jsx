@@ -4,57 +4,51 @@ import { DateRangePicker } from 'react-dates';
 // import 'react-dates/lib/css/_datepicker.css';
 
 
-class BookingForm extends React.Component {
-    constructor(props){
+class EditBookingForm extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = { 
-            check_in: null, 
-            check_out: null, 
-            guest_number: 1, 
-            focusedInput: null,
-            spot_id: this.props.spotId,
-            // guest_id: this.props.currentUser.id
-        };
+        this.state = this.props.booking;
+            // guest_id: this.props.currentUser.id;
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
-    
+
     handleChange(e) {
         this.setState({ guest_number: e.target.value });
     }
 
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault();
 
-        if(!this.props.currentUser){
-            this.props.openModal('login')
-        }else{
+        // if (!this.props.currentUser) {
+        //     this.props.openModal('login')
+        // } else {
             // debugger
-            this.props.createBooking({
-                
+            this.props.updateBooking({
+
                 check_in: this.state.check_in._d,
                 check_out: this.state.check_out._d,
                 guest_number: this.state.guest_number,
                 spot_id: this.state.spot_id,
                 // guest_id: this.state.guest_id
-            }).then(()=> this.props.history.push('/bookings'));
+            }).then(() => this.props.history.push('/bookings'));
             // debugger
-        }
+        // }
 
     }
 
-    
-    render(){
-        debugger
-        const {spot} = this.props;
-        return(
+
+    render() {
+        // debugger
+        // const { spot } = this.props;
+        return (
             <div className="booking-form-container">
                 <form onSubmit={this.handleSubmit}>
                     <div className="booking-form-detail-container">
                         <div className="booking-form-rate">
                             <div className="form-rate-group">
-                                <div className="form-rate">${spot.rate} </div>
+                                {/* <div className="form-rate">${spot.rate} </div> */}
                                 <div className="form-rate-end"> per night</div>
                             </div>
                             <div className="booking-num-group">
@@ -83,25 +77,25 @@ class BookingForm extends React.Component {
                                     startDatePlaceholderText={'Check in'}
                                     endDatePlaceholderText={'Check out'}
                                     numberOfMonths={1}
-                                    minimumNights={1}  
-                                /> 
+                                    minimumNights={1}
+                                />
                             </div>
                         </div>
 
-                        <div className="booking-form-guest"> 
+                        <div className="booking-form-guest">
 
                             <div className="booking-form-guest-title">Guests</div>
                             <div className="booking-form-guest-inout">
-                                <input type="number" className="guest-number-input" min="1" max={spot.guest_number} 
-                                onChange={this.handleChange} 
-                                value={this.state.guest_number}/>
+                                <input type="number" className="guest-number-input" min="1" max={spot.guest_number}
+                                    onChange={this.handleChange}
+                                    value={this.state.guest_number} />
                             </div>
 
                         </div>
 
 
                         <div className="booking-form-input">
-                            <button className="booking-form-input-button" >Request to Book</button>
+                            <button className="booking-form-input-button" >Update</button>
                         </div>
 
                         <div className="booking-form-footer">
@@ -118,4 +112,4 @@ class BookingForm extends React.Component {
 
 }
 
-export default BookingForm;
+export default EditBookingForm;

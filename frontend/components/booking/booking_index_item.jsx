@@ -8,6 +8,7 @@ class BookingIndexitem extends React.Component {
     constructor(props){
         super(props);
         this.deleteBooking = this.deleteBooking.bind(this)
+        // this.openModal = this.openModal.bind(this);
     }
 
 
@@ -16,12 +17,21 @@ class BookingIndexitem extends React.Component {
         this.props.deleteBooking(this.props.booking.id)
     }
 
+
+    
+    // openModal(){
+    //     this.props.openModal('booking')
+    // }
+
+
+
+
     render(){
         
         if (this.props.spot === undefined) {
             return null
         }
-       
+    
 
         return(
             
@@ -46,6 +56,10 @@ class BookingIndexitem extends React.Component {
                         </div>
                     
 
+                </div>
+
+                <div>
+                    {/* <button onClick={() => this.props.openModal('booking')} className="nav-login-button">Update</button> */}
                 </div>
             </div>
             
