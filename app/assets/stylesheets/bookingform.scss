@@ -81,9 +81,23 @@
 
 .DateRangePickerInput{
     padding-right: 30px;
-    // // width: 56px;
+    // // width: 56px;book
     width: 295px;
     height: 46px;
     // border: 1px solid rgb(235, 235, 235);
 }
 
+.booking-num-group{
+    display: flex;
+}
+
+.booking-rating{
+
+    display: flex;
+    align-items: center;
+}
+
+
+.booking-num{
+    margin-right: 5px;
+}

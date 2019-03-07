@@ -56,7 +56,8 @@ class BookingForm extends React.Component {
                                 <div className="form-rate">${spot.rate} </div>
                                 <div className="form-rate-end"> per night</div>
                             </div>
-                            <div>
+                            <div className="booking-num-group">
+                                <div className="booking-num">200</div>
                                 <div className="booking-rating">
                                     <i className="fas fa-star"></i>
                                     <i className="fas fa-star"></i>
