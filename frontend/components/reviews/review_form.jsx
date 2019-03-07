@@ -54,44 +54,51 @@ class ReviewForm extends React.Component {
 
         return(
             <div className='review-form-container-all'>
+               
 
-                    <div>
-                        <div className="review-form-title">Leave a Review</div>
+                            <div>
+                                <div className="review-form-title">Leave a Review</div>
 
-                    </div>
+                            </div> 
 
-                  <div className="review-form-container">
 
-                            <div className="stars-div">
-                                <i className={`fa fa-star ${starred[1]}`}></i>
-                                <i className={`fa fa-star ${starred[2]}`}></i>
-                                <i className={`fa fa-star ${starred[3]}`}></i>
-                                <i className={`fa fa-star ${starred[4]}`}></i>
-                                <i className={`fa fa-star ${starred[5]}`}></i>
-                            </div>
-                    </div>
-                    
-
-                <form className="review-form-detail-container" onSubmit={this.handleSubmit}>
-                    <div className="star-rating">
-                        <input className="radio-input" onChange={this.handleRating} type="radio" name="star" value="1"></input>
-                        <input className="radio-input"  onChange={this.handleRating} type="radio" name="star" value="2"></input>
-                        <input className="radio-input"  onChange={this.handleRating} type="radio" name="star" value="3"></input>
-                        <input className="radio-input"  onChange={this.handleRating} type="radio" name="star" value="4"></input>
-                        <input className="radio-input" onChange={this.handleRating} type="radio" name="star" value="5"></input>
-                    </div> 
-
-                    <div>
-                        <textarea className="review-body" onChange={this.handleChange} ></textarea>
-                    </div>
-
-                    <div>
-                        <button>Submit</button>
-                    </div>
-
-                    
                 
-                </form>
+
+                            <div className="review-form-container">
+
+                                        <div className="stars-div">
+                                            <i className={`fa fa-star ${starred[1]}`}></i>
+                                            <i className={`fa fa-star ${starred[2]}`}></i>
+                                            <i className={`fa fa-star ${starred[3]}`}></i>
+                                            <i className={`fa fa-star ${starred[4]}`}></i>
+                                            <i className={`fa fa-star ${starred[5]}`}></i>
+                                        </div>
+                            </div>
+                                
+
+                            <form className="review-form-detail-container" onSubmit={this.handleSubmit}>
+                                <div className="star-rating">
+                                    <input className="radio-input" onChange={this.handleRating} type="radio" name="star" value="1"></input>
+                                    <input className="radio-input"  onChange={this.handleRating} type="radio" name="star" value="2"></input>
+                                    <input className="radio-input"  onChange={this.handleRating} type="radio" name="star" value="3"></input>
+                                    <input className="radio-input"  onChange={this.handleRating} type="radio" name="star" value="4"></input>
+                                    <input className="radio-input" onChange={this.handleRating} type="radio" name="star" value="5"></input>
+                                </div> 
+
+                                <div>
+                                    <textarea className="review-body" onChange={this.handleChange} ></textarea>
+                                </div>
+
+                                <div>
+                                    <button>Submit</button>
+                                </div>
+
+                                
+                            
+                            </form>
+
+                
+
             </div>
         )
     }
