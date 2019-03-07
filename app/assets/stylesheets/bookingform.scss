@@ -65,6 +65,10 @@
     color: rgb(72, 72, 72);
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 20px;
+
 
 }
 .booking-form-date-picker{
@@ -100,4 +104,40 @@
 
 .booking-num{
     margin-right: 5px;
+}
+
+
+.booking-form-bottom{
+    display: flex;
+
+}
+.booking-form-bottom-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.first{
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 16px ;
+    font-weight: 800 ;
+    line-height: 1.285714em ;
+    color: #484848;
+    margin-bottom: 10px;
+}
+
+.second{
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 14px ;
+    font-weight: 400 ;
+    line-height: 1.285714em ;
+    color: #484848
+}
+
+
+.booking-bottom-pic{
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+
 }

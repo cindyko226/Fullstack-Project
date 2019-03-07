@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/reviewform_container';
-import EditBookingFromContainer from '../booking/edit_bookingform_container';
+import EditBookingFromContainer from '../booking/edit_booking_form_container';
 
 
 function Modal({ modal, closeModal }) {

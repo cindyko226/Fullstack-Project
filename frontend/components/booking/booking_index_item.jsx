@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ReviewFormContainer from '../reviews/reviewform_container';
-
-
+import EditBookingFormContainer from './edit_booking_form_container';
 
 class BookingIndexitem extends React.Component {
     constructor(props){
         super(props);
         this.deleteBooking = this.deleteBooking.bind(this)
         // this.openModal = this.openModal.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
 
@@ -17,12 +17,11 @@ class BookingIndexitem extends React.Component {
         this.props.deleteBooking(this.props.booking.id)
     }
 
-
+    handleClick() {
+        this.props.history.push(`/spots/${this.props.spot.id}/edit/${this.props.booking.id}`);
+    }
     
-    // openModal(){
-    //     this.props.openModal('booking')
-    // }
-
+   
 
 
 
@@ -44,6 +43,7 @@ class BookingIndexitem extends React.Component {
                     <div className="booking-each-checkin" >Check In: {this.props.booking.checkIn}</div>
                     <div className="booking-each-checkout">Check Out: {this.props.booking.checkOut}</div>
                     <div className="booking-cancel">
+                        <button onClick={this.handleClick} >Update Reservation</button>
                         <button onClick={this.deleteBooking}>Cancel Reservation</button>
                     </div>
 
@@ -59,7 +59,7 @@ class BookingIndexitem extends React.Component {
                 </div>
 
                 <div>
-                    {/* <button onClick={() => this.props.openModal('booking')} className="nav-login-button">Update</button> */}
+                    
                 </div>
             </div>
             
@@ -72,19 +72,11 @@ class BookingIndexitem extends React.Component {
         
     }
     
-    export default BookingIndexitem;
+    export default withRouter(BookingIndexitem);
 
 
     
-    { /* 
-<div className="nav-login">
-<button onClick={() => this.props.openModal('review')} className="nav-login-button">Leave Review</button>
-</div> */}
-{/* <Link to="/reviews">
-<p>
-Leave a review
-</p>
-</Link> */}
+   
 
 
 

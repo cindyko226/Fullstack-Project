@@ -20,6 +20,7 @@ class Api::BookingsController < ApplicationController
     end 
 
     def update 
+        # debugger
         @booking = Booking.find(params[:id])
         if @booking.update(booking_params)
             render :show

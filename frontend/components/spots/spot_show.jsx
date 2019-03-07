@@ -3,6 +3,7 @@ import NavBarContainer from '../nav-bar/nav_bar_container';
 import ShowMap from '../map/show_map';
 import SpotMapContainer from '../map/spot_map_container';
 import BookingFormContainer from '../booking/booking_form_container';
+import EditBookingFormContainer from '../booking/edit_booking_form_container';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
 class SpotShow extends React.Component {
@@ -19,10 +20,19 @@ class SpotShow extends React.Component {
         this.props.fetchSpot(this.props.match.params.spotId);
         window.scrollTo(0, 0);
         this.props.fetchReviews();
+        this.props.fetchBookings();
     }
 
     componentWillUnmount(){
         this.props.clearErrors();
+    }
+
+    renderBookingForm() {
+        if (this.props.location.pathname.includes('edit')) {
+            return <EditBookingFormContainer spot={this.props.spot}/>;
+        } else {
+            return <BookingFormContainer spot={this.props.spot} />;
+        }
     }
 
     render(){
@@ -178,7 +188,7 @@ class SpotShow extends React.Component {
                     </div>
 
                     <div className="booking-container">
-                        <BookingFormContainer spot={this.props.spot}/>
+                        {this.renderBookingForm()}
                     </div>
                 </div>
 

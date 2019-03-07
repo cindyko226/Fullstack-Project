@@ -21,6 +21,7 @@ const App = () => (
 
             <Route exact path='/' component={GreetingContainer} />
             <Route exact path='/spots/:spotId' component={SpotShowContainer} />
+            <Route exact path='/spots/:spotId/edit/:bookingId' component={SpotShowContainer} />
             <Route path='/search' component={SearchContainer} />
             <Redirect to="/" />
         </Switch>
