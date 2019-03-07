@@ -15,7 +15,7 @@ const msp =(state, ownProps) => {
 
 const mdp = dispatch => {
     return({
-        formAction: (booking) => dispatch(createBooking(booking)),
+        createBooking: (booking) => dispatch(createBooking(booking)),
         openModal: (modal) => dispatch(openModal(modal)),
         // fetchBookings: () => dispatch(fetchBookings())
     })
