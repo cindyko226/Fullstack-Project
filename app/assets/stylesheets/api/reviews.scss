@@ -4,6 +4,50 @@
 
 
 .review-body{
-    border: 3px solid teal;
-    background: papayawhip;
+    font-family: 'Nunito Sans',sans-serif;
+    border: 1px solid #EBEBEB;
+    background: white;
+    width: 400px;
+    height: 150px;
 }
+
+ .stars-div{
+        // background: black;
+        color: #afafaf;
+        // color: black;
+        letter-spacing: 2px;
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        font-size: 17px;
+
+        .higlighted{
+          color: gold;
+        }
+      }
+    
+    .star-rating{
+        margin: 10px;
+        opacity: 0;
+        z-index: 1;
+      }
+
+.review-form-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.radio-input{
+    margin-right: 5px;
+}
+
+.review-form-title{
+    font-family: 'Nunito Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+
