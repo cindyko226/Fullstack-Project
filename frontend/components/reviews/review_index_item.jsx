@@ -18,6 +18,62 @@ class ReviewIndexitem extends React.Component {
         //     return null;
         // }
 
+        let star;
+        if (this.props.review.rating === 1){
+            star = (
+                <div className="review-index-star">
+                    <i id="star" className="fas fa-star"></i> 
+                </div>
+            )
+        }
+        
+        if (this.props.review.rating === 2){
+            star =(
+                <div >
+                    <i id="review-index-star" className="fas fa-star"></i>
+                    <i id="review-index-star" className="fas fa-star"></i> 
+                </div>
+            )
+        }
+
+        if (this.props.review.rating === 3) {
+            star = (
+                <div >
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                </div>
+            )
+        }
+    
+        if (this.props.review.rating === 4) {
+            star = (
+                <div>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                </div>
+            )
+        }
+
+
+        if (this.props.review.rating === 5) {
+            star = (
+                <div>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                    <i id="review-index-star"className="fas fa-star"></i>
+                </div>
+            )
+        }
+
+
+
+
+
         return(
             
             <div className="review-index-all">
@@ -27,7 +83,7 @@ class ReviewIndexitem extends React.Component {
                    </div>
                     <div className="review-index-rating">
                         <div className="review-author" >{this.props.review.author}</div>
-                        <div>Rating: {this.props.review.rating}</div>
+                        <div>{star}</div>
                     </div>
 
                 </div>

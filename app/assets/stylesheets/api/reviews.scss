@@ -84,7 +84,7 @@
 
 .review-index-pic{
 
-    margin-right: 10px;
+    margin-right: 30px;
 
 }
 
@@ -97,7 +97,7 @@
 }
 
 .review-author{
-     font-family: 'Nunito Sans',sans-serif;
+    font-family: 'Nunito Sans',sans-serif;
     font-size: 16px ;
     font-weight: 800 ;
     line-height: 1.375em ;
@@ -105,7 +105,13 @@
 }
 
 .user-img-review{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+}
+
+.review-index-star{
+    font-size: 12px;
+    color: teal;
+    line-height: 1.43;
 }
