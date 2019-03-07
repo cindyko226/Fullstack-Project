@@ -130,23 +130,23 @@ ActiveRecord::Base.transaction do
 
   )
 
-  sf6 = Spot.create(
-    host_id: user5.id,
-    name: "Perfect Retreat",
-    address: '1100 Hait St',
-    city: 'San Francisco',
-    state: 'CA',
-    lat: 37.775314, 
-    lng: -122.444161,
-    guests: 2,
-    bedrooms: 1,
-    beds: 1,
-    bathrooms: 1,
-    description: "The guest apartment has its own entrance located on the ground level of our home.",
-    rate: 250,
-    home_type: "PRIVATE ROOM"
+  # sf6 = Spot.create(
+  #   host_id: user5.id,
+  #   name: "Perfect Retreat",
+  #   address: '1100 Hait St',
+  #   city: 'San Francisco',
+  #   state: 'CA',
+  #   lat: 37.775314, 
+  #   lng: -122.444161,
+  #   guests: 2,
+  #   bedrooms: 1,
+  #   beds: 1,
+  #   bathrooms: 1,
+  #   description: "The guest apartment has its own entrance located on the ground level of our home.",
+  #   rate: 250,
+  #   home_type: "PRIVATE ROOM"
 
-  )
+  # )
 
 
   # sf spots photos attached
@@ -186,12 +186,12 @@ ActiveRecord::Base.transaction do
   sf5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf5-5.jpg"), filename: "sf5-5.jpg")
   sf5.save!
 
-  sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-1.jpg"), filename: "sf6-1.jpg")
-  sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-2.jpg"), filename: "sf6-2.jpg")
-  sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-3.jpg"), filename: "sf6-3.jpg")
-  sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-4.jpg"), filename: "sf6-4.jpg")
-  sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-5.jpg"), filename: "sf6-5.jpg")
-  sf6.save!
+  # sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-1.jpg"), filename: "sf6-1.jpg")
+  # sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-2.jpg"), filename: "sf6-2.jpg")
+  # sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-3.jpg"), filename: "sf6-3.jpg")
+  # sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-4.jpg"), filename: "sf6-4.jpg")
+  # sf6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SF/sf6-5.jpg"), filename: "sf6-5.jpg")
+  # sf6.save!
 
 
 
@@ -296,24 +296,24 @@ ActiveRecord::Base.transaction do
   )
 
 
-  la6 = Spot.create(
-    host_id: user4.id,
-    name: "The Town",
-    address: '5405029007',
-    city: 'Los Angeles',
-    state: 'CA',
-    lat: 34.052833, 
-    lng: -118.256738,
-    guests: 1,
-    bedrooms: 1,
-    beds: 1,
-    bathrooms: 2,
-    description: "Our darling, sunny, detached, private studio guest house, 
-                  the NoHouse, is ready for your visit to Los Angeles! ",
-    rate: 130,
-    home_type: "ENTIRE GUEST SUITE"
+  # la6 = Spot.create(
+  #   host_id: user4.id,
+  #   name: "The Town",
+  #   address: '5405029007',
+  #   city: 'Los Angeles',
+  #   state: 'CA',
+  #   lat: 34.052833, 
+  #   lng: -118.256738,
+  #   guests: 1,
+  #   bedrooms: 1,
+  #   beds: 1,
+  #   bathrooms: 2,
+  #   description: "Our darling, sunny, detached, private studio guest house, 
+  #                 the NoHouse, is ready for your visit to Los Angeles! ",
+  #   rate: 130,
+  #   home_type: "ENTIRE GUEST SUITE"
 
-  )
+  # )
 
   # la spots photos attached
   la1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la1-1.jpeg"), filename: "la1-1.jpg")
@@ -351,12 +351,12 @@ ActiveRecord::Base.transaction do
   la5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la5-5.jpeg"), filename: "la5-5.jpg")
   la5.save!
 
-  la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-1.jpeg"), filename: "la6-1.jpg")
-  la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-2.jpeg"), filename: "la6-2.jpg")
-  la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-3.jpeg"), filename: "la6-3.jpg")
-  la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-4.jpeg"), filename: "la6-4.jpg")
-  la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-5.jpeg"), filename: "la6-5.jpg")
-  la6.save!
+  # la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-1.jpeg"), filename: "la6-1.jpg")
+  # la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-2.jpeg"), filename: "la6-2.jpg")
+  # la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-3.jpeg"), filename: "la6-3.jpg")
+  # la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-4.jpeg"), filename: "la6-4.jpg")
+  # la6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/LA/la6-5.jpeg"), filename: "la6-5.jpg")
+  # la6.save!
 
 
   sd1 = Spot.create(
@@ -458,24 +458,24 @@ ActiveRecord::Base.transaction do
   )
 
 
-  sd6 = Spot.create(
-    host_id: user3.id,
-    name: "The Beach",
-    address: '21 21st St',
-    city: 'San Diego',
-    state: 'CA',
-    lat: 32.718147, 
-    lng: -117.165534,
-    guests: 2,
-    bedrooms: 2,
-    beds: 3,
-    bathrooms: 2,
-    description: "Our darling, sunny, detached, private studio guest house, 
-                  the NoHouse, is ready for your visit to San Deigo!",
-    rate: 230,
-    home_type: "ENTIRE GUEST SUITE"
+  # sd6 = Spot.create(
+  #   host_id: user3.id,
+  #   name: "The Beach",
+  #   address: '21 21st St',
+  #   city: 'San Diego',
+  #   state: 'CA',
+  #   lat: 32.718147, 
+  #   lng: -117.165534,
+  #   guests: 2,
+  #   bedrooms: 2,
+  #   beds: 3,
+  #   bathrooms: 2,
+  #   description: "Our darling, sunny, detached, private studio guest house, 
+  #                 the NoHouse, is ready for your visit to San Deigo!",
+  #   rate: 230,
+  #   home_type: "ENTIRE GUEST SUITE"
 
-  )
+  # )
 
 
   # sd spots photos attached 
@@ -515,12 +515,12 @@ ActiveRecord::Base.transaction do
   sd5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd5-5.jpeg"), filename: "sd5-5.jpeg")
   sd5.save!
 
-  sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-1.jpeg"), filename: "sd6-1.jpeg")
-  sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-2.jpeg"), filename: "sd6-2.jpeg")
-  sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-3.jpeg"), filename: "sd6-3.jpeg")
-  sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-4.jpeg"), filename: "sd6-4.jpeg")
-  sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-5.jpeg"), filename: "sd6-5.jpeg")
-  sd6.save!
+  # sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-1.jpeg"), filename: "sd6-1.jpeg")
+  # sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-2.jpeg"), filename: "sd6-2.jpeg")
+  # sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-3.jpeg"), filename: "sd6-3.jpeg")
+  # sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-4.jpeg"), filename: "sd6-4.jpeg")
+  # sd6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SD/sd6-5.jpeg"), filename: "sd6-5.jpeg")
+  # sd6.save!
 
 
 
@@ -612,22 +612,22 @@ ActiveRecord::Base.transaction do
     home_type: "ENTIRE GUEST SUITE"
   )
 
-  sj6 = Spot.create(
-    host_id: user4.id,
-    name: "De Anza",
-    address: '506 S 7th St',
-    city: 'San Jose',
-    state: 'CA',
-    lat: 37.344757, 
-    lng: -121.885423,
-    guests: 2,
-    bedrooms: 2,
-    beds: 2,
-    bathrooms: 3,
-    description: "Very quite neighborhood, 1/3 acre lot, near eBay & public transit",      
-    rate: 200,
-    home_type: "ENTIRE GUEST SUITE"
-  )
+  # sj6 = Spot.create(
+  #   host_id: user4.id,
+  #   name: "De Anza",
+  #   address: '506 S 7th St',
+  #   city: 'San Jose',
+  #   state: 'CA',
+  #   lat: 37.344757, 
+  #   lng: -121.885423,
+  #   guests: 2,
+  #   bedrooms: 2,
+  #   beds: 2,
+  #   bathrooms: 3,
+  #   description: "Very quite neighborhood, 1/3 acre lot, near eBay & public transit",      
+  #   rate: 200,
+  #   home_type: "ENTIRE GUEST SUITE"
+  # )
 
   sj1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj1-1.jpeg"), filename: "sj1-1.jpeg")
   sj1.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj1-2.jpeg"), filename: "sj1-2.jpeg")
@@ -664,11 +664,11 @@ ActiveRecord::Base.transaction do
   sj5.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj5-5.jpeg"), filename: "sj5-5.jpeg")
   sj5.save!
 
-  sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-1.jpeg"), filename: "sj6-1.jpeg")
-  sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-2.jpeg"), filename: "sj6-2.jpeg")
-  sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-3.jpeg"), filename: "sj6-3.jpeg")
-  sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-4.jpeg"), filename: "sj6-4.jpeg")
-  sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-5.jpeg"), filename: "sj6-5.jpeg")
-  sj6.save!
+  # sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-1.jpeg"), filename: "sj6-1.jpeg")
+  # sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-2.jpeg"), filename: "sj6-2.jpeg")
+  # sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-3.jpeg"), filename: "sj6-3.jpeg")
+  # sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-4.jpeg"), filename: "sj6-4.jpeg")
+  # sj6.photos.attach(io: open("https://s3-us-west-1.amazonaws.com/takemehome-seed/SJ/sj6-5.jpeg"), filename: "sj6-5.jpeg")
+  # sj6.save!
 
 end

@@ -9,7 +9,7 @@ class ReviewIndex extends React.Component {
 
     componentDidMount(){
         this.props.fetchReviews();
-        this.props.fetchSpots();
+        // this.props.fetchSpots();
     }
 
     render(){

@@ -37,11 +37,6 @@ class BookingIndexitem extends React.Component {
                         <button onClick={this.deleteBooking}>Cancel Reservation</button>
                     </div>
 
-                    {/* <Link to="/reviews">
-                        <p>
-                            Leave a review
-                        </p>
-                    </Link> */}
 
                         <div>
 
@@ -50,21 +45,33 @@ class BookingIndexitem extends React.Component {
                         spot={this.props.spot}/>
                         </div>
                     
-                        { /* 
-                    <div className="nav-login">
-                        <button onClick={() => this.props.openModal('review')} className="nav-login-button">Leave Review</button>
-                    </div> */}
 
                 </div>
             </div>
             
-        )
-
+            )
+            
+        }
+        
+        
+        
+        
     }
+    
+    export default BookingIndexitem;
+
+
+    
+    { /* 
+<div className="nav-login">
+<button onClick={() => this.props.openModal('review')} className="nav-login-button">Leave Review</button>
+</div> */}
+{/* <Link to="/reviews">
+<p>
+Leave a review
+</p>
+</Link> */}
 
 
 
 
-}
-
-export default BookingIndexitem;

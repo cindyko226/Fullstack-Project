@@ -6,7 +6,7 @@ import {fetchReviews} from '../../actions/review_actions';
 
 
 const msp = (state, ownProps) => {
-  
+//   debugger
     return({
         spot: state.entities.spots[ownProps.match.params.spotId],
         currentUserId: state.session.currentUserId,

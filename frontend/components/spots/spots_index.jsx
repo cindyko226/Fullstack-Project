@@ -136,26 +136,7 @@ class SpotsIndex extends React.Component{
                             </div>
                         </Link>
 
-                        <Link to={`/spots/${this.props.sf[5].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sf[5].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.sf[5].homeType} • {this.props.sf[5].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sf[5].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sf[5].rate} per night + $100 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+                        
 
                     </div>
 
@@ -274,26 +255,7 @@ class SpotsIndex extends React.Component{
                             </div>
                         </Link>
 
-                        <Link to={`/spots/${this.props.la[5].id}`} >
-                            <div className="homes-des" >
-                                <div className="home-pic">
-                                    < img src={this.props.la[5].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.la[5].homeType} • {this.props.la[5].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.la[5].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.la[5].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+                       
                     </div>
                 </div>
             )
@@ -411,26 +373,7 @@ class SpotsIndex extends React.Component{
                             </div>
                         </Link>
 
-                        <Link to={`/spots/${this.props.sd[5].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sd[5].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sd[5].homeType} • {this.props.sd[5].beds} BED</div>
-                                    <div className="index-spot-title">  {this.props.sd[5].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sd[5].rate} per night</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+                        
 
                     </div>
                 </div>
@@ -549,26 +492,7 @@ class SpotsIndex extends React.Component{
                             </div>
                         </Link>
 
-                        <Link to={`/spots/${this.props.sj[5].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sj[5].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sj[5].homeType} • {this.props.sj[5].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sj[5].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sj[5].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+                        
 
                     </div>
                 </div>

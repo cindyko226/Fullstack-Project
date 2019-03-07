@@ -44,7 +44,6 @@ class SpotShow extends React.Component {
                 <div className="spot-pictures">
                     <div className="large-pix-container">
                         <div className="large-pix">
-                            {/* < img className="large" src={window.artURL} src={window.artURL} /> */}
                             < img className="large" src={this.props.spot.photoUrls[0]}  />
                         </div>
                     </div>
