@@ -101,10 +101,16 @@
 
 }
 
+.homes-list-add{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+}
+
 .homes-des{
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    margin: 7px;
 }
 
 img{

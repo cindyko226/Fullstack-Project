@@ -27,6 +27,7 @@ class SpotsIndex extends React.Component{
     // testttttttttttttt
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchSpots(this.props.filters);
     }
 
@@ -587,22 +588,30 @@ class SpotsIndex extends React.Component{
                         {this.noResult()}
                         <div className="homes-column">
                             <h1 className="index-title" >{sfTitle}</h1>
-                            {sf}
+                            <div className="homes-list-add">
+                                {sf}
+                            </div>
                         </div>
 
                         <div className="homes-column">
                             <h1 className="index-title" >{laTitle}</h1>
-                            {la}
+                            <div className="homes-list-add">
+                                {la}
+                            </div>
                         </div>
 
                         <div className="homes-column">
                             <h1 className="index-title" >{sdTitle}</h1>
-                            {sd}
+                            <div className="homes-list-add">
+                                {sd}
+                            </div>
                         </div>
 
                         <div className="homes-column">
                             <h1 className="index-title" >{sjTitle}</h1>
-                            {sj}
+                            <div className="homes-list-add">
+                                {sj}
+                            </div>
                         </div>
 
                         {/* {this.loadLa()} */}
