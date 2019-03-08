@@ -11,7 +11,7 @@ const msp = (state, ownProps) => {
     return({
         spot: state.entities.spots[ownProps.match.params.spotId],
         currentUserId: state.session.currentUserId,
-        
+        bookings: state.entities.bookings
     })
    
 }

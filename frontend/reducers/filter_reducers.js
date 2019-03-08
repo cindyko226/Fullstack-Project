@@ -8,7 +8,7 @@ const defaultFilters = {
 }
 
 const filtersReducer = (state = defaultFilters, action) => {
-    debugger 
+    // debugger 
     Object.freeze(state);
     switch(action.type){
         case UPDATE_FILTER:

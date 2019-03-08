@@ -14,7 +14,7 @@ class Search extends React.Component {
 
 
     loadSpots(){
-        debugger
+        // debugger
             return (
                 <div>
 

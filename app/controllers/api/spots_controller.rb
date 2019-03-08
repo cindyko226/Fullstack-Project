@@ -7,6 +7,9 @@ class Api::SpotsController < ApplicationController
         # elsif params[:price]
         #      @spots = Spot.where(rate: price_range)
         #      render :index
+        elsif params[:price]
+             @spots = Spot.where(rate: price_range)
+             render :index
         else 
             @spots = Spot.all 
             render :index
