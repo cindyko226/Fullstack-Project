@@ -3,12 +3,12 @@ import {UPDATE_FILTER, CLEAR_FILTER}  from '../actions/filter_actions';
 
 const defaultFilters = {
     bounds: {},
-    price: [1, 600],
+    rate: [1, 600],
     
 }
 
 const filtersReducer = (state = defaultFilters, action) => {
-    // debugger 
+    debugger 
     Object.freeze(state);
     switch(action.type){
         case UPDATE_FILTER:

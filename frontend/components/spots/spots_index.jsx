@@ -4,6 +4,7 @@ import GreetingContainer from '../greeting/greeting_container';
 import NavBarContainer from '../nav-bar/nav_bar_container';
 import {Link} from 'react-router-dom';
 import SpotMapContainer from '../map/spot_map_container';
+import FilterForm from '../search/filter_form';
 
 class SpotsIndex extends React.Component{
 
@@ -531,6 +532,7 @@ class SpotsIndex extends React.Component{
 
             <div className="filter"> 
                 <p>Filter here</p>
+                <FilterForm /> 
             </div>
 
             <div className="index-page-container">

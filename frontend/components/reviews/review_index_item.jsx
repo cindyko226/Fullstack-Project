@@ -70,6 +70,12 @@ class ReviewIndexitem extends React.Component {
             )
         }
 
+        let url;
+        if(!this.props.review.authorPhotourl){
+            url = window.booURL
+        }else{
+            url = this.props.review.authorPhotourl
+        }
 
 
 
@@ -79,7 +85,7 @@ class ReviewIndexitem extends React.Component {
             <div className="review-index-all">
                 <div className="pic-rating">
                     <div className="review-index-pic">
-                        < img className="user-img-review" src={this.props.review.authorPhotourl} />
+                        < img className="user-img-review" src={url} />
                    </div>
                     <div className="review-index-rating">
                         <div className="review-author" >{this.props.review.author}</div>
