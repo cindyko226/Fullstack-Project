@@ -11,6 +11,7 @@
     "moment": "^2.24.0",
     "nuka-carousel": "^4.4.9",
     "query-string": "^6.3.0",
+    "rc-slider": "^8.6.6",
     "react": "^16.8.3",
     "react-dates": "^20.0.0",
     "react-dom": "^16.8.3",
