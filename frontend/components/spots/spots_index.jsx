@@ -5,15 +5,16 @@ import NavBarContainer from '../nav-bar/nav_bar_container';
 import {Link} from 'react-router-dom';
 import SpotMapContainer from '../map/spot_map_container';
 import FilterForm from '../search/filter_form';
+import SpotIndexItem from './spot_index_item';
 
 class SpotsIndex extends React.Component{
 
     constructor(props){
         super(props);
-        this.loadSf = this.loadSf.bind(this);
-        this.loadLa = this.loadLa.bind(this);
-        this.loadSd = this.loadSd.bind(this);
-        this.loadSj = this.loadSj.bind(this);
+        // this.loadSf = this.loadSf.bind(this);
+        // this.loadLa = this.loadLa.bind(this);
+        // this.loadSd = this.loadSd.bind(this);
+        // this.loadSj = this.loadSj.bind(this);
         this.noResult = this.noResult.bind(this);
     }
 
@@ -23,492 +24,500 @@ class SpotsIndex extends React.Component{
     // }
 
 
-    loadSf(){
-        // debugger
-        if(this.props.sf.length > 0){
-            return (
-                <div className="homes-column">
-                    <h1 className="index-title">Homes in San Francisco</h1>
-                    <div className="homes-lists">
-                        <Link to={`/spots/${this.props.sf[0].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                   
-                                    < img src={this.props.sf[0].photoUrls[0]} />
-                                  
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.sf[0].homeType} • {this.props.sf[0].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sf[0].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sf[0].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        
-                        <Link to={`/spots/${this.props.sf[1].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sf[1].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sf[1].homeType} • {this.props.sf[1].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sf[1].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sf[1].rate} per night</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        
-                        <Link to={`/spots/${this.props.sf[2].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sf[2].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.sf[2].homeType} • {this.props.sf[2].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sf[2].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sf[2].rate} per night + $50 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    // testttttttttttttt
 
-                        <Link to={`/spots/${this.props.sf[3].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sf[3].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.sf[3].homeType} • {this.props.sf[3].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sf[3].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sf[3].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link to={`/spots/${this.props.sf[4].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sf[4].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.sf[4].homeType} • {this.props.sf[4].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sf[4].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sf[4].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        
-
-                    </div>
-
-                </div>
-            )
-        }
+    componentDidMount() {
+        this.props.fetchSpots(this.props.filters);
     }
-
-
-    //test  filter 
 
     
 
+    // loadSf(){
+    //     // debugger
+    //     if(this.props.sf.length > 0){
+    //         return (
+    //             <div className="homes-column">
+    //                 <h1 className="index-title">Homes in San Francisco</h1>
+    //                 <div className="homes-lists">
+    //                     <Link to={`/spots/${this.props.sf[0].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+                                   
+    //                                 < img src={this.props.sf[0].photoUrls[0]} />
+                                  
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.sf[0].homeType} • {this.props.sf[0].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sf[0].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sf[0].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+                        
+    //                     <Link to={`/spots/${this.props.sf[1].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sf[1].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sf[1].homeType} • {this.props.sf[1].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sf[1].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sf[1].rate} per night</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+                        
+    //                     <Link to={`/spots/${this.props.sf[2].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sf[2].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.sf[2].homeType} • {this.props.sf[2].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sf[2].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sf[2].rate} per night + $50 cleaning fee</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+    //                     <Link to={`/spots/${this.props.sf[3].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sf[3].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.sf[3].homeType} • {this.props.sf[3].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sf[3].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sf[3].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+    //                     <Link to={`/spots/${this.props.sf[4].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sf[4].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.sf[4].homeType} • {this.props.sf[4].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sf[4].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sf[4].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+                        
+
+    //                 </div>
+
+    //             </div>
+    //         )
+    //     }
+    // }
+
+
+ 
+
+
+
 
    
-    loadLa(){
-        if(this.props.la.length > 0){
-            return(
-                <div className="homes-column">
-                    <h1 className="index-title">Homes in Los Angeles</h1>
-                    <div className="homes-lists">
-                        <Link to={`/spots/${this.props.la[0].id}`} >
-                            <div className="homes-des" >
-                                <div className="home-pic">
-                                    < img src={this.props.la[0].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.la[0].homeType} • {this.props.la[0].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.la[0].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.la[0].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={`/spots/${this.props.la[1].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.la[1].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.la[1].homeType} • {this.props.la[1].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.la[1].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.la[1].rate} per night</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    // loadLa(){
+    //     if(this.props.la.length > 0){
+    //         return(
+    //             <div className="homes-column">
+    //                 <h1 className="index-title">Homes in Los Angeles</h1>
+    //                 <div className="homes-lists">
+    //                     <Link to={`/spots/${this.props.la[0].id}`} >
+    //                         <div className="homes-des" >
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.la[0].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.la[0].homeType} • {this.props.la[0].beds} BED</div>
+    //                                 <div className="index-spot-title" >{this.props.la[0].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.la[0].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+    //                     <Link to={`/spots/${this.props.la[1].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.la[1].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.la[1].homeType} • {this.props.la[1].beds} BED</div>
+    //                                 <div className="index-spot-title" >{this.props.la[1].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.la[1].rate} per night</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
-                        <Link to={`/spots/${this.props.la[2].id}`} >
-                            <div className="homes-des" >
-                                <div className="home-pic">
-                                    < img src={this.props.la[2].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.la[2].homeType} • {this.props.la[2].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.la[2].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.la[2].rate} per night + $102 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                     <Link to={`/spots/${this.props.la[2].id}`} >
+    //                         <div className="homes-des" >
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.la[2].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.la[2].homeType} • {this.props.la[2].beds} BED</div>
+    //                                 <div className="index-spot-title" >{this.props.la[2].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.la[2].rate} per night + $102 cleaning fee</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
-                        <Link to={`/spots/${this.props.la[3].id}`} >
-                            <div className="homes-des" >
-                                <div className="home-pic">
-                                    < img src={this.props.la[3].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.la[3].homeType} • {this.props.la[3].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.la[3].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.la[3].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                     <Link to={`/spots/${this.props.la[3].id}`} >
+    //                         <div className="homes-des" >
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.la[3].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.la[3].homeType} • {this.props.la[3].beds} BED</div>
+    //                                 <div className="index-spot-title" >{this.props.la[3].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.la[3].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
-                        <Link to={`/spots/${this.props.la[4].id}`} >
+    //                     <Link to={`/spots/${this.props.la[4].id}`} >
                         
-                            <div className="homes-des" >
-                                <div className="home-pic">
-                                    < img src={this.props.la[4].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.la[4].homeType} • {this.props.la[4].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.la[4].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.la[4].rate} per night + $90 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                         <div className="homes-des" >
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.la[4].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.la[4].homeType} • {this.props.la[4].beds} BED</div>
+    //                                 <div className="index-spot-title" >{this.props.la[4].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.la[4].rate} per night + $90 cleaning fee</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
                        
-                    </div>
-                </div>
-            )
-        }
-    }
+    //                 </div>
+    //             </div>
+    //         )
+    //     }
+    // }
 
-    loadSd(){
-        if(this.props.sd.length > 0){
-            return(
-                <div className="homes-column">
-                    <h1 className="index-title" >Homes in San Diego</h1>
-                    <div className="homes-lists">
-                        <Link to={`/spots/${this.props.sd[0].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sd[0].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sd[0].homeType} • {this.props.sd[0].beds} BED</div>
-                                    <div className="index-spot-title">  {this.props.sd[0].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sd[0].rate} per night + $150 cleaning fee</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    // loadSd(){
+    //     if(this.props.sd.length > 0){
+    //         return(
+    //             <div className="homes-column">
+    //                 <h1 className="index-title" >Homes in San Diego</h1>
+    //                 <div className="homes-lists">
+    //                     <Link to={`/spots/${this.props.sd[0].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sd[0].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sd[0].homeType} • {this.props.sd[0].beds} BED</div>
+    //                                 <div className="index-spot-title">  {this.props.sd[0].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sd[0].rate} per night + $150 cleaning fee</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
-                        <Link to={`/spots/${this.props.sd[1].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sd[1].photoUrls[0]}/>
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sd[1].homeType} • {this.props.sd[1].beds} BED</div>
-                                    <div className="index-spot-title" >{this.props.sd[1].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sd[1].rate} per night</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                     <Link to={`/spots/${this.props.sd[1].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sd[1].photoUrls[0]}/>
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sd[1].homeType} • {this.props.sd[1].beds} BED</div>
+    //                                 <div className="index-spot-title" >{this.props.sd[1].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sd[1].rate} per night</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
                         
-                        <Link to={`/spots/${this.props.sd[2].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sd[2].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sd[2].homeType} • {this.props.sd[2].beds} BED</div>
-                                    <div className="index-spot-title">  {this.props.sd[2].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sd[2].rate} per night + $80 cleaning fee</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                     <Link to={`/spots/${this.props.sd[2].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sd[2].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sd[2].homeType} • {this.props.sd[2].beds} BED</div>
+    //                                 <div className="index-spot-title">  {this.props.sd[2].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sd[2].rate} per night + $80 cleaning fee</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
-                        <Link to={`/spots/${this.props.sd[3].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sd[3].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sd[3].homeType} • {this.props.sd[3].beds} BED</div>
-                                    <div className="index-spot-title">  {this.props.sd[3].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sd[3].rate} per night</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                     <Link to={`/spots/${this.props.sd[3].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sd[3].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sd[3].homeType} • {this.props.sd[3].beds} BED</div>
+    //                                 <div className="index-spot-title">  {this.props.sd[3].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sd[3].rate} per night</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
-                        <Link to={`/spots/${this.props.sd[4].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sd[4].photoUrls[0]}/>
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sd[4].homeType} • {this.props.sd[4].beds} BED</div>
-                                    <div className="index-spot-title">  {this.props.sd[4].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sd[4].rate} per night + $30 cleaning fee</div>
-                                    <div className="index-rating" >
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        
-
-                    </div>
-                </div>
-            )
-        }
-    }
-
-    loadSj(){
-        if(this.props.sj.length > 0){
-            return(
-                <div className="homes-column">
-                    <h1 className="index-title" >Homes in San Jose</h1>
-                    <div className="homes-lists">
-                        <Link to={`/spots/${this.props.sj[0].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sj[0].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sj[0].homeType} • {this.props.sj[0].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sj[0].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sj[0].rate} per night + $55 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link to={`/spots/${this.props.sj[1].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sj[1].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type">{this.props.sj[1].homeType} • {this.props.sj[1].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sj[1].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sj[1].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link to={`/spots/${this.props.sj[2].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sj[2].photoUrls[0]} />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sj[2].homeType} • {this.props.sj[2].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sj[2].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sj[2].rate} per night + $35 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link to={`/spots/${this.props.sj[3].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sj[3].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sj[3].homeType} • {this.props.sj[3].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sj[3].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sj[3].rate} per night</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-
-                        <Link to={`/spots/${this.props.sj[4].id}`} >
-                            <div className="homes-des">
-                                <div className="home-pic">
-                                    < img src={this.props.sj[4].photoUrls[0]}  />
-                                    <i className="far fa-heart"></i>
-                                </div>
-                                <div className="index-spot-info">
-                                    <div className="index-spot-type" >{this.props.sj[4].homeType} • {this.props.sj[4].beds} BED</div>
-                                    <div className="index-spot-title">{this.props.sj[4].name}</div>
-                                    <div className="index-spot-rate">From ${this.props.sj[4].rate} per night + $20 cleaning fee</div>
-                                    <div className="index-rating">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+    //                     <Link to={`/spots/${this.props.sd[4].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sd[4].photoUrls[0]}/>
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sd[4].homeType} • {this.props.sd[4].beds} BED</div>
+    //                                 <div className="index-spot-title">  {this.props.sd[4].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sd[4].rate} per night + $30 cleaning fee</div>
+    //                                 <div className="index-rating" >
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
 
                         
 
-                    </div>
-                </div>
+    //                 </div>
+    //             </div>
+    //         )
+    //     }
+    // }
+
+    // loadSj(){
+    //     if(this.props.sj.length > 0){
+    //         return(
+    //             <div className="homes-column">
+    //                 <h1 className="index-title" >Homes in San Jose</h1>
+    //                 <div className="homes-lists">
+    //                     <Link to={`/spots/${this.props.sj[0].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sj[0].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sj[0].homeType} • {this.props.sj[0].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sj[0].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sj[0].rate} per night + $55 cleaning fee</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+    //                     <Link to={`/spots/${this.props.sj[1].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sj[1].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type">{this.props.sj[1].homeType} • {this.props.sj[1].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sj[1].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sj[1].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+    //                     <Link to={`/spots/${this.props.sj[2].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sj[2].photoUrls[0]} />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sj[2].homeType} • {this.props.sj[2].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sj[2].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sj[2].rate} per night + $35 cleaning fee</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+    //                     <Link to={`/spots/${this.props.sj[3].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sj[3].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sj[3].homeType} • {this.props.sj[3].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sj[3].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sj[3].rate} per night</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+    //                     <Link to={`/spots/${this.props.sj[4].id}`} >
+    //                         <div className="homes-des">
+    //                             <div className="home-pic">
+    //                                 < img src={this.props.sj[4].photoUrls[0]}  />
+    //                                 <i className="far fa-heart"></i>
+    //                             </div>
+    //                             <div className="index-spot-info">
+    //                                 <div className="index-spot-type" >{this.props.sj[4].homeType} • {this.props.sj[4].beds} BED</div>
+    //                                 <div className="index-spot-title">{this.props.sj[4].name}</div>
+    //                                 <div className="index-spot-rate">From ${this.props.sj[4].rate} per night + $20 cleaning fee</div>
+    //                                 <div className="index-rating">
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                     <i className="fas fa-star"></i>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    //                     </Link>
+
+                        
+
+    //                 </div>
+    //             </div>
                 
-            )
-        }
-    }
+    //         )
+    //     }
+    // }
 
     noResult(){
         // debugger
@@ -529,6 +538,32 @@ class SpotsIndex extends React.Component{
         // if (this.props.spots.length === 0 ){
         //     return null;
         // }
+        // debugger
+        const sf = this.props.sf.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
+        const la = this.props.la.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
+        const sd = this.props.sd.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
+        const sj = this.props.sj.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
+        
+        let sfTitle;
+        if (this.props.sf.length > 0) {
+            sfTitle = "Homes in San Francisco"
+        }
+
+        let laTitle;
+        if(this.props.la.length > 0 ){
+            laTitle = "Homes in Los Angeles"
+        }
+
+        let sdTitle;
+        if(this.props.sd.length > 0){
+            sdTitle = "Homes in San Diego"
+        }
+
+        let sjTitle;
+        if(this.props.sj.length > 0){
+            sjTitle = "Homes in San Jose"
+        }
+
 
         return(
         <div className="spots-index-page">
@@ -540,7 +575,7 @@ class SpotsIndex extends React.Component{
 
             <div className="filter"> 
                 <p>Filter here</p>
-                <FilterForm /> 
+                <FilterForm resetFilters={this.props.resetFilters}/> 
             </div>
 
             <div className="index-page-container">
@@ -550,10 +585,29 @@ class SpotsIndex extends React.Component{
                     </div>
                    
                         {this.noResult()}
-                        {this.loadSf()}
-                        {this.loadLa()}
-                        {this.loadSd()}
-                        {this.loadSj()}
+                        <div className="homes-column">
+                            <h1 className="index-title" >{sfTitle}</h1>
+                            {sf}
+                        </div>
+
+                        <div className="homes-column">
+                            <h1 className="index-title" >{laTitle}</h1>
+                            {la}
+                        </div>
+
+                        <div className="homes-column">
+                            <h1 className="index-title" >{sdTitle}</h1>
+                            {sd}
+                        </div>
+
+                        <div className="homes-column">
+                            <h1 className="index-title" >{sjTitle}</h1>
+                            {sj}
+                        </div>
+
+                        {/* {this.loadLa()} */}
+                        {/* {this.loadSd()}
+                        {this.loadSj()} */}
                     
                     
                 </div>

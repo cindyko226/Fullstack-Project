@@ -8,7 +8,7 @@ class FilterForm extends React.Component {
     }
 
     clearFilters() {
-        this.props.resetFilters()
+        this.props.resetFilters();
     }
 
     render() {

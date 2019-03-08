@@ -2,11 +2,12 @@ import {connect} from 'react-redux';
 import SpotsIndex from './spots_index';
 import { logout } from '../../actions/session_actions';
 import {fetchSpots} from '../../actions/spots_actions';
+import {resetFilters} from '../../actions/filter_actions';
 // import 'react-dates/initialize';
 // import 'react-dates/lib/css/_datepicker.css';
 
 const msp = (state, ownProps) => {
-    debugger
+    // debugger
     const sf = Object.values(state.entities.spots).filter(spot => spot.city === 'San Francisco').slice(0, 6);
     const la = Object.values(state.entities.spots).filter(spot => spot.city === 'Los Angeles').slice(0, 6);
     const sd = Object.values(state.entities.spots).filter(spot => spot.city === 'San Diego').slice(0, 6);
@@ -27,8 +28,9 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
     return({
         logout: () => dispatch(logout()),
-        fetchSpots: () => dispatch(fetchSpots())
-    })
+        fetchSpots: () => dispatch(fetchSpots()),
+        resetFilters: () => resetFilters()
+    });
 }
 
 
