@@ -19,7 +19,7 @@ class FilterForm extends React.Component {
                     <PriceFilterContainer />
                 </div>
                 
-                <div >
+                <div className="clear-filter-button">
                     <button id="clear-filters" onClick={this.clearFilters}>Clear All Filters</button>
                 </div>
             </div>

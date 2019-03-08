@@ -3,6 +3,7 @@
     padding-left: 15px;
     padding-right: 15px;
     flex-direction: column;
+    padding-top: 40px;
     width: 65%;
 }
 
@@ -43,7 +44,7 @@
 
 .index-page-container{
     display: flex;
-    padding-top: 230px;
+    padding-top: 190px;
     width: auto;
 }
 
@@ -52,7 +53,7 @@
 .filter{
     position: fixed;
     margin-top:80px;
-    height: 135px;
+    height: 100px;
     padding-top: 10px;
     border: 1px solid rgb(235,235,235);
     font-family: 'Nunito Sans', sans-serif;
@@ -457,4 +458,25 @@ img{
 .rc-slider-tooltip-zoom-down-leave {
   -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
           animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.filter-rate-range{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.price-filter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+}
+
+.clear-filter-button{
+    display: none;
+}
+
+.price-filter-title{
+    margin-bottom: 10px;
 }

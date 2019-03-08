@@ -43,24 +43,25 @@ class PriceFilter extends React.Component {
     render() {
         const { minPrice, maxPrice } = this.state;
         return (
-            <div >
-                <div>
-                    <h2>Price Filter</h2>
-                </div>
+            <div className="price-filter-container" >
 
-                <div >
-                    <Range
-                        min={1}
-                        max={600}
-                        value={[minPrice, maxPrice]}
-                        defaultValue={[minPrice, maxPrice]}
-                        onChange={this.updatePrice}
-                        onAfterChange={() => this.handleApply([minPrice, maxPrice])}
-                        allowCross={false}
-                    />
-                </div>
+                        <div className="price-filter-title">
+                            <h2>Price Filter</h2>
+                        </div>
 
-                <div>
+                        <div >
+                            <Range
+                                min={1}
+                                max={600}
+                                value={[minPrice, maxPrice]}
+                                defaultValue={[minPrice, maxPrice]}
+                                onChange={this.updatePrice}
+                                onAfterChange={() => this.handleApply([minPrice, maxPrice])}
+                                allowCross={false}
+                            />
+                        </div>
+
+                <div className="filter-rate-range">
                     <div>
                         <p>${minPrice}</p>
                     </div>

@@ -575,7 +575,6 @@ class SpotsIndex extends React.Component{
              
 
             <div className="filter"> 
-                <p>Filter here</p>
                 <FilterForm resetFilters={this.props.resetFilters}/> 
             </div>
 
