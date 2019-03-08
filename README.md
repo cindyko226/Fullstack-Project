@@ -69,6 +69,8 @@ Searching for places was the most challenging and most rewarding feature. It inv
 
 ## Filtering For Spots
 
+![filter](https://github.com/cindyko226/Fullstack-Project/blob/master/ReadMe/chrome-capture%20(1).gif)
+
 User can search spots by moving rate range bar, filtering for spots by rate will update search results and only show the spots within the price range.
 
 ```js
@@ -86,6 +88,8 @@ User can search spots by moving rate range bar, filtering for spots by rate will
 ```
 
 ## Spots Show Page 
+
+![spotshow](https://github.com/cindyko226/Fullstack-Project/blob/master/ReadMe/chrome-capture%20(2).gif)
 
 Clicking on a spot will take you to the spot show page, where all relevant information of the spot is shown. Implement React Dates to create an interactive calendar that displays the dates of the spot and allows the user to book it as well. 
 
