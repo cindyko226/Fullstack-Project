@@ -36,6 +36,11 @@ class Spot < ApplicationRecord
     foreign_key: :spot_id,
     class_name: :Booking
 
+    has_many :reviews,
+    primary_key: :id,
+    foreign_key: :spot_id,
+    class_name: :Review 
+
     has_many_attached :photos
 
     def in_bounds(bounds)

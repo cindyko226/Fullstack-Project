@@ -220,7 +220,7 @@ class SpotShow extends React.Component {
                             
                         </div>
                         <div className="spot-detail-reviews">
-                        Reviews
+                        
                         
                         <ReviewIndexContainer />
                         </div>

@@ -1,15 +1,17 @@
 class Api::SpotsController < ApplicationController
 
     def index 
+        # debugger
         if params[:bounds]
-            @spots = Spot.all.select {|spot| spot.in_bounds(params[:bounds])} 
+            @spots = Spot.where(rate: price_range).select {|spot| spot.in_bounds(params[:bounds])} 
             render :index
         # elsif params[:price]
         #      @spots = Spot.where(rate: price_range)
         #      render :index
-        elsif params[:price]
-             @spots = Spot.where(rate: price_range)
-             render :index
+        # elsif params[:rate]
+
+        #      @spots = Spot.where(rate: price_range)
+        #      render :index
         else 
             @spots = Spot.all 
             render :index
@@ -39,7 +41,7 @@ class Api::SpotsController < ApplicationController
 
     private
     def price_range
-        (params[:price][0]..params[:price][1])
+        (params[:rate][0]..params[:rate][1])
     end
 
 

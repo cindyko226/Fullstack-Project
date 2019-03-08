@@ -145,6 +145,13 @@ class SpotsIndex extends React.Component{
             )
         }
     }
+
+
+    //test  filter 
+
+    
+
+
    
     loadLa(){
         if(this.props.la.length > 0){
@@ -236,6 +243,7 @@ class SpotsIndex extends React.Component{
                         </Link>
 
                         <Link to={`/spots/${this.props.la[4].id}`} >
+                        
                             <div className="homes-des" >
                                 <div className="home-pic">
                                     < img src={this.props.la[4].photoUrls[0]} />

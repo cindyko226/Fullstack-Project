@@ -6,7 +6,7 @@ import {fetchSpots} from '../../actions/spots_actions';
 // import 'react-dates/lib/css/_datepicker.css';
 
 const msp = (state, ownProps) => {
-    // debugger
+    debugger
     const sf = Object.values(state.entities.spots).filter(spot => spot.city === 'San Francisco').slice(0, 6);
     const la = Object.values(state.entities.spots).filter(spot => spot.city === 'Los Angeles').slice(0, 6);
     const sd = Object.values(state.entities.spots).filter(spot => spot.city === 'San Diego').slice(0, 6);

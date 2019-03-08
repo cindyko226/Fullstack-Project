@@ -95,7 +95,7 @@ class ReviewIndexitem extends React.Component {
 
                 </div>
                 <div className="review-index-body" > {this.props.review.body}</div>
-                <div>
+                <div className="review-index-delete">
                     <button onClick={this.deleteReview}>Delete</button>
                 </div>
 

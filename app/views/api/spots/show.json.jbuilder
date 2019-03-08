@@ -9,3 +9,11 @@ json.hostPhotourl url_for(@spot.host.photo) if @spot.host.photo.attached?
 json.photoUrls @spot.photos.map { |pic| url_for(pic) } if @spot.photos.attached?
 
 
+json.reviews do
+  @spot.reviews.each do |review|
+    json.set! review.id do
+        json.extract! review, :id, :spot_id, :author_id, :body , :rating
+    end
+  end
+end
+
