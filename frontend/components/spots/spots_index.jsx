@@ -583,7 +583,6 @@ class SpotsIndex extends React.Component{
                     <div className="homes-column">
                         <p className="index-title">Where to stay</p>
                     </div>
-                   
                         {this.noResult()}
                         <div className="homes-column">
                             <h1 className="index-title" >{sfTitle}</h1>
