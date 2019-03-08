@@ -19,7 +19,7 @@ class SpotsIndex extends React.Component{
 
     // componentDidMount(){
     //     // debugger
-    //     this.props.fetchSpots(this.props.filters);
+    //     this.props.reviews
     // }
 
 

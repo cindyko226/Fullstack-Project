@@ -6,6 +6,14 @@ import BookingFormContainer from '../booking/booking_form_container';
 import EditBookingFormContainer from '../booking/edit_booking_form_container';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
+
+import 'react-dates/initialize';
+import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
+
+
+
+
 class SpotShow extends React.Component {
 
     constructor(props){
@@ -19,8 +27,8 @@ class SpotShow extends React.Component {
         // debugger
         this.props.fetchSpot(this.props.match.params.spotId);
         window.scrollTo(0, 0);
-        this.props.fetchReviews();
         this.props.fetchBookings();
+        this.props.fetchReviews();
     }
 
     componentWillUnmount(){
@@ -37,7 +45,37 @@ class SpotShow extends React.Component {
 
     render(){
 
+
+
+
+        const unavailableDates = () => {
+            let unavDates = [];
+            for (let i = 0; i < this.props.bookings.length; i++) {
+                unavDates = unavDates.concat(this.props.bookings[i].unavailable_dates);
+            }
+            return unavDates;
+        };
+
+        const isDayBlocked = (day) => {
+            if (this.props.bookings) {
+                return unavailableDates().some(date => (
+                    moment(date).isSame(day, 'day')
+                ));
+            } return true;
+        };
+
+
+
+
+
+
+
         if (!this.props.spot) {
+            return null;
+        }
+
+
+        if (!this.props.reviews) {
             return null;
         }
 
@@ -136,7 +174,39 @@ class SpotShow extends React.Component {
                                 <div><p>1 queen bed</p></div>
                             </div>
                         </div>
-                        <div className="spot-detail-ava" >Availability</div>
+                        <div className="spot-detail-ava" >
+                        
+                        
+                          <div>Availability</div>
+                        
+                         <div>
+
+                            
+                            <DayPickerRangeController
+                                    startDate={null}
+                                    endDate={null}
+                                    onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate }); }}
+                                    focusedInput={null}
+                                    onFocusChange={(focusedInput) => { this.setState({ focusedInput }); }}
+                                    numberOfMonths={2}
+                                    hideKeyboardShortcutsPanel
+                                    isDayBlocked={isDayBlocked}
+                                />
+                         </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        </div>
                         <div className="review-star" >
                             <div className="spot-detail-review">200 REVIEWS</div>
                             

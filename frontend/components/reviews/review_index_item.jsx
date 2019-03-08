@@ -85,10 +85,11 @@ class ReviewIndexitem extends React.Component {
             <div className="review-index-all">
                 <div className="pic-rating">
                     <div className="review-index-pic">
-                        < img className="user-img-review" src={url} />
+                        < img className="user-img-review" src={this.props.review.authorPhotourl} />
                    </div>
                     <div className="review-index-rating">
                         <div className="review-author" >{this.props.review.author}</div>
+                        {/* <div className="review-author" >{this.props.review.author}</div> */}
                         <div>{star}</div>
                     </div>
 
