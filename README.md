@@ -39,7 +39,8 @@ Take Me Home, an AirBnB clone, is a platform that allow user to look for local h
 
 ![Searching](https://github.com/cindyko226/Fullstack-Project/blob/master/ReadMe/chrome-capture.gif)
 
-Searching for places was the most challenging and most rewarding feature. It involved the Google Places API which took care of the autofill as well as the Google Geocoding API which captured the latitude and longitude data. The NorthEast and SouthWest coordinates of the map were used to filter spotss that are within the bounds.
+Searching for places was the most challenging and most rewarding feature. It involved the Google Places API which took care of the autofill as well as the Google Geocoding API
+ which captured the latitude and longitude data. The NorthEast and SouthWest coordinates of the map were used to filter spotss that are within the bounds.
 
 ```js
     componentDidMount() {

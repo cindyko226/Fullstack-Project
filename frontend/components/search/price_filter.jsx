@@ -49,7 +49,7 @@ class PriceFilter extends React.Component {
                             <h2>Price Filter</h2>
                         </div>
 
-                        <div >
+                        <div className='price-filter-bar'>
                             <Range
                                 min={1}
                                 max={600}

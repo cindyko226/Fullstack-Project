@@ -11,6 +11,11 @@
 
 }
 
+h2{
+    font-family: 'Nunito Sans', sans-serif;
+    padding-left: 20px;
+}
+
 .name-group{
     display: flex;
     flex-direction: column;
@@ -47,6 +52,18 @@
     overflow: hidden;
 }
 
+.filter-rate-range{
+    padding-left: 20px;
+}
+
+p{
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.price-filter-bar{
+    padding-left: 25px;
+}
 
 .large:hover{
     transition: transform 435ms;
