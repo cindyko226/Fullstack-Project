@@ -6,27 +6,39 @@ import React from 'react';
 export default ({currentUser, logout, openModal}) => {
 
     const display = currentUser ? (
-        <div className="home-page-greeting-splash">
-            <div className="logo-png" ></div>
-            <div className="welcome-top" >
-            <p className="welcome-splash">Hello, {currentUser.username}</p>
-            <button onClick={logout} className="home-logout-splash" >Logout</button>
-            </div>
+      <div className="home-page-greeting-splash">
+             <div className="logo-png" ></div>
+        <div className="welcome-top">
+          <p className="welcome-splash">Hello, {currentUser.username}</p>
+          <button onClick={logout} className="home-logout-splash">
+            Logout
+          </button>
         </div>
+      </div>
     ) : (
-        <div className="home-page-button-greeting">
-            <div className="logo-png" ></div>
-            <div className="home-nav" >
-                <div className="nav-login">
-                <button onClick={() => openModal('login')} className="home-login">Log In</button>
-                </div>
+      <div className="home-page-button-greeting">
+        <div className="logo-png" />
+        <div className="home-nav">
+          <div className="nav-login">
+            <button
+              onClick={() => openModal("login")}
+              className="home-login"
+            >
+              Log In
+            </button>
+          </div>
 
-                <div className="nav-signup">
-                <button onClick={() => openModal('signup')} className="home-signup" >Sign Up</button>
-                </div>
-            </div>
+          <div className="nav-signup">
+            <button
+              onClick={() => openModal("signup")}
+              className="home-signup"
+            >
+              Sign Up
+            </button>
+          </div>
         </div>
-    )
+      </div>
+    );
     
     return(
         <div className='home-page'>
