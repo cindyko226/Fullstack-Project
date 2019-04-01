@@ -40,19 +40,22 @@ export default ({currentUser, logout, openModal}) => {
               <div>
                   <div className="home-page-search">
                         <GreetingSearchBar />
-                        {/* <div className="home-icon">
-                        <i className="fa fa-search" aria-hidden="true"></i>
-
-                        <input className="search-input" type="text" placeholder='Try San Francisco' />
-                        
-                    
-                        </div> */}
-                      
                         <button className="search-button"><i className="fa fa-search" aria-hidden="true"></i></button>
-                      
+                       
                   </div>
               </div>
+
+
             </div>
+
+              <footer className="social-midia">
+                    <div className="linkin">
+                        <a target="_blank" href="https://www.linkedin.com/in/cindy-ke/"><i className="fab fa-linkedin"></i></a>
+                    </div>
+                    <div className="github">
+                        <a target="_blank" href="https://github.com/cindyko226/Fullstack-Project"><i className="fab fa-github"></i></a>
+                    </div>
+              </footer>
             
         </div>
     

@@ -1,5 +1,11 @@
 
 .home-page {
+    display: grid;
+    grid-template-rows: 100px auto 30px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
     background: image_url("tower2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,13 +16,33 @@
 }
 
 .splash-container{
+    grid-area: main;
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
     justify-content: flex-start;
-    align-content: space-between;
+    align-content: space-around;
+}
+
+
+.social-midia{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background: rgb(160, 212, 235);
+    opacity: 0.7;
+    
+}
+
+.linkin{
+    margin-right: 30px;
+}
+
+.linkin, .github{
+    font-size: 25px;
+    padding: 3px;
 }
 
 .app-name{
@@ -95,6 +121,7 @@ button:hover{
 
 
 .home-page-button-greeting, .home-page-greeting-splash{
+    grid-area: header;
     display: flex;
     justify-content: space-between;
     width: 100%;
