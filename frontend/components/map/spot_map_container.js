@@ -5,7 +5,6 @@ import { openModal } from '../../actions/modal_actions';
 import { updateFilter } from '../../actions/filter_actions';
 
 const msp = (state, ownProps) => {
-    // debugger
     return ({
         spots: Object.values(ownProps.spots),
         search: state.ui.search,

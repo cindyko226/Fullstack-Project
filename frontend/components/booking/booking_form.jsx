@@ -69,23 +69,16 @@ class BookingForm extends React.Component {
         if(!this.props.currentUser){
             this.props.openModal('login')
         }else if (this.props.formType === 'Request to Book'){
-            // debugger
             this.props.formAction({ 
                 
                 check_in: this.state.check_in._d,
                 check_out: this.state.check_out._d,
                 guest_number: this.state.guest_number,
                 spot_id: this.state.spot_id,
-                // id: this.state.id
-                // guest_id: this.state.guest_id
         }).then(()=> this.props.history.push('/bookings'));
-        //     // debugger
 
-            // this.props.formAction(this.state)
-            // .then(() => this.props.history.push('/bookings'));
 
         } else {
-            // debugger
             this.props.formAction({
 
                 check_in: this.state.check_in._d,
@@ -93,7 +86,6 @@ class BookingForm extends React.Component {
                 guest_number: this.state.guest_number,
                 spot_id: this.state.spot_id,
                 id: this.state.id
-                // guest_id: this.state.guest_id
             }).then(() => this.props.history.push('/bookings'));
         }
 
@@ -104,7 +96,6 @@ class BookingForm extends React.Component {
 
     
     render(){
-        // debugger
         const {spot} = this.props;
         return(
             <div className="booking-form-container">
@@ -153,9 +144,7 @@ class BookingForm extends React.Component {
                                 <input type="number" className="guest-number-input" min="1" max={spot.guest_number} 
                                 onChange={this.handleChange} 
                                 value={this.state.guest_number}/>
-                                {/* <input type="number" className="guest-number-input" min="1" 
-                                onChange={this.handleChange} 
-                                value={this.state.guest_number}/> */}
+                                
                             </div>
 
                         </div>

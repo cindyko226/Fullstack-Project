@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './search_bar';
-import { withRouter } from 'react-router-dom';
 
 export default ({ currentUser, logout, openModal, receiveSearch }) => {
     

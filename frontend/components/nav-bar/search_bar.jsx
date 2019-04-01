@@ -5,7 +5,6 @@ import SpotMap from '../map/spot_map';
 class SearchBar extends React.Component {
     constructor(props){
         super(props);
-        // debugger
         this.state = { address: null };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,19 +25,15 @@ class SearchBar extends React.Component {
                 // use input if cannot convert to formatted address
                 address = autocomplete.getPlace().name;
                 this.setState({ address: address }, this.handleSubmit );
-                // this.handleSubmit();
             } else {
                 // use formatted address if available
                 address = autocomplete.getPlace().formatted_address;
                 this.setState({ address: address }, this.handleSubmit );
-                // this.handleSubmit();
             }
         });
 
     }
-    // componentDidUpdate(){
-    //     this.handleSubmit();
-    // }
+    
 
     handleSubmit() {
         let lat;

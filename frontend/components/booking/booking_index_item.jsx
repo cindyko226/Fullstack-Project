@@ -7,7 +7,6 @@ class BookingIndexitem extends React.Component {
     constructor(props){
         super(props);
         this.deleteBooking = this.deleteBooking.bind(this)
-        // this.openModal = this.openModal.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -28,7 +27,7 @@ class BookingIndexitem extends React.Component {
     render(){
         
         if (this.props.spot === undefined) {
-            return null
+            return null;
         }
     
 

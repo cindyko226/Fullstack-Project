@@ -5,14 +5,12 @@ import {openModal} from '../../actions/modal_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp =(state, ownProps) => {
-    // debugger
     return({
         form: {check_in: null,
         check_out: null,
         guest_number: 1,
         focusedInput: null,
         spotId: ownProps.spot.id},
-        // bookings: Object.values(state.entities.bookings),
         currentUser: state.entities.users[state.session.id],
         spotId: ownProps.spot.id,
         formType: "Request to Book"
@@ -24,7 +22,6 @@ const mdp = dispatch => {
     return({
         formAction: (booking) => dispatch(createBooking(booking)),
         openModal: (modal) => dispatch(openModal(modal)),
-        // fetchBookings: () => dispatch(fetchBookings())
     })
 }
 

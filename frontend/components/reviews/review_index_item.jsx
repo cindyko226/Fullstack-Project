@@ -13,10 +13,7 @@ class ReviewIndexitem extends React.Component {
 
 
     render(){
-        // debugger
-        // if (this.props.spot === undefined){
-        //     return null;
-        // }
+        
 
         let star;
         if (this.props.review.rating === 1){
@@ -89,7 +86,6 @@ class ReviewIndexitem extends React.Component {
                    </div>
                     <div className="review-index-rating">
                         <div className="review-author" >{this.props.review.author}</div>
-                        {/* <div className="review-author" >{this.props.review.author}</div> */}
                         <div>{star}</div>
                     </div>
 

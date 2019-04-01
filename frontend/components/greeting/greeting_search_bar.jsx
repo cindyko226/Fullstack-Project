@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 
 class SearchBar extends React.Component {
     constructor(props) {
-        // debugger
         super(props);
         
         this.state = { address: null };

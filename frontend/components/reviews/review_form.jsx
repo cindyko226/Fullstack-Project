@@ -28,7 +28,6 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e){
-        // debugger
         e.preventDefault();
         if (!this.props.currentUser) {
             this.props.openModal('login')
@@ -44,7 +43,6 @@ class ReviewForm extends React.Component {
 
 
     render(){
-        // let checked = "checked";
         let starred = [];
 
         for (let i = 0; i <= this.state.rating; i++) {

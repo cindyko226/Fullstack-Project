@@ -14,14 +14,8 @@ class Search extends React.Component {
 
 
     loadSpots(){
-        // debugger
             return (
                 <div>
-
-                    {/* <FilterForm updateFilter={this.props.updateFilter} minPrice={this.props.minPrice} maxPrice={this.props.maxPrice} 
-                        resetFilters={this.props.resetFilters} 
-                    /> */}
-
                     <SpotsIndexContainer
                         spots={this.props.spots}
                         logout={this.props.logout}
@@ -46,23 +40,5 @@ class Search extends React.Component {
     }
 
 }
-
-// const Search = ({ spots, logout, fetchSpots, updateFilter}) => {
-//     // console.log(spots);
-//     // debugger
-//     return(
-//     <div>
-//         <SpotsIndexContainer
-//           spots={spots}
-//           logout={logout}
-//           fetchSpots={fetchSpots}
-//           updateFilter = {updateFilter}
-//         />
-        
-//     </div>
-//     )
-// };
-
-
 
 export default Search;

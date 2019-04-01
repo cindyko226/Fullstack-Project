@@ -6,7 +6,6 @@ import { openModal } from '../../actions/modal_actions';
 
 
 const msp = (state, ownProps) => {
-    // debugger
     return({
         currentUser: state.entities.users[state.session.id],
         spotId: ownProps.spot.id
@@ -15,7 +14,6 @@ const msp = (state, ownProps) => {
 }
 
 const mdp = dispatch => {
-    // debugger
     return({
         createReview: (review) => dispatch(createReview(review)),
         openModal: modal => dispatch(openModal(modal)),

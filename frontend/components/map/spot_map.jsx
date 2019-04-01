@@ -10,26 +10,21 @@ class SpotMap extends React.Component {
 
     constructor(props){
         super(props);
-        // console.log(props);
-        // debugger
+
         this.resetMap = this.resetMap.bind(this);
         this.registerListeners = this.registerListeners.bind(this);
         this.handleMarkerClick = this.handleMarkerClick.bind(this);
     }
 
     componentDidMount() {
-        // debugger
         return this.resetMap();
 
     }
 
     resetMap(){
-        // debugger
         let coordinates;
         if (this.props.location.search) {
-            // debugger
             coordinates = queryString.parse(this.props.location.search);
-            // debugger
         } else {
             coordinates = { lat: '37.773972', lng: '-122.431297' };
         }
@@ -42,23 +37,17 @@ class SpotMap extends React.Component {
             zoom: 12
         };
         
-        // debugger
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        // debugger
         this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick);
-        // debugger
         this.registerListeners();
         this.MarkerManager.updateMarkers(this.props.spots);
     }
 
     componentDidUpdate(prevProps){
        
-        // debugger
         if(this.props.location.search !== prevProps.location.search){
-            // debugger
             this.resetMap();
         }
-        // debugger
         this.MarkerManager.updateMarkers(this.props.spots);
     }
 
@@ -87,7 +76,6 @@ class SpotMap extends React.Component {
     
 
     render() {
-        // debugger
         return(
             
             <div className="map" ref={map => this.mapNode = map}>

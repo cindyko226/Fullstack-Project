@@ -44,7 +44,6 @@ class SessionForm extends React.Component {
     }
     
     changeHistory(){
-        // debugger
         if (this.props.location.pathname === "/") {
            return( this.props.history.push('/spots') );
         };
@@ -66,8 +65,7 @@ class SessionForm extends React.Component {
         setTimeout(() => this.props.processForm(user)
         .then(() => {
                 this.props.closeModal();
-                this.changeHistory()
-                // this.props.history.push('/spots');
+                this.changeHistory();
             }), totalDemoTime);
         
     }
@@ -110,19 +108,6 @@ class SessionForm extends React.Component {
     
     }
         
-
-
-    // handleDemoLogin(e) {
-    //     e.preventDefault();
-    //     const user = Object.assign({}, { username: 'Mocha', password: "password" });
-
-    //     this.props.processForm(user)
-    //         .then(() => {
-    //             this.props.closeModal();
-    //             this.props.history.push('/spots');
-    //         });
-
-    // }
     
    renderUsernameErrors(){
        if (this.props.formType === "Sign Up"){

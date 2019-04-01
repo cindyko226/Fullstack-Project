@@ -14,12 +14,9 @@ class BookingIndex extends React.Component {
     }
 
     render(){
-        // debugger 
         let userBookings = this.props.bookings.filter((booking) => booking.guestId === this.props.currentUser.id);
 
         let bookingItems = userBookings.map(booking => {
-            // let spot = booking.guestId
-            // debugger
             return (
                 <BookingIndexItem
                     booking={booking}
@@ -30,7 +27,6 @@ class BookingIndex extends React.Component {
                 />
             )
         })
-        // debugger
         return(
             <div>
                 <div>

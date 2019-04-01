@@ -9,15 +9,12 @@ class ReviewIndex extends React.Component {
 
     componentDidMount(){
         this.props.fetchReviews();
-        // this.props.fetchSpots();
     }
 
     render(){
         let reviewItems = this.props.reviews.map( review => {
-            // debugger
             return(
                 <li className="no-style" key={review.id}>
-
                         <ReviewIndexItem 
                             review = {review}
                             currentUser={this.props.currentUser}
@@ -26,7 +23,6 @@ class ReviewIndex extends React.Component {
                 </li>
             )
         })
-        // debugger 
         return(
             <div>
                
