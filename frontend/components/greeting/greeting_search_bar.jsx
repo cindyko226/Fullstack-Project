@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
-        
         this.state = { address: null };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,10 +44,12 @@ class SearchBar extends React.Component {
                 lat = results[0].geometry.location.lat();
                 lng = results[0].geometry.location.lng();
                 this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
+                this.props.receiveSearch({ lat, lng });
             } else {
                 lat = 37.773972;
                 lng = -122.431297;
                 this.props.history.push(`/search?lat=${lat}&lng=${lng}`);
+                this.props.receiveSearch({ lat, lng });
             }
         });
     }

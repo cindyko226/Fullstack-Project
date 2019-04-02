@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import Greeting from './greeting';
 import {logout} from '../../actions/session_actions';
 import {openModal} from '../../actions/modal_actions';
+import { receiveSearch } from '../../actions/search_actions';
 
 const msp = (state) => {
     return({
@@ -10,10 +11,11 @@ const msp = (state) => {
 }
 
 const mdp = (dispatch) => {
-    return({
-        logout: () => dispatch(logout()),
-        openModal: modal => dispatch(openModal(modal))
-    })
+    return {
+      logout: () => dispatch(logout()),
+      openModal: modal => dispatch(openModal(modal)),
+      receiveSearch: (searchResult) => dispatch(receiveSearch(searchResult))
+    };
 }
 
 export default connect(msp, mdp)(Greeting);

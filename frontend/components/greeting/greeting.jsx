@@ -3,7 +3,7 @@ import GreetingSearchBar from './greeting_search_bar';
 import React from 'react';
 
 
-export default ({currentUser, logout, openModal}) => {
+export default ({ currentUser, logout, openModal, receiveSearch}) => {
 
     const display = currentUser ? (
       <div className="home-page-greeting-splash">
@@ -40,37 +40,39 @@ export default ({currentUser, logout, openModal}) => {
       </div>
     );
     
-    return(
-        <div className='home-page'>
-            {display}
-            <div className="splash-container" >
+    return (
+      <div className="home-page">
+        {display}
+        <div className="splash-container">
+          <div>
+            <h1 className="app-name">Plan your next trip</h1>
+          </div>
 
-              <div> 
-                  <h1 className="app-name">Plan your next trip</h1>
-              </div>
-
-              <div>
-                  <div className="home-page-search">
-                        <GreetingSearchBar />
-                        <button className="search-button"><i className="fa fa-search" aria-hidden="true"></i></button>
-                       
-                  </div>
-              </div>
-
-
+          <div>
+            <div className="home-page-search">
+              <GreetingSearchBar receiveSearch={receiveSearch} />
+              <button className="search-button">
+                <i className="fa fa-search" aria-hidden="true" />
+              </button>
             </div>
-
-              <footer className="social-midia">
-                    <div className="linkin">
-                        <a target="_blank" href="https://www.linkedin.com/in/cindy-ke/"><i className="fab fa-linkedin"></i></a>
-                    </div>
-                    <div className="github">
-                        <a target="_blank" href="https://github.com/cindyko226/Fullstack-Project"><i className="fab fa-github"></i></a>
-                    </div>
-              </footer>
-            
+          </div>
         </div>
-    
 
-    )
+        <footer className="social-midia">
+          <div className="linkin">
+            <a target="_blank" href="https://www.linkedin.com/in/cindy-ke/">
+              <i className="fab fa-linkedin" />
+            </a>
+          </div>
+          <div className="github">
+            <a
+              target="_blank"
+              href="https://github.com/cindyko226/Fullstack-Project"
+            >
+              <i className="fab fa-github" />
+            </a>
+          </div>
+        </footer>
+      </div>
+    );
 }

@@ -17,7 +17,7 @@ class SpotMap extends React.Component {
     }
 
     componentDidMount() {
-        return this.resetMap();
+        this.resetMap();
 
     }
 

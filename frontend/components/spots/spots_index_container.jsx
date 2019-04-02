@@ -20,7 +20,6 @@ const msp = (state, ownProps) => {
         sd,
         sj,
         filters: state.ui.filters
-
     })
 }
 

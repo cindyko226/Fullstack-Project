@@ -9,7 +9,7 @@ class ShowMap extends React.Component {
     componentDidMount() {
         const mapOptions = {
             center: { lat: this.props.spot.lat, lng: this.props.spot.lng },
-            zoom: 13
+            zoom: 14
         }
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map, null, true);
