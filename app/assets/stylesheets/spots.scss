@@ -44,7 +44,7 @@
 
 .index-page-container{
     display: flex;
-    padding-top: 190px;
+    padding-top: 150px;
     width: auto;
 }
 
@@ -53,7 +53,7 @@
 .filter{
     position: fixed;
     margin-top:80px;
-    height: 100px;
+    height: 55px;
     padding-top: 10px;
     border: 1px solid rgb(235,235,235);
     font-family: 'Nunito Sans', sans-serif;
@@ -267,7 +267,7 @@ img{
   position: relative;
   height: 14px;
   padding: 5px 0;
-  width: 50%;
+  width: 400px;
   border-radius: 6px;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -459,10 +459,13 @@ img{
 .filter-rate-range{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 435px;
 }
 
 .price-filter-container{
+    position: absolute;
+    top: 8%;
+    left: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -474,6 +477,7 @@ img{
 }
 
 .price-filter-title{
+    // display: none;
     margin-bottom: 10px;
 }
 
@@ -486,4 +490,30 @@ img{
 }
 }
 
+
+.price-button{
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 14px ;
+    line-height: 18px ;
+    letter-spacing: normal ;
+    font-family:'Nunito Sans', sans-serif;
+    color: rgb(72, 72, 72) ;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+    cursor: pointer ;
+    display: inline-block ;
+    padding-left: 12px ;
+    padding-right: 12px ;
+    position: relative ;
+    text-align: center ;
+    width: auto ;
+    background: none ;
+    border-width: 1px ;
+    border-style: solid ;
+    border-color: rgb(220, 224, 224) ;
+    border-image: initial ;
+    border-radius: 4px ;
+    text-decoration: none ;
+}
 

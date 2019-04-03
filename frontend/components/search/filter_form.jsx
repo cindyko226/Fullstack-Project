@@ -14,16 +14,21 @@ class FilterForm extends React.Component {
     render() {
 
         return (
-            <div  className="filter-form" >
-                <div >
-                    <PriceFilterContainer />
-                </div>
-                
-                <div className="clear-filter-button">
-                    <button id="clear-filters" onClick={this.clearFilters}>Clear All Filters</button>
-                </div>
+          <div className="filter-form">
+            <div>
+              <button className="price-button" onClick={() => this.props.openModal("price")}>
+                Price Filter
+              </button>
+              {/* <PriceFilterContainer /> */}
             </div>
-        )
+
+            <div className="clear-filter-button">
+              <button id="clear-filters" onClick={this.clearFilters}>
+                Clear All Filters
+              </button>
+            </div>
+          </div>
+        );
     }
 }
 

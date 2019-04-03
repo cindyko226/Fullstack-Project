@@ -46,7 +46,9 @@ class PriceFilter extends React.Component {
             <div className="price-filter-container" >
 
                         <div className="price-filter-title">
-                            <h2>Price Filter</h2>
+
+                            {/* <h2>Price Filter</h2>
+                            <button onClick={() => this.props.openModal("price")}>Price Filter</button> */}
                         </div>
 
                         <div className='price-filter-bar'>

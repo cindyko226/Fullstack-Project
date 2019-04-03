@@ -3,6 +3,7 @@ import SpotsIndex from './spots_index';
 import { logout } from '../../actions/session_actions';
 import {fetchSpots} from '../../actions/spots_actions';
 import {resetFilters} from '../../actions/filter_actions';
+import { openModal } from '../../actions/modal_actions';
 // import 'react-dates/initialize';
 // import 'react-dates/lib/css/_datepicker.css';
 
@@ -25,11 +26,12 @@ const msp = (state, ownProps) => {
 
 
 const mdp = (dispatch) => {
-    return({
-        logout: () => dispatch(logout()),
-        fetchSpots: () => dispatch(fetchSpots()),
-        resetFilters: () => resetFilters()
-    });
+    return {
+      logout: () => dispatch(logout()),
+      fetchSpots: () => dispatch(fetchSpots()),
+      resetFilters: () => resetFilters(),
+      openModal: modal => dispatch(openModal(modal))
+    };
 }
 
 

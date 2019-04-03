@@ -5,7 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import ReviewFormContainer from '../reviews/reviewform_container';
 import EditBookingFromContainer from '../booking/edit_booking_form_container';
-
+import PriceFilterContainer from '../search/price_filter_container';
 
 function Modal({ modal, closeModal }) {
 
@@ -24,14 +24,31 @@ function Modal({ modal, closeModal }) {
         case 'booking':
             component = <EditBookingFromContainer />; 
             break;
+        case 'price':
+            component = <PriceFilterContainer />;
+            break;
         default:
             return null;
     }
+    
+    let className;
+    if (component === <PriceFilterContainer />) {
+        className = "modal-test"
+    }else {
+        className = "modal-chil"
+    }
+
+    
+   
+
     return (
         <div className="modal-background" onClick={closeModal}>
-            <div className="modal-child" onClick={e => e.stopPropagation()}>
+            <div className={className} onClick={e => e.stopPropagation()}>
                 {component}
             </div>
+           
+           
+
         </div>
     );
 }

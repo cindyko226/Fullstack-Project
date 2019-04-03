@@ -74,7 +74,7 @@ class SpotsIndex extends React.Component{
              
 
             <div className="filter"> 
-                <FilterForm resetFilters={this.props.resetFilters}/> 
+                <FilterForm resetFilters={this.props.resetFilters} openModal={this.props.openModal}/> 
             </div>
 
             <div className="index-page-container">
