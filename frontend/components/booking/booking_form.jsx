@@ -8,25 +8,7 @@ class BookingForm extends React.Component {
 
     constructor(props){
         super(props);
-        // this.state = ({
-
-        //     check_in: null, 
-        //     check_out: null, 
-        //     guest_number: 1, 
-        //     focusedInput: null,
-        //     spot_id: this.props.spotId,
-        // })
-            // guest_id: this.props.currentUser.id
         
-        // this.state = ({
-        //     id: this.props.form.id,
-        //     check_in: null,
-        //     check_out: null,
-        //     guest_number: this.props.form.guest_number,
-        //     focusedInput: null,
-        //     spot_id: this.props.form.spotId,
-        // })
-
         this.state = (this.formType === "Request to Book") ? ({
             
             check_in: null,
@@ -43,16 +25,7 @@ class BookingForm extends React.Component {
             spot_id: this.props.form.spotId,
         });
 
-        // ({
-        //     id: this.props.form.id,
-        //     check_in: null,
-        //     check_out: null,
-        //     guest_number: this.props.form.guest_number,
-        //     focusedInput: null,
-        //     spot_id: this.props.form.spotId,
-        // })
-
-        // this.state = this.props.form;
+      
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -91,7 +64,25 @@ class BookingForm extends React.Component {
 
     }
 
-  
+    isDayBooked(day) {
+
+       
+
+
+        for (let i = 0; i < this.props.bookings.length; i++) {
+            const start = this.props.bookings[i].checkIn;
+            const end = this.props.bookings[i].checkOut;
+            if (
+              day.format().includes(start) ||
+              day.format().includes(end)
+            ) {
+              return true;
+            } else if (day.isBetween(start, end)) {
+              return true;
+            }
+        }
+        return false;
+    }
 
 
     
@@ -133,6 +124,7 @@ class BookingForm extends React.Component {
                                     endDatePlaceholderText={this.props.form.oldCheckOut}
                                     numberOfMonths={1}
                                     minimumNights={1}  
+                                    isDayBlocked={(day) => this.isDayBooked(day)}
                                 /> 
                             </div>
                         </div>

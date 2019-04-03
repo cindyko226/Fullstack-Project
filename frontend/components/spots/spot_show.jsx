@@ -43,30 +43,45 @@ class SpotShow extends React.Component {
         }
     }
 
+
+    isDayBooked(day) {
+        // debugger
+        for (let i = 0; i < this.props.bookings.length; i++) {
+            const start = this.props.bookings[i].checkIn;
+            const end = this.props.bookings[i].checkOut;
+
+            if (
+                day.format().includes(start) ||
+                day.format().includes(end)
+            ) {
+                return true;
+            }else if (day.isBetween(start, end)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     render(){
 
 
 
 
-        const unavailableDates = () => {
-            let unavDates = [];
-            for (let i = 0; i < this.props.bookings.length; i++) {
-                unavDates = unavDates.concat(this.props.bookings[i].unavailable_dates);
-            }
-            return unavDates;
-        };
+        // const unavailableDates = () => {
+        //     let unavDates = [];
+        //     for (let i = 0; i < this.props.bookings.length; i++) {
+        //         unavDates = unavDates.concat(this.props.bookings[i].unavailable_dates);
+        //     }
+        //     return unavDates;
+        // };
 
-        const isDayBlocked = (day) => {
-            if (this.props.bookings) {
-                return unavailableDates().some(date => (
-                    moment(date).isSame(day, 'day')
-                ));
-            } return true;
-        };
-
-
-
-
+        // const isDayBlocked = (day) => {
+        //     if (this.props.bookings) {
+        //         return unavailableDates().some(date => (
+        //             moment(date).isSame(day, 'day')
+        //         ));
+        //     } return true;
+        // };
 
 
 
@@ -190,22 +205,12 @@ class SpotShow extends React.Component {
                                     onFocusChange={(focusedInput) => { this.setState({ focusedInput }); }}
                                     numberOfMonths={2}
                                     hideKeyboardShortcutsPanel
-                                    isDayBlocked={isDayBlocked}
+                                    isDayBlocked={(day) => this.isDayBooked(day)}
                                 />
                          </div>
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                    
                         </div>
                         <div className="review-star" >
                             <div className="spot-detail-review">200 REVIEWS</div>

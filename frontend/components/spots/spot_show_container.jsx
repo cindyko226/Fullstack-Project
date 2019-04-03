@@ -7,11 +7,14 @@ import { fetchBookings} from '../../actions/booking_actions';
 
 
 const msp = (state, ownProps) => {
-//   debugger
+    // debugger
+    const bookings = Object.values(state.entities.bookings).filter(
+        booking => booking.spotId === parseInt(ownProps.match.params.spotId)
+    );
     return({
         spot: state.entities.spots[ownProps.match.params.spotId],
         currentUserId: state.session.currentUserId,
-        bookings: state.entities.bookings,
+        bookings,
         reviews: state.entities.reviews
     })
    
