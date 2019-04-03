@@ -5,11 +5,15 @@ import {fetchSpots} from '../../actions/spots_actions';
 import {withRouter} from 'react-router-dom';
 
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
+    const reviews = Object.values(state.entities.reviews).filter(
+      review => review.spotId === parseInt(ownProps.match.params.spotId)
+    );
+    // debugger
     return({
        
         currentUser: state.entities.users[state.session.id],
-        reviews: Object.values(state.entities.reviews),
+        reviews,
         spots: state.entities.spots
     })
 }
