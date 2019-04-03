@@ -67,22 +67,6 @@ class SpotShow extends React.Component {
 
 
 
-        // const unavailableDates = () => {
-        //     let unavDates = [];
-        //     for (let i = 0; i < this.props.bookings.length; i++) {
-        //         unavDates = unavDates.concat(this.props.bookings[i].unavailable_dates);
-        //     }
-        //     return unavDates;
-        // };
-
-        // const isDayBlocked = (day) => {
-        //     if (this.props.bookings) {
-        //         return unavailableDates().some(date => (
-        //             moment(date).isSame(day, 'day')
-        //         ));
-        //     } return true;
-        // };
-
 
 
         if (!this.props.spot) {
