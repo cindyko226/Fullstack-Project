@@ -1,6 +1,6 @@
 # Take Me Home 
 
-Live Demo(https://take--me--home.herokuapp.com/#/)
+[Live Demo](https://take--me--home.herokuapp.com/#/)
 
 
 Take Me Home, an AirBnB clone, is a platform that allow user to look for local homes for rentals or to rent out spots at specific dates.
