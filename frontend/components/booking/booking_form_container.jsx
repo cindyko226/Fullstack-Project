@@ -5,7 +5,6 @@ import {openModal} from '../../actions/modal_actions';
 import {withRouter} from 'react-router-dom';
 
 const msp =(state, ownProps) => {
-    // debugger
     const bookings = Object.values(state.entities.bookings).filter(booking => booking.spotId === ownProps.spot.id);
     return({
         form: {check_in: null,

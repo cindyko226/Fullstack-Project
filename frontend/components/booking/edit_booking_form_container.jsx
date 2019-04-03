@@ -5,8 +5,8 @@ import { openModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
 const msp = (state, ownProps) => {
-    
-    let booking = state.entities.bookings[ownProps.match.params.bookingId];
+    const bookings = Object.values(state.entities.bookings).filter(booking => booking.spotId === ownProps.spot.id);
+    const booking = state.entities.bookings[ownProps.match.params.bookingId];
     return ({
         form: {
             id: booking.id,
@@ -20,6 +20,7 @@ const msp = (state, ownProps) => {
         formType: "Update",
         spotId: ownProps.spot.id,
         bookingId: ownProps.bookingId,
+        bookings
 
     })
 };

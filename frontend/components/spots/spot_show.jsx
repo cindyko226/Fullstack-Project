@@ -46,20 +46,23 @@ class SpotShow extends React.Component {
 
     isDayBooked(day) {
         // debugger
-        for (let i = 0; i < this.props.bookings.length; i++) {
-            const start = this.props.bookings[i].checkIn;
-            const end = this.props.bookings[i].checkOut;
+        if (this.props.bookings.length){
 
-            if (
-                day.format().includes(start) ||
-                day.format().includes(end)
-            ) {
-                return true;
-            }else if (day.isBetween(start, end)) {
-                return true;
+            for (let i = 0; i < this.props.bookings.length; i++) {
+                const start = this.props.bookings[i].checkIn;
+                const end = this.props.bookings[i].checkOut;
+    
+                if (
+                    day.format().includes(start) ||
+                    day.format().includes(end)
+                ) {
+                    return true;
+                }else if (day.isBetween(start, end)) {
+                    return true;
+                }
             }
+            return false;
         }
-        return false;
     }
 
     render(){
