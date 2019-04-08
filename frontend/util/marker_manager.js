@@ -65,14 +65,7 @@ class MarkerManager{
             this.markers[spot.id].setMap(this.map);
         }
         
-        // const marker = new google.maps.Marker({
-        //     position: {lat: spot.lat, lng: spot.lng},
-        //     map: this.map,
-        //     spotId: spot.id
-        // });
-
-        // marker.addListener('click', () => this.handleClick(spot));
-        // this.markers[marker.spotId] = marker;
+        
 
     }
 

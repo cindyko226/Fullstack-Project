@@ -45,7 +45,6 @@ class SpotShow extends React.Component {
 
 
     isDayBooked(day) {
-        // debugger
         if (this.props.bookings.length){
 
             for (let i = 0; i < this.props.bookings.length; i++) {
