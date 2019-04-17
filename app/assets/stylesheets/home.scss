@@ -1,7 +1,7 @@
 
 .home-page {
     display: grid;
-    grid-template-rows: 100px auto 30px;
+    grid-template-rows: 100px auto 40px;
     grid-template-areas: 
     "header"
     "main"
@@ -31,7 +31,7 @@
     grid-area: footer;
     display: flex;
     justify-content: center;
-    background: rgb(160, 212, 235);
+    background: black;
     opacity: 0.7;
     
 }
@@ -41,8 +41,9 @@
 }
 
 .linkin, .github{
-    font-size: 25px;
+    font-size: 30px;
     padding: 3px;
+    color: white;
 }
 
 .app-name{
@@ -224,5 +225,4 @@ button:hover{
     padding-left: 20px;
     height: 80px;
 }
-
 
