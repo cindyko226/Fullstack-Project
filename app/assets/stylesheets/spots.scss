@@ -71,6 +71,7 @@
 
 
 .index-map-container{
+    // width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -187,7 +188,15 @@ img{
     flex-wrap: wrap;
     width: auto;
     }
+
+    
 }
+@media (max-width: 400px){
+    .index-map-container{
+        width: 100%;
+    }
+}
+
 
 
 .index-spot-type{
@@ -482,12 +491,16 @@ img{
 }
 
 @media (min-width: 1900px){
-.map {
-    width: 620px;
-}
-.homes-lists{
-    width: 50%;
-}
+    .map {
+        width: 620px;
+    }
+
+    .home-pic img {
+        width: 400px;
+    }
+// .homes-lists{
+//     width: 50%;
+// }
 }
 
 
