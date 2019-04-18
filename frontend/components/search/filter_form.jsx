@@ -8,6 +8,7 @@ class FilterForm extends React.Component {
     }
 
     clearFilters() {
+      // debugger;
         this.props.resetFilters();
     }
 
@@ -23,7 +24,7 @@ class FilterForm extends React.Component {
             </div>
 
             <div className="clear-filter-button">
-              <button id="clear-filters" onClick={this.clearFilters}>
+              <button id="clear-filters" onClick={() => this.clearFilters}>
                 Clear All Filters
               </button>
             </div>

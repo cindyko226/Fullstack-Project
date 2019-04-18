@@ -21,9 +21,10 @@ export function updateFilter(filter, value) {
     }
 }
 
-export function resetFilters(filter, value) {
+export function resetFilters() {
+    // debugger
     return(dispatch, getState) => {
-        dispatch(clearFilters(filter, value));
+        dispatch(clearFilters());
         return dispatch(fetchSpots(getState().ui.filters));
     }
 }
