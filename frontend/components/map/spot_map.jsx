@@ -44,11 +44,17 @@ class SpotMap extends React.Component {
     }
 
     componentDidUpdate(prevProps){
-       
+    //    debugger
         if(this.props.location.search !== prevProps.location.search){
             this.resetMap();
         }
+
+
         this.MarkerManager.updateMarkers(this.props.spots);
+    }
+
+    componentWillUpdate(){
+        
     }
 
 
