@@ -22,7 +22,6 @@ return(
                         <i className="far fa-heart"></i>
                     </div>
                     <div className="index-spot-info">
-                        {/* <p>{spot.city}</p> */}
                         <div className="index-spot-type">{spot.homeType} • {spot.beds} BED</div>
                         <div className="index-spot-title">{spot.name}</div>
                         <div className="index-spot-rate">From ${spot.rate} per night</div>

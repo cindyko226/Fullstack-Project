@@ -24,10 +24,10 @@ class SpotsIndex extends React.Component{
     noResult(){
         if (this.props.spots.length === 0 && this.props.bounds.length > 1){
             return(
+                
                 <div className="homes-column">
-                   
-                        <div className="no-result">NO RESULT! </div>
-                    
+                    <div className="loader"></div>
+                    <div className="no-result">NO RESULT! </div>
                 </div>
             )
         }
@@ -36,9 +36,7 @@ class SpotsIndex extends React.Component{
 
 
     render(){
-        // if (this.props.spots.length === 0 ){
-        //     return null;
-        // }
+        
         const sf = this.props.sf.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
         const la = this.props.la.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
         const sd = this.props.sd.map(spot => <SpotIndexItem key={spot.id} spot={spot} />)
