@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
     def index 
-        # debugger
+        
         @reviews = Review.all 
         render :index 
     end 
